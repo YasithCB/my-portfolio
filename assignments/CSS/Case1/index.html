@@ -4,29 +4,40 @@
     <meta charset="UTF-8">
     <title>Css | Case 1</title>
     <meta name="viewport" content="width= device-width, initial-scale= 1">
+<!--    css reset-->
     <link rel="stylesheet" href="assets/css/normalize.css">
     <style>
 
       main {
           height: 100vh;
+          width: 100vw;
       }
 
-      div {
-        display: block;
-        background-color: white;
-        width: 20vw;
-        height: 20vw;
-        border-radius: 100px;
-        position: relative;
-          left: -75px;
-          top: -75px;
-      }
-
-      section {
-        display: inline-block;
+      main> section {
+        position: absolute;
         width: 50vw;
         height: 50vh;
-        position: relative;
+      }
+
+      main> section:nth-child(1) {
+          background-color: red;
+          left: 0;
+          top: 0;
+      }
+      main> section:nth-child(2) {
+          background-color: green;
+          right: 0;
+          top: 0;
+      }
+      main> section:nth-child(3) {
+          background-color: yellow;
+          left: 0;
+          bottom: 0;
+      }
+      main> section:nth-child(4) {
+          background-color: hotpink;
+          right: 0;
+          bottom: 0;
       }
 
     </style>
@@ -34,12 +45,10 @@
 <body>
 
   <main>
-      <Section style="background-color: red">
-      </Section>
-
-      <Section style="background-color: green"></Section>
-      <Section style="background-color: yellow"></Section>
-      <Section style="background-color: hotpink"></Section>
+      <Section></Section>
+      <Section></Section>
+      <Section></Section>
+      <Section></Section>
   </main>
 
 
