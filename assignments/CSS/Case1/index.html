@@ -15,6 +15,15 @@
 
       div {
           position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+      }
+
+      section {
+          background-color: white;
       }
 
       main> section {
@@ -49,10 +58,10 @@
           display: inline;
           width: 35vh;
           height: 35vh;
-          top: 0;
-          right: 0;
-          bottom: 0;
           left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
           margin: auto;
       }
       #midRect> div {
@@ -60,11 +69,6 @@
           width: 25vh;
           height: 25vh;
           border-radius: 12.5vh;
-          left: 0;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          margin: auto;
       }
 
       body> main> section> div {
@@ -72,21 +76,59 @@
           width: 28vh;
           height: 28vh;
           border-radius: 14vh;
-          left: 0;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          margin: auto;
        }
       body> main> section> div> div {
           background-color: red;
           width: 12vh;
           height: 12vh;
-          left: 0;
+      }
+
+
+      body> main> section:nth-child(6) {
+          width: 40vh;
+          height: 40vh;
+          border-radius: 20vh;
+          left: -20vh;
+          top: -20vh;
+      }
+      body> main> section:nth-child(7) {
+          width: 40vh;
+          height: 40vh;
+          border-radius: 20vh;
+          right: -20vh;
+          top: -20vh;
+      }
+      body> main> section:nth-child(8) {
+          width: 40vh;
+          height: 40vh;
+          border-radius: 20vh;
+          left: -20vh;
+          bottom: -20vh;
+      }
+      body> main> section:nth-child(9) {
+          width: 40vh;
+          height: 40vh;
+          border-radius: 20vh;
+          right: -20vh;
+          bottom: -20vh;
+      }
+      body> main> section:nth-child(10) {
+          width: 30vh;
+          height: 30vh;
+          border-radius: 15vh;
           right: 0;
-          top: 0;
-          bottom: 0;
+          left: 0;
           margin: auto;
+          bottom: -20vh;
+      }
+      body> main> section:nth-child(11) {
+          width: 30vh;
+          height: 30vh;
+          border-radius: 15vh;
+          right: 0;
+          left: 0;
+          margin: auto;
+          top: -20vh;
       }
 
 
@@ -125,6 +167,15 @@
       <section id="midRect">
           <div></div>
       </section>
+
+<!--      4 side circle pieces-->
+      <section></section>
+      <section></section>
+      <section></section>
+      <section></section>
+<!--      mid top and bottom half circles-->
+      <section></section>
+      <section></section>
 
   </main>
 
