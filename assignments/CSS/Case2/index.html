@@ -17,7 +17,12 @@
     <style>
 
         * {
-            font-family: 'Oswald', sans-serif;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
         }
 
         ::-webkit-scrollbar {
@@ -26,71 +31,101 @@
 
         /*header*/
         header {
-            height: 50px;
-            border: solid 1px black;
+            top: 0px;
+            background-color: white;
+            box-shadow: -1px 2px 4px 1px Black;
+            position: relative;
+            z-index: 1;
+            width: 99.3vw;
+            height: 7vh;
         }
         header > nav {
             position: absolute;
             right: 25px;
-            top: 0px;
+            top: -6px;
         }
         header > nav > ul > li {
+            font-weight: bold;
             display: inline-block;
             padding-left: 15px;
             font-size: 14px;
         }
         header > img {
-            height: 35px;
+            height: 30px;
             margin-left: 15px;
-            margin-top: 8px;
+            margin-top: 3px;
+        }
+
+        /*main--------------------------------------------*/
+        main {
+            width: 99vw;
+            position: relative;
         }
 
         /*aside*/
-        aside {
-            display: inline-block;
+        body> main> aside {
+            display: inline;
             position: absolute;
-            width: 20vw;
-            height: 100vh;
-            top: 51px;
+            width: 200px;
             background-color: #4C0182;
+            top: 0;
+            bottom: -16px;
         }
-        aside > nav {
+        body> main> aside > nav {
             padding-top: 13px;
             padding-left: 0px;
         }
-        aside > nav > ul > li {
+        body> main> aside > nav > ul > li {
+            font-weight: bold;
             display: block;
             color: white;
             padding-bottom: 8px;
         }
 
-        /*main------------------------------------------------------*/
-        main {
-            height: 100vh;
-            width: 79vw;
-            position: absolute;
-            left: 214px;
-            display: inline-block;
-        }
-        /*section 1*/
-        body > main > section {
+        /*article included section*/
+        main> section {
             position: relative;
-            left: 12px;
+            width: 81%;
+            left: 200px;
+            padding-top: 20px;
         }
-        body > main > section > img {
+        /*pictures section*/
+        main> section> section {
+            padding-left: 25px;
+            position: relative;
             display: inline-block;
-            width: 270px;
-            height: 188px;
-            border: 1px solid black;
-            margin-top: 5px;
-            margin-left: -6px;
         }
-        /*article*/
-        main p {
-            font-family: 'Roboto', sans-serif;
-            font-size: 13px;
+        /*images styling*/
+        .main_img {
+            height: 160px;
+            width: 250px;
+            display: inline;
+            position: relative;
         }
 
+        /*article below pictures*/
+        main> section> article {
+            font-family: 'Roboto', sans-serif;
+            padding-left: 20px;
+            width: 88%;
+        }
+
+        /*footer--------------------------------------------*/
+        footer {
+            width: 100%;
+            background-color: #454040;
+            text-align: center;
+            height: 30px;
+            position: relative;
+            bottom: 0px;
+        }
+        footer> p {
+            font-family: 'Roboto', sans-serif;
+            font-weight: lighter;
+            font-size: 12px;
+            color: white;
+            padding-top: 8px;
+        }
 
     </style>
 
@@ -110,63 +145,68 @@
     </nav>
 </header>
 
-<aside>
-    <nav>
-        <ul>
-            <li>Home</li>
-            <li>Service</li>
-            <li>Contact</li>
-            <li>About Us</li>
-        </ul>
-    </nav>
-</aside>
-
 <main>
-    <section>
-        <img class="main_img" src="assets/image/monkey.gif" alt="monkey.gif" width="150">
-        <img class="main_img" src="assets/image/monkey.gif" alt="monkey.gif">
-        <img class="main_img" src="assets/image/monkey.gif" alt="monkey.gif">
-    </section>
-    <article>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
-            repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
-            nesciunt praesentium quis repudiandae!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
-            repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
-            nesciunt praesentium quis repudiandae!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
-            repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
-            nesciunt praesentium quis repudiandae!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
-            repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
-            nesciunt praesentium quis repudiandae!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
-            repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
-            nesciunt praesentium quis repudiandae!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
-            repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
-            nesciunt praesentium quis repudiandae!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
-            repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
-            nesciunt praesentium quis repudiandae!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
-            repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
-            nesciunt praesentium quis repudiandae!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
-            repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
-            nesciunt praesentium quis repudiandae!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
-            repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
-            nesciunt praesentium quis repudiandae!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
-            repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
-            nesciunt praesentium quis repudiandae!</p>
+    <aside>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Service</li>
+                <li>Contact</li>
+                <li>About Us</li>
+            </ul>
+        </nav>
+    </aside>
 
-    </article>
+    <section>
+        <section>
+            <img class="main_img" src="assets/image/monkey.gif" alt="monkey.gif" width="150">
+            <img class="main_img" src="assets/image/monkey.gif" alt="monkey.gif">
+            <img class="main_img" src="assets/image/monkey.gif" alt="monkey.gif">
+        </section>
+        <article>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
+                repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
+                nesciunt praesentium quis repudiandae!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
+                repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
+                nesciunt praesentium quis repudiandae!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
+                repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
+                nesciunt praesentium quis repudiandae!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
+                repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
+                nesciunt praesentium quis repudiandae!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
+                repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
+                nesciunt praesentium quis repudiandae!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
+                repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
+                nesciunt praesentium quis repudiandae!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
+                repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
+                nesciunt praesentium quis repudiandae!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
+                repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
+                nesciunt praesentium quis repudiandae!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
+                repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
+                nesciunt praesentium quis repudiandae!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
+                repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
+                nesciunt praesentium quis repudiandae!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
+                repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
+                nesciunt praesentium quis repudiandae!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis deserunt illo possimus quaerat
+                repudiandae saepe voluptatum! Accusamus alias, aliquam architecto, beatae corporis, deleniti ea modi
+                nesciunt praesentium quis repudiandae!</p>
+
+        </article>
+    </section>
 </main>
 
 <footer>
-
+    <p>Designed By IJSE</p>
 </footer>
 
 </body>
