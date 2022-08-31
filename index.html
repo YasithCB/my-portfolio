@@ -147,10 +147,21 @@
         }
         body> main> section:nth-child(3)> section { /*common to all sections*/
             position: relative;
-            padding-top: 10px;
+            display: flex;
+            padding: 10px 40px 10px 40px;
         }
-        body> main> section:nth-child(3)> section> img { /*common to all images*/
+        body> main> section:nth-child(3)> section> div { /*common to all image containing divs*/
             display: inline-block;
+            position: relative;
+            width: 121px;
+        }
+        body> main> section:nth-child(3)> section> div> img { /*common style to images (logos)*/
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
         }
         body> main> section:nth-child(3)> section> section { /*common to all rectangle sections*/
             display: inline-block;
@@ -172,17 +183,21 @@
             margin: 0;
         }
         body> main> section:nth-child(3)> section> p { /*common to all each articles*/
-            position: absolute;
+            position: relative;
             display: inline-block;
             text-align: left;
-            right: 0;
             width: 37%;
-            height: 31px;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            padding-right: 418px;
+            padding: 24px;
         }
+
+        /*row reversed sections*/
+        .row_reversed_education { /*common to all sections*/
+            flex-direction: row-reverse;
+        }
+        .row_reversed_education> p {
+            text-align: right !important;
+        }
+
 
     </style>
 
@@ -248,7 +263,7 @@
         <h2>Education</h2>
 
         <section> <!--vmv-->
-            <img src="assets/image/vmv.png" alt="vmv.png" width="67">
+            <div><img src="assets/image/vmv.png" alt="vmv.png" width="67"></div>
             <section>
                 <h6>Primary Education</h6>
                 <div><p>R Vidyakara Maha <br>Vidyalaya</p></div>
@@ -259,8 +274,8 @@
                 district. I faced to scolarship exam and i get 171 marks on 2011.</p>
         </section>
 
-        <section> <!--scc-->
-            <img src="assets/image/scc.png" alt="scc.png" width="79">
+        <section class="row_reversed_education"> <!--scc-->
+            <div><img src="assets/image/scc.png" alt="scc.png" width="79"></div>
             <section>
                 <h6>Secondary Education</h6>
                 <div><p>R Sivali Central<br>Collage</p></div>
@@ -272,8 +287,9 @@
                 face
                 to AL exam on 2020 and finished my school journey.</p>
         </section>
+
         <section> <!--nac-->
-            <img src="assets/image/nac.png" alt="nac.ong" width="80">
+            <div><img src="assets/image/nac.png" alt="nac.ong" width="80"></div>
             <section>
                 <h6>Additional Education</h6>
                 <div><p>NAC Computer<br>Training Centre</p></div>
@@ -284,8 +300,9 @@
                 system</a> Pelmadulla branch on 2015. Finally i completed it and got a A pass from that exam
                 too.</p>
         </section>
-        <section> <!--Ijse-->
-            <img src="assets/image/ijse.png" alt="ijse.png" width="91">
+
+        <section class="row_reversed_education"> <!--Ijse-->
+            <div><img src="assets/image/ijse.png" alt="ijse.png" width="91"></div>
             <section>
                 <h6>Higher Education</h6>
                 <div><p>Institute of<br>Software <br>Engineering</p></div>
@@ -294,6 +311,7 @@
             <p>Since 2021 July, i following BSc (Hons) in Computer Science at <a href="https://www.ijse.lk/">Institute
                 of Software Engineering</a> Panadura.</p>
         </section>
+
     </section>
 
     <section> <!--Skill-->
