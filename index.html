@@ -4,7 +4,7 @@
 <head> <!--Document meta data-->
     <meta charset="UTF-8">
     <title>Yasith C Bandara | Fullstack Developer | Web Designer</title>
-    <link rel="icon" href="../assets/icon.png">
+<!--    <link rel="icon" href="../assets/icon.png">-->
     <link rel="stylesheet" href="assets/style/normalize.css">
     <link rel="stylesheet" href="assets/font/css/all.min.css">
 
@@ -16,9 +16,155 @@
     <meta name="viewport" content="width= device-width initial-scale=1 user-scalable=no">
     <meta name="theme-color" content="red">
 
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+
     <style>
 
+        body {
+            height: 100%;
+            width: 100%;
+        }
 
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+        }
+
+        h1,h2,h3,h4,h5,h6 {
+            margin: 0;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body> header {
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            /*box-shadow: -1px 2px 4px 1px Black;*/
+            height: 6vh;
+            width: 100%;
+            background-color: #090807;
+        }
+        body> header> p {
+            display: inline-block;
+            width: 100px;
+            color: white;
+            font-size: 13px;
+            padding-left: 10px;
+        }
+        body> header> nav {
+            position: absolute;
+            right: 23px;
+            top: 0;
+        }
+        body> header> nav> ul {
+            list-style: none;
+            padding-top: 6px;
+            margin: 0;
+        }
+        body> header> nav> ul> li {
+            display: inline-block;
+            padding-left: 10px;
+            font-size: 12px;
+            color: white;
+        }
+
+
+        /*main*/
+        main {
+            width: 100%;
+            height: 100%;
+            padding-top: 6vh;
+        }
+
+        /*home*/
+         body> main> section:nth-child(1) {
+            position: relative;
+            background: url("assets/image/computer.jpg");
+            background-size: cover;
+            width: 100%;
+            height: 95vh;
+        }
+        body> main> section:nth-child(1)> nav {
+            position: absolute;
+            left: 15px;
+            bottom: 21px;
+            display: inline-block;
+        }
+        body> main> section:nth-child(1)> nav> img {
+            padding-bottom: 7px;
+        }
+        body> main> section:nth-child(1)> div {
+            position: relative;
+            color: white;
+            top: 35%;
+            padding-left: 17%;
+        }
+
+        /*about me-----------------------------------------start*/
+        body> main> section:nth-child(2) {
+            padding-top: 39px;
+        }
+        /*article----start*/
+        body> main> section:nth-child(2)> article {
+            position: relative;
+            top: 30px;
+            left: 116px;
+            display: inline-block;
+            width: 50vw;
+            height: 300px;
+            padding-top: 50px;
+        }
+        body> main> section:nth-child(2)> article> p {
+            text-align: center;
+        }
+        body> main> section:nth-child(2)> article> img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            bottom: 14px;
+        }/*article--------------end*/
+        body> main> section:nth-child(2)> img {
+            width: 375px;
+            position: absolute;
+            margin-left: 173px;
+            margin-top: -54px;
+        }
+        /*about me-------------------------------------------------------------end*/
+
+        /*education-----------------------------------------------------------start*/
+        body> main> section:nth-child(3) {
+            padding-top: 98px;
+        }
+        body> main> section:nth-child(3)> section { /*common to all sections*/
+            position: relative;
+            padding-top: 10px;
+        }
+        body> main> section:nth-child(3)> section> img { /*common to all images*/
+            display: inline-block;
+        }
+        body> main> section:nth-child(3)> section> section { /*common to all rectangle sections*/
+            display: inline-block;
+            position: relative;
+        }
+        body> main> section:nth-child(3)> section> section> div { /*common to all div(rect)s next to the logo*/
+            position: relative;
+            border: 1px solid black;
+            border-radius: 30px;
+        }
+        body> main> section:nth-child(3)> section> article { /*common to all each articles*/
+            position: relative;
+            display: inline-block;
+        }
 
     </style>
 
@@ -27,7 +173,7 @@
 <body> <!--Sectioning root-->
 
 <header>
-    <aside>Portfolio</aside>
+    <p>Portfolio</p>
     <nav>
         <ul>
             <li>Home</li>
@@ -42,102 +188,101 @@
 
 <main>
     <section> <!--Home-->
-        <aside> <!--social icons-->
-            <nav>
-                <img src="assets/image/facebook.svg" alt="" width="15"><br>
-                <img src="assets/image/instagram.svg" alt="" width="15"><br>
-                <img src="assets/image/git.png" alt="" width="18"><br>
-                <img src="assets/image/whatsapp.png" alt="" width="17"><br>
-                <img src="assets/image/linked-in-alt.svg" alt="" width="15"><br>
-                <img src="assets/image/stack-overflow.svg" alt="" width="15"><br>
-            </nav>
-        </aside>
-        <section>
-            <h4>Hello I am</h4>
+
+        <div>
+            <h4 style="color: red">Hello I am</h4>
             <h1>Yasith C Bandara</h1>
             <h5>Interactive fullstack developer</h5>
-        </section>
+        </div>
+
+        <nav>
+            <img src="assets/image/facebook.svg" alt="" width="15"><br>
+            <img src="assets/image/instagram.svg" alt="" width="15"><br>
+            <img src="assets/image/git.png" alt="" width="18"><br>
+            <img src="assets/image/whatsapp.png" alt="" width="17"><br>
+            <img src="assets/image/linked-in-alt.svg" alt="" width="15"><br>
+            <img src="assets/image/stack-overflow.svg" alt="" width="15"><br>
+        </nav>
     </section>
 
     <section> <!--About-->
-        <header><h4>About Me</h4></header>
-        <section>
-            <article>
-                <h5>I am Yasith C Bandara</h5>
-                <h6>Designer and Developer</h6>
-                <p>I’m Yasith Chathturanga Bandara.I currently studing in Software Engineering at IJSE in Panadura. I
-                    also self studying about software and web programming and much more using Internet.</p>
-                <p>I am a Developer and also a Designer.If you have as any Project or if you want make a Software for
-                    your bussiness contact me. I develop your project as soon as possible.</p>
+        <h2>About Me</h2>
 
-                <h5>And also I am</h5>
-                <p>Owner At <a href="https://www.facebook.com/t4me.lk">T4Me Apparel & Printers</a></p>
-                <p>Owner At <a href="https://www.facebook.com/motiongraphics.yc">Motion Graphics</a></p> <br>
+        <article>
+            <h5>I am Yasith C Bandara</h5>
+            <h6>Designer and Developer</h6>
+            <p>I’m Yasith Chathturanga Bandara.I currently studing in Software Engineering at IJSE in Panadura. I
+                also self studying about software and web programming and much more using Internet.</p>
+            <p>I am a Developer and also a Designer.If you have as any Project or if you want make a Software for
+                your bussiness contact me. I develop your project as soon as possible.</p>
 
-                <img src="assets/image/lap.gif" alt="laptop GIF" width="90">
-            </article>
+            <h5>And also I am</h5>
+            <p>Owner At <a href="https://www.facebook.com/t4me.lk">T4Me Apparel & Printers</a><br>
+                Owner At <a href="https://www.facebook.com/motiongraphics.yc">Motion Graphics</a></p> <br>
 
-            <img src="assets/image/icon.png" alt="Yasith C Bandara's image" width="421">
-        </section>
+            <img src="assets/image/lap.gif" alt="laptop GIF" width="90">
+        </article>
+        <img src="assets/image/icon.png" alt="Yasith C Bandara's image">
+
     </section>
 
     <section> <!--Education-->
-        <header><h4>Education</h4></header>
-        <section> <!--content-->
-            <section> <!--vmv-->
-                <img src="assets/image/vmv.png" alt="vmv.png" width="67">
-                <section>
-                    <h6>Primary Education</h6>
-                    <p>R Vidyakara Maha <br>Vidyalaya</p>
-                    <h6>Scholarship</h6>
-                </section>
-                <article>
-                    <p>I get my primary education from <a href="https://www.facebook.com/groups/531425147231773/">R /
-                        Vidyakara Maha Vidyalaya</a>. Its located on Opanayaka, Ratnapura
-                        district. I faced to scolarship exam and i get 171 marks on 2011.</p>
-                </article>
+        <h2>Education</h2>
+
+        <section> <!--vmv-->
+            <img src="assets/image/vmv.png" alt="vmv.png" width="67">
+            <section>
+                <h6>Primary Education</h6>
+                <div><p>R Vidyakara Maha <br>Vidyalaya</p></div>
+                <h6>Scholarship</h6>
             </section>
-            <section> <!--scc-->
-                <img src="assets/image/scc.png" alt="scc.png" width="79">
-                <section>
-                    <h6>Secondary Education</h6>
-                    <p>R Sivali Central<br>Collage</p>
-                    <h6>GCE Ordinary Level &<br>Advanced Level</h6>
-                </section>
-                <article>
-                    <p>I studied for secondary education on <a href="http://sivalicc.lk/">R / Sivali central collage</a>
-                        Ratnapura after i passed
-                        scholarship exam well. Then i faced to GCE OL exam and get a result of 9 A’s on 2017. Then i
-                        face
-                        to AL exam on 2020 and finished my school journey.</p>
-                </article>
+            <article>
+                <p>I get my primary education from <a href="https://www.facebook.com/groups/531425147231773/">R /
+                    Vidyakara Maha Vidyalaya</a>. Its located on Opanayaka, Ratnapura
+                    district. I faced to scolarship exam and i get 171 marks on 2011.</p>
+            </article>
+        </section>
+
+        <section> <!--scc-->
+            <img src="assets/image/scc.png" alt="scc.png" width="79">
+            <section>
+                <h6>Secondary Education</h6>
+                <p>R Sivali Central<br>Collage</p>
+                <h6>GCE Ordinary Level &<br>Advanced Level</h6>
             </section>
-            <section> <!--nac-->
-                <img src="assets/image/nac.png" alt="nac.ong" width="80">
-                <section>
-                    <h6>Additional Education</h6>
-                    <p>NAC Computer<br>Training Centre</p>
-                    <h6>Certificate In Computer Studies</h6>
-                </section>
-                <article>
-                    <p>During these things i studied a certificate level computer training program on <a
-                            href="https://www.facebook.com/naccomputersystem/">NAC computer
-                        system</a> Pelmadulla branch on 2015. Finally i completed it and got a A pass from that exam
-                        too.</p>
-                </article>
+            <article>
+                <p>I studied for secondary education on <a href="http://sivalicc.lk/">R / Sivali central collage</a>
+                    Ratnapura after i passed
+                    scholarship exam well. Then i faced to GCE OL exam and get a result of 9 A’s on 2017. Then i
+                    face
+                    to AL exam on 2020 and finished my school journey.</p>
+            </article>
+        </section>
+        <section> <!--nac-->
+            <img src="assets/image/nac.png" alt="nac.ong" width="80">
+            <section>
+                <h6>Additional Education</h6>
+                <p>NAC Computer<br>Training Centre</p>
+                <h6>Certificate In Computer Studies</h6>
             </section>
-            <section> <!--Ijse-->
-                <img src="assets/image/ijse.png" alt="ijse.png" width="91">
-                <section>
-                    <h6>Higher Education</h6>
-                    <p>Institute of<br>Software <br>Engineering</p>
-                    <h6>BSc (Hons) in Computer Science</h6>
-                </section>
-                <article>
-                    <p>Since 2021 July, i following BSc (Hons) in Computer Science at <a href="https://www.ijse.lk/">Institute
-                        of Software Engineering</a> Panadura.</p>
-                </article>
+            <article>
+                <p>During these things i studied a certificate level computer training program on <a
+                        href="https://www.facebook.com/naccomputersystem/">NAC computer
+                    system</a> Pelmadulla branch on 2015. Finally i completed it and got a A pass from that exam
+                    too.</p>
+            </article>
+        </section>
+        <section> <!--Ijse-->
+            <img src="assets/image/ijse.png" alt="ijse.png" width="91">
+            <section>
+                <h6>Higher Education</h6>
+                <p>Institute of<br>Software <br>Engineering</p>
+                <h6>BSc (Hons) in Computer Science</h6>
             </section>
+            <article>
+                <p>Since 2021 July, i following BSc (Hons) in Computer Science at <a href="https://www.ijse.lk/">Institute
+                    of Software Engineering</a> Panadura.</p>
+            </article>
         </section>
     </section>
 
