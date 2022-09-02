@@ -48,6 +48,9 @@
         body> main> section {
             padding-top: 98px;
         }
+        body> main> section:first-child { /*home section doesn't need a top padding*/
+            padding-top: 0;
+        }
 
         body> header {
             position: fixed;
@@ -342,7 +345,7 @@
     </section>
 
     <section> <!--Projects-->
-        <header><h4>Projects</h4></header>
+        <h2>Projects</h2>
         <section>
             <section> <!--project 1-->
                 <img src="assets/image/parking%20system%20project.png" width="346" alt="">
