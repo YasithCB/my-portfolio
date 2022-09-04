@@ -2,9 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Case 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/style/normalize.css">
+    <link rel="stylesheet" href="assets/font/css/all.min.css">
+
+
+    <style>
+
+        body> section {
+            width: 600px;
+            height: 69vh;
+            position: absolute;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+
+        body> section> div {
+            background-color: #8e26d9;
+            width: 200px;
+            height: 19px;
+            color: white;
+            font-size: 16px;
+            padding-bottom: 30px;
+            position: relative;
+            left: -148px;
+            box-shadow: 1px 4px 20px 3px gray;
+
+            transition-property: all;
+            transition-duration: 1s;
+        }
+        body> section> div> p {
+            padding-left: 20px;
+            display: inline-block;
+        }
+        body> section> div> i {
+            position: relative;
+            display: inline-block;
+            right: -70px;
+        }
+
+        body> section> div:hover {
+            left: 0;
+            background-color: #ae0ab4;
+            transition-property: all;
+            transition-duration: 0.6s;
+            cursor: pointer;
+        }
+
+    </style>
+
 </head>
 <body>
+
+    <section>
+        <div>
+            <p>Menu One</p>
+            <i class="fa-solid fa-house"></i>
+        </div>
+        <div>
+            <p>Menu Two</p>
+            <i class="fa-solid fa-phone"></i>
+        </div>
+        <div>
+            <p>Menu Three</p>
+            <i class="fa-solid fa-notes-medical"></i>
+        </div>
+        <div>
+            <p>Menu Four</p>
+            <i class="fa-solid fa-link"></i>
+        </div>
+    </section>
 
 </body>
 </html>
