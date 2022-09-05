@@ -251,15 +251,63 @@
         /*Contact me --------------------------------------------------start*/
         main> section:nth-child(6)> div {
             background: url("assets/image/map.jpg");
+            background-position: center;
             height: 200px;
             width: 80vw;
             left: 0;
             right: 0;
             margin: auto;
             margin-top: 32px;
-            margin-bottom: 40px;
+            margin-bottom: 80px;
+            box-shadow: 3px 7px 12px -3px #80808099
         }
         /*Contact me --------------------------------------------------end*/
+
+        /*footer --------------------------------------------------start*/
+        body> footer> div:first-child {
+            position: absolute;
+            z-index: 0;
+            height: 383px;
+            width: 1143px;
+            background-color: #000000e3;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border-top-left-radius: 650px;
+            border-top-right-radius: 650px;
+            box-shadow: 4px 0px 95px 7px #808080bf;
+        }
+        body> footer> section {
+            position: relative;
+            top: 67px;
+        }
+        body> footer> section> p {
+            text-align: center;
+            color: white;
+            padding-top: 17px;
+        }
+        body> footer> nav {
+            position: relative;
+            top: 88px;
+            padding-left: 45vw;
+        }
+        body> footer> nav> img {
+            padding-right: 4px;
+        }
+        body> footer> div:last-child {
+            background-color: black;
+            height: 40px;
+            position: relative;
+            bottom: -126px;
+        }
+        body> footer> div:last-child> p {
+            color: white;
+            text-align: center;
+            top: -14px;
+            position: relative;
+            font-size: 10px;
+        }
+        /*footer --------------------------------------------------end*/
 
 
     </style>
@@ -443,15 +491,24 @@
 
 </main>
 
-<fooetr>
+<footer>
+    <div></div>
     <section>
-        <address></address>
-        <section></section>
-        <section></section>
+        <p><b>Address</b> <br>No 120/B Botreejunction, Opanayake, 70080, <br>Ratnapura, Sri Lanka.</p>
+        <p><b>Contact</b> <br>+94767722095</p>
+        <p><b>Email</b> <br>yasith.cb2001@gmail.com</p>
     </section>
-    <nav><!--icons--></nav>
-    <aside><!--copyrights--></aside>
-</fooetr>
+
+    <nav><!--icons-->
+        <img src="assets/image/facebook.svg" alt="" width="15">
+        <img src="assets/image/instagram.svg" alt="" width="15">
+        <img src="assets/image/git.png" alt="" width="18">
+        <img src="assets/image/whatsapp.png" alt="" width="17">
+        <img src="assets/image/linked-in-alt.svg" alt="" width="15">
+        <img src="assets/image/stack-overflow.svg" alt="" width="15">
+    </nav>
+    <div><<p>Copyright © 2022 Yasith C Bandara. All Rights Reserved</p></div>
+</footer>
 
 </body>
 
