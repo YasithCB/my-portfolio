@@ -3,8 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>CSS | Animation | Case 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/style/normalize.css">
+
+    <style>
+
+        div {
+            width: 15%;
+            height: 10vh;
+            border-radius: 18px;
+
+            animation-name: rect_animate;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes rect_animate {
+            0% {
+                transform: rotate(0deg);
+                background-color: yellow;
+                margin: 0;
+            }
+            25% {
+                transform: rotate(180deg);
+                background-color: red;
+                margin: 0 0 0 85%;
+            }
+            50% {
+                transform: rotate(0deg);
+                background-color: green;
+                margin: 80vh 0 0 85%;
+            }
+            75% {
+                transform: rotate(180deg);
+                background-color: blue;
+                margin: 80vh 0 0 0;
+            }
+            100% {
+                transform: rotate(0deg);
+                background-color: greenyellow;
+                margin: 0 0 0 0;
+            }
+        }
+
+    </style>
+
 </head>
 <body>
+
+    <div></div>
 
 </body>
 </html>
