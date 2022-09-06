@@ -3,8 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>CSS | Animations | Case 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/style/normalize.css">
+
+    <style>
+
+        div {
+            width: 150px;
+            height: 150px;
+            border: 2px solid gray;
+            border-radius: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+
+            animation-name: circle_animate;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+        }
+
+        @keyframes circle_animate {
+            0% {
+                width: 0;
+                height: 0;
+            }
+            100% {
+                opacity: 0;
+                border: 2px solid dodgerblue;
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+    </style>
+
 </head>
 <body>
+
+    <div></div>
 
 </body>
 </html>
