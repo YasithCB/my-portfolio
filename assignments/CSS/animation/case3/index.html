@@ -8,12 +8,63 @@
 
   <style>
 
-    section {
-      position: absolute;
-      display: flex;
-    }
-    section> div:nth-child(1) {
 
+    main {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      overflow-x: hidden;
+      /*overflow-x: scroll;*/
+    }
+    main> section {
+      position: relative;
+      display: flex;
+      width: 300%;
+      height: 100%;
+
+      animation-name: sliding;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-delay: 1s;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+    }
+    main> section> div {
+      height: 100%;
+      width: 100%;
+    }
+    main> section> div:nth-child(1) {
+      background: url("assets/image/t4me project.png");
+      background-position: center;
+      background-size: cover;
+    }
+    main> section> div:nth-child(2) {
+      background: url("assets/image/parking system project.png");
+      background-position: center;
+      background-size: cover;
+    }
+    main> section> div:nth-child(3) {
+      background: url("assets/image/d24 project.png");
+      background-position: center;
+      background-size: cover;
+    }
+
+    @keyframes sliding {
+      0%,20% {
+        transform: translateX(0);
+      }
+      40%,60% {
+        transform: translateX(-100vw);
+      }
+      80%,100% {
+        transform: translateX(-200vw);
+      }
     }
 
   </style>
@@ -21,11 +72,13 @@
 </head>
 <body>
 
-  <section>
-    <div></div>
-    <div></div>
-    <div></div>
-  </section>
+  <main>
+    <section>
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+  </main>
 
 </body>
 </html>
