@@ -9,8 +9,9 @@
   <style>
 
       main {
-          width: 99vw;
-          height: 97vh;
+          width: 100vw;
+          height: 100vh;
+          overflow: hidden;
       }
 
       main> div:nth-child(1) {
@@ -23,15 +24,15 @@
       }
       main> section:nth-child(2) { /*long section --- flex container*/
           width: 300%;
-          height: 75%;
+          height: 82%;
           position: relative;
           top: -296px;
           display: flex;
-          overflow: hidden;
 
           animation-name: city_road_move;
-          animation-duration: 10s;
-          animation-timing-function: ease-out;
+          animation-duration: 7s;
+          animation-timing-function: cubic-bezier(0, 0, 0, 0.97);
+          animation-fill-mode: forwards;
       }
       main> section:nth-child(2)> section { /*3 pics of road and city --- flex items*/
           width: 100%;
@@ -50,7 +51,7 @@
           height: 63%;
       }
 
-      main> div:nth-child(3) {
+      main> div:nth-child(3) { /*car*/
           background: url("assets/image/car.png");
           background-size: cover;
           position: absolute;
@@ -59,7 +60,7 @@
           left: 0;
           right: 0;
           bottom: 0;
-          top: 0;
+          top: 131px;
           margin: auto;
       }
       main> div:nth-child(3)> div:nth-child(1) { /*front tyre*/
@@ -70,6 +71,10 @@
           position: relative;
           left: 27px;
           top: 66px;
+
+          animation-name: tyre_rotation;
+          animation-duration: 7s;
+          animation-timing-function: cubic-bezier(0, 0, 0, 0.97);
       }
       main> div:nth-child(3)> div:nth-child(2) { /*back tyre*/
           background: url("assets/image/wheel.png");
@@ -79,6 +84,10 @@
           position: relative;
           left: 209px;
           top: 10px;
+
+          animation-name: tyre_rotation;
+          animation-duration: 7s;
+          animation-timing-function: cubic-bezier(0, 0, 0, 0.97);
       }
 
       @keyframes city_road_move {
@@ -87,6 +96,15 @@
           }
           100% {
             transform: translateX(-180vw);
+          }
+      }
+
+      @keyframes tyre_rotation {
+          0% {
+              transform: rotate(0);
+          }
+          100% {
+              transform: rotate(3600deg);
           }
       }
 
