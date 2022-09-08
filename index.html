@@ -7,6 +7,7 @@
 <!--    <link rel="icon" href="../assets/icon.png">-->
     <link rel="stylesheet" href="assets/style/normalize.css">
     <link rel="stylesheet" href="assets/font/css/all.min.css">
+    <link rel="stylesheet" href="assets/style/main.css">
 
     <base href="localhost">
     <meta name="keywords" content="Yasith, Chathuranga, Bandara, Yasith C Bandara, Software, Developer, Designer">
@@ -19,7 +20,11 @@
     <!--fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,325 +38,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
 
-
-    <style>
-
-        body {
-            height: 100%;
-            width: 100%;
-        }
-
-        ::-webkit-scrollbar {
-            width: 0;
-        }
-
-        p {
-            font-family: 'Poppins', sans-serif;
-            font-size: 13px;
-        }
-
-        h1,h2,h3,h4,h5,h6 {
-            margin: 0;
-            text-align: center;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        /*All sections in the main*/
-        body> main> section {
-            padding-top: 98px;
-        }
-        body> main> section:first-child { /*home section doesn't need a top padding*/
-            padding-top: 0;
-        }
-
-        body> header {
-            position: absolute;
-            z-index: 2;
-            top: 0;
-            height: 10vh;
-            width: 100%;
-        }
-        body> header> div {
-            background: url("assets/image/my-logo.png");
-            background-size: cover;
-            display: inline-block;
-            width: 235px;
-            height: 70px;
-            padding-left: 10px;
-        }
-        body> header> nav {
-            position: relative;
-            left: 169px;
-            bottom: 27px;
-            display: inline-block;
-        }
-        body> header> nav> ul {
-            list-style: none;
-            padding-top: 6px;
-            margin: 0;
-        }
-        body> header> nav> ul> li {
-            display: inline-block;
-            padding-left: 21px;
-            font-size: 15px;
-            color: gray;
-            cursor: pointer;
-        }
-
-
-        /*main*/
-        main {
-            width: 100%;
-            height: 100%;
-            padding-top: 10vh;
-        }
-
-        /*home*/
-         body> main> section:nth-child(1) {
-            position: relative;
-            width: 100%;
-            height: 95vh;
-        }
-        body> main> section:nth-child(1)> nav {
-            position: absolute;
-            left: 15px;
-            bottom: 169px;
-            display: inline-block;
-        }
-        body> main> section:nth-child(1)> nav> img {
-            padding-bottom: 7px;
-            cursor: pointer;
-        }
-        body> main> section:nth-child(1)> div:nth-child(1) {
-            position: relative;
-            color: white;
-            top: 41%;
-            padding-left: 7%;
-        }
-        body> main> section:nth-child(1)> div:nth-child(2) { /*my portrait*/
-            background: url("assets/image/my-portrait b&w.png");
-            background-size: cover;
-            position: relative;
-            height: 674px;
-            width: 367px;
-            display: inline-block;
-            left: 832px;
-            top: -295px;
-        }
-        body> main> section:nth-child(1)> div> p {
-            text-align: left;
-            color: #404040;
-            font-family: 'Port Lligat Sans', sans-serif;
-            font-size: 24px;
-            margin: 0;
-        }
-        body> main> section:nth-child(1)> div> h5 {
-            text-align: left;
-            color: #404040;
-            font-family: 'Roboto Condensed', sans-serif;
-            font-size: 17px;
-        }
-        body> main> section:nth-child(1)> div> h1 {
-            text-align: left;
-            color: black;
-            font-family: 'Inter', sans-serif;
-            font-size: 58px;
-        }
-
-        /*about me-----------------------------------------start*/
-
-        /*article----start*/
-        body> main> section:nth-child(2)> article {
-            position: relative;
-            top: 30px;
-            left: 116px;
-            display: inline-block;
-            width: 50vw;
-            height: 300px;
-            padding-top: 50px;
-        }
-        body> main> section:nth-child(2)> article> p {
-            text-align: center;
-        }
-        body> main> section:nth-child(2)> article> img {
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin: auto;
-            bottom: 14px;
-        }/*article--------------end*/
-        body> main> section:nth-child(2)> img {
-            width: 375px;
-            position: absolute;
-            margin-left: 173px;
-            margin-top: -54px;
-        }
-        /*about me-------------------------------------------------------------end*/
-
-        /*education-----------------------------------------------------------start*/
-        body> main> section:nth-child(3)> section { /*common to all sections*/
-            position: relative;
-            display: flex;
-            padding: 10px 40px 10px 40px;
-        }
-        body> main> section:nth-child(3)> section> div { /*common to all image containing divs*/
-            display: inline-block;
-            position: relative;
-            width: 121px;
-        }
-        body> main> section:nth-child(3)> section> div> img { /*common style to images (logos)*/
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-        }
-        body> main> section:nth-child(3)> section> section { /*common to all rectangle sections*/
-            display: inline-block;
-            position: relative;
-            width: 23%;
-        }
-        body> main> section:nth-child(3)> section> section> div { /*common to all div(rect)s next to the logo*/
-            position: relative;
-            border: 1px solid black;
-            border-radius: 13px;
-            width: 100%;
-            height: 96px;
-            margin: 4px;
-        }
-        body> main> section:nth-child(3)> section> section> div> p { /*common to all p inside divs*/
-            text-align: center;
-            position: relative;
-            top: 33px;
-            margin: 0;
-        }
-        body> main> section:nth-child(3)> section> p { /*common to all each articles*/
-            position: relative;
-            display: inline-block;
-            text-align: left;
-            width: 37%;
-            padding: 24px;
-        }
-
-        /*row reversed sections*/
-        .row_reversed_education { /*common to all sections*/
-            flex-direction: row-reverse;
-        }
-        .row_reversed_education> p {
-            text-align: right !important;
-        }
-        /*Education ------------------------------------------------------------------end*/
-
-        /*Skill and tools ------------------------------------------------------------start*/
-        body> main> section:nth-child(4)> section {
-            display: flex;
-            justify-content: space-evenly;
-            margin: 42px;
-        }
-        /*skill and tools ----------------------------------------------------------end*/
-
-        /*projects ----------------------------------------------------------------start*/
-        body> main> section:nth-child(5)> section {
-            display: flex;
-            padding-top: 37px;
-            justify-content: space-evenly;
-        }
-        /*project 1*/
-        body> main> section:nth-child(5)> section> section> div {
-            width: 346px;
-            height: 230px;
-            border-radius: 18px;
-            box-shadow: 11px 6px 25px -3px #00000057;
-        }
-        body> main> section:nth-child(5)> section> section:nth-child(1)> div {
-            background: url("assets/image/parking system project.png");
-            background-size: cover;
-        }
-        body> main> section:nth-child(5)> section> section:nth-child(2)> div {
-            background: url("assets/image/t4me project.png");
-            background-size: cover;
-        }
-        body> main> section:nth-child(5)> section> section:nth-child(3)> div {
-            background: url("assets/image/d24 project.png");
-            background-size: cover;
-        }
-
-        body> main> section:nth-child(5)> section> section> article {
-            padding-top: 15px;
-            padding-bottom: 15px;
-            text-align: center;
-        }
-        body> main> section:nth-child(5)> button {
-            position: relative;
-            display: block;
-            margin: auto;
-        }
-        /*projects ----------------------------------------------------end*/
-
-        /*Contact me --------------------------------------------------start*/
-        main> section:nth-child(6)> div {
-            background: url("assets/image/map.jpg");
-            background-position: center;
-            height: 200px;
-            width: 80vw;
-            left: 0;
-            right: 0;
-            margin: auto;
-            margin-top: 32px;
-            margin-bottom: 80px;
-            box-shadow: 3px 7px 12px -3px #80808099
-        }
-        /*Contact me --------------------------------------------------end*/
-
-        /*footer --------------------------------------------------start*/
-        body> footer> div:first-child {
-            position: absolute;
-            z-index: 0;
-            height: 383px;
-            width: 1143px;
-            background-color: #000000e3;
-            left: 0;
-            right: 0;
-            margin: auto;
-            border-top-left-radius: 650px;
-            border-top-right-radius: 650px;
-            box-shadow: 4px 0px 95px 7px #808080bf;
-        }
-        body> footer> section {
-            position: relative;
-            top: 67px;
-        }
-        body> footer> section> p {
-            text-align: center;
-            color: white;
-            padding-top: 17px;
-        }
-        body> footer> nav {
-            position: relative;
-            top: 88px;
-            padding-left: 45vw;
-        }
-        body> footer> nav> img {
-            padding-right: 4px;
-        }
-        body> footer> div:last-child {
-            background-color: black;
-            height: 40px;
-            position: relative;
-            bottom: -126px;
-        }
-        body> footer> div:last-child> p {
-            color: white;
-            text-align: center;
-            top: -14px;
-            position: relative;
-            font-size: 10px;
-        }
-        /*footer --------------------------------------------------end*/
-
-
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -377,8 +66,8 @@
         <div>
             <h5>YASITH C BANDARA</h5>
             <h1>Website and user <br>interface designer</h1>
-            <p>Over the past 2 years, i’ve learned with IJSE and up-and-coming startups <br>to successfully help them reach their full potential and attract
-                <br>new customers.</p>
+            <h3>Over the past 2 years, i’ve learned with IJSE and up-and-coming startups <br>to successfully help them reach their full potential and attract
+                <br>new customers.</h3>
         </div>
 
         <div><!--my-portrait--></div>
@@ -394,11 +83,11 @@
     </section>
 
     <section> <!--About-->
-        <h2>About Me</h2>
+        <h1>About Me</h1>
 
         <article>
-            <h5>I am Yasith C Bandara</h5>
-            <h6>Designer and Developer</h6>
+            <h3>I am Yasith C Bandara</h3>
+            <h5>Designer and Developer</h5>
             <p>I’m Yasith Chathturanga Bandara.I currently studing in Software Engineering at IJSE in Panadura. I
                 also self studying about software and web programming and much more using Internet.</p>
             <p>I am a Developer and also a Designer.If you have as any Project or if you want make a Software for
@@ -410,12 +99,11 @@
 
             <img src="assets/image/lap.gif" alt="laptop GIF" width="90">
         </article>
-        <img src="assets/image/icon.png" alt="Yasith C Bandara's image">
 
     </section>
 
     <section> <!--Education-->
-        <h2>Education</h2>
+        <h1>Education</h1>
 
         <section> <!--vmv-->
             <div><img src="assets/image/vmv.png" alt="vmv.png" width="67"></div>
@@ -470,7 +158,7 @@
     </section>
 
     <section> <!--Skill-->
-        <h2>Skill and Tools</h2>
+        <h1>Skill and Tools</h1>
         <section> <!--imges-->
             <img src="assets/image/java.svg" width="50" alt="">
             <img src="assets/image/mysql.svg" width="50" alt="">
@@ -489,7 +177,7 @@
     </section>
 
     <section> <!--Projects-->
-        <h2>Projects</h2>
+        <h1>Projects</h1>
         <section>
             <section> <!--project 1-->
                 <div><!--image--></div>
@@ -529,7 +217,7 @@
     </section>
 
     <section> <!--Contact-->
-        <h2>Contact Me</h2>
+        <h1>Contact Me</h1>
         <div></div>
     </section>
 
