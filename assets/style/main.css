@@ -343,7 +343,7 @@ body> footer> div:first-child {
     position: absolute;
     z-index: 0;
     height: 383px;
-    width: 1143px;
+    width: 100%;
     background-color: #000000e3;
     left: 0;
     right: 0;

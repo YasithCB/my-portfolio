@@ -1,3 +1,75 @@
+/*laptop*/
 @media all and (max-width: 1024px){
+
+    h1 {
+        font-size: 53px;
+        padding-left: 75px;
+        margin: 39px;
+    }
+
+    /*head*/
+    body> header> div {
+        width: 232px;
+        height: 60px;
+    }
+    body> header> nav {
+        left: 68px;
+        bottom: 26px;
+    }
+    body> header {
+        height: 8vh;
+    }
+
+    /*main*/
+    main {
+        padding-top: 8vh;
+    }
+
+    /*home*/
+    body> main> section:nth-child(1)> div> h5 {
+        margin: 11px;
+        font-size: 15px;
+    }
+    body> main> section:nth-child(1)> div> h1 {
+        font-size: 48px;
+    }
+    body> main> section:nth-child(1)> div> h3 {
+        font-size: 20px;
+    }
+    body> main> section:nth-child(1)> nav {
+        left: 27px;
+        bottom: 187px;
+    }
+    body> main> section:nth-child(1)> div:nth-child(2) {
+        background-position: center;
+        height: 633px;
+        width: 340px;
+        left: 653px;
+        top: -210px;
+    }
+    body> main> section:nth-child(1)> div:nth-child(1) {
+        top: 45%;
+    }
+
+    /*about me*/
+    body> main> section:nth-child(2) {
+        height: 501px;
+    }
+    body> main> section:nth-child(2)> article> img {
+        bottom: -110px;
+    }
+
+    /*projects*/
+    body> main> section:nth-child(5)> section> section> div {
+        width: 885px;
+        height: 595px;
+    }
+
+    /*footer*/
+    body> footer> nav {
+        padding-left: 44vw;
+    }
+
+
 
 }
