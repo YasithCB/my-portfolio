@@ -503,3 +503,158 @@
         font-size: 7px;
     }
 }
+
+/*mobile small*/
+@media all and (max-width: 320px){
+    h1 {
+        font-size: 23px;
+        padding-left: 42px;
+        margin: 13px 0;
+    }
+    p {
+        font-size: 9px;
+    }
+    h3 {
+        font-size: 17px;
+    }
+    h5 {
+        font-size: 11px;
+        letter-spacing: 3px;
+        margin: 11px;
+    }
+    h6 {
+        font-size: 8px;
+    }
+
+    /*header*/
+    body> header> div {
+        display: block;
+        width: 202px;
+        height: 50px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        scale: 0.88;
+    }
+    body> header> nav {
+        left: -7px;
+        bottom: 14px;
+    }
+    body> header> nav> ul> li {
+        padding-left: 9px;
+        font-size: 10px;
+    }
+
+    /*main*/
+    main {
+        padding-top: 11vh;
+    }
+    body> main> section {
+        padding-top: 34px;
+    }
+
+    /*home*/
+    body> main> section:nth-child(1)> div:nth-child(2) {
+        height: 388px;
+        width: 245px;
+        left: 36px;
+        top: -379px;
+    }
+    body> main> section:nth-child(1)> div:nth-child(1) {
+        top: 44%;
+        scale: 0.6;
+        padding-left: 0;
+    }
+    body> main> section:nth-child(1)> nav {
+        left: 38px;
+        bottom: 64px;
+        scale: 0.8;
+    }
+
+    /*about me*/
+    body> main> section:nth-child(2) {
+        height: 395px;
+    }
+    body> main> section:nth-child(2)> article {
+        padding-top: 31px;
+    }
+    body> main> section:nth-child(2)> article> img {
+        bottom: -36px;
+        scale: 0.5;
+    }
+
+    /*education*/
+    body> main> section:nth-child(3)> section {
+        padding: 5px 10px;
+        scale: 0.8;
+    }
+    body> main> section:nth-child(3)> section> section> div> p {
+        font-size: 8px;
+    }
+    body> main> section:nth-child(3)> section> p {
+        padding: 0 15px;
+        font-size: 9px;
+    }
+
+    /*skill and tools*/
+    body> main> section:nth-child(4)> section {
+        scale: 0.3;
+        margin: -6px;
+    }
+    body> main> section:nth-child(4)> section> img {
+        padding-left: 14px;
+    }
+
+    /*projects*/
+    body> main> section:nth-child(5)> section> section> div {
+        width: 284px;
+        height: 191px;
+    }
+    body> main> section:nth-child(5)> section> section {
+        margin-bottom: 22px;
+    }
+    body> main> section:nth-child(5)> section> section:nth-child(1)> article {
+        top: -73px;
+        scale: 0.4;
+    }
+    body> main> section:nth-child(5)> section> section:nth-child(2)> article {
+        top: -77px;
+        scale: 0.4;
+    }
+    body> main> section:nth-child(5)> section> section:nth-child(2)> article {
+        top: -71px;
+        scale: 0.4;
+    }
+    body> main> section:nth-child(5)> button {
+        scale: 0.5;
+    }
+
+    /*contact*/
+    main> section:nth-child(6)> div {
+        background-size: cover;
+        height: 106px;
+    }
+
+    /*footer*/
+    body> footer> div:first-child {
+        height: 223px;
+    }
+    body> footer> nav {
+        padding-left: 30vw;
+        scale: 0.6;
+        top: -10px;
+    }
+    body> footer> section {
+        position: relative;
+        top: 12px;
+        scale: 0.7;
+    }
+    body> footer> div:last-child {
+        height: 32px;
+        bottom: 0;
+    }
+    body> footer> div:last-child> p {
+        top: -9px;
+        font-size: 5px;
+    }
+}
