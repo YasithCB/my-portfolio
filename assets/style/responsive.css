@@ -1,5 +1,66 @@
+
+/*laptop large*/
+@media all and (min-width: 1440px) {
+    h1 {
+        font-size: 62px;
+        padding-left: 106px;
+    }
+    p {
+        font-size: 16px;
+    }
+    h3 {
+        font-size: 31px;
+    }
+    h5 {
+        font-size: 20px;
+        letter-spacing: 10px;
+        margin: 14px;
+    }
+    h6 {
+        font-size: 14px;
+    }
+
+    /*head*/
+    body> header> div {
+        width: 329px;
+        height: 80px;
+        padding-left: 37px;
+    }
+    body> header> nav {
+        left: 126px;
+        bottom: 33px;
+        font-size: 67px;
+    }
+
+    /*home*/
+    body> main> section:nth-child(1)> div:nth-child(2) {
+        left: 955px;
+    }
+    body> main> section:nth-child(1)> div> h5 {
+        font-size: 22px;
+    }
+    body> main> section:nth-child(1)> div> h1 {
+        font-size: 64px;
+    }
+    body> main> section:nth-child(1)> div> h3 {
+        font-size: 26px;
+    }
+    body> main> section:nth-child(1)> nav {
+        left: 49px;
+        bottom: 179px;
+    }
+
+    /*about me*/
+    body> main> section:nth-child(2) {
+        height: 501px;
+    }
+    body> main> section:nth-child(2)> article> img {
+        bottom: -110px;
+    }
+}
+
 /*laptop*/
-@media all and (max-width: 1024px){
+@media all and (max-width: 1024px) and (max-width: 1439px) {
 
     h1 {
         font-size: 53px;
@@ -69,7 +130,91 @@
     body> footer> nav {
         padding-left: 44vw;
     }
+}
+
+/*tablet*/
+@media all and (min-width: 768px) and (max-width: 1023px) {
+
+    h1 {
+        font-size: 40px;
+        padding-left: 75px;
+        margin: 18px 0;
+    }
+    p {
+        font-size: 14px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    h5 {
+        font-size: 16px;
+        letter-spacing: 5px;
+        margin: 14px 0;
+    }
+    h6 {
+        font-size: 9px;
+    }
+
+    /*header*/
+    body> header> div {
+        width: 206px;
+        height: 46px;
+    }
+    body> header> nav {
+        left: -19px;
+        bottom: 16px;
+    }
+    body> header> nav> ul> li {
+        font-size: 12px;
+    }
+
+    /*home*/
+    body> main> section:nth-child(1)> div:nth-child(1) {
+        top: 48%;
+    }
+    body> main> section:nth-child(1)> div> h5 {
+        margin: 9px 0;
+        font-size: 11px;
+        letter-spacing: 8px;
+    }
+    body> main> section:nth-child(1)> div> h1 {
+        font-size: 32px;
+    }
+    body> main> section:nth-child(1)> div> h3 {
+        font-size: 15px;
+    }
+    body> main> section:nth-child(1)> nav {
+        left: 21px;
+        bottom: 195px;
+        scale: 0.81;
+    }
+    body> main> section:nth-child(1)> div:nth-child(2) {
+        left: 440px;
+        top: -137px;
+    }
+
+    /*education*/
+    body> main> section:nth-child(3)> section> p {
+        font-size: 12px;
+    }
+
+    /*skill and tools*/
+    body> main> section:nth-child(4)> section {
+        width: 100%;
+        scale: 0.7;
+    }
+
+    /*projects*/
+    body> main> section:nth-child(5)> section> section> div {
+        width: 666px;
+        height: 447px;
+    }
 
 
+
+}
+
+/*mobile large*/
+@media all and (min-width: 425px) and (max-width: 767px) {
 
 }

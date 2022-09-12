@@ -133,6 +133,7 @@ body> main> section:nth-child(1)> div> h3 {
 }
 body> main> section:nth-child(1)> div> h5 {
     text-align: left;
+    margin: 12px 0;
 }
 body> main> section:nth-child(1)> div> h1 {
     padding-left: 0;
