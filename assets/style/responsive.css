@@ -134,7 +134,6 @@
 
 /*tablet*/
 @media all and (min-width: 768px) and (max-width: 1023px) {
-
     h1 {
         font-size: 40px;
         padding-left: 75px;
@@ -216,5 +215,146 @@
 
 /*mobile large*/
 @media all and (min-width: 425px) and (max-width: 767px) {
+
+    h1 {
+        font-size: 40px;
+        padding-left: 75px;
+        margin: 18px 0;
+    }
+    p {
+        font-size: 11px;
+    }
+    h3 {
+        font-size: 19px;
+    }
+    h5 {
+        font-size: 11px;
+        letter-spacing: 3px;
+        margin: 11px;
+    }
+    h6 {
+        font-size: 9px;
+    }
+
+    /*header*/
+    body> header> div {
+        display: block;
+        width: 202px;
+        height: 50px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    body> header> nav {
+        left: 22px;
+        bottom: 6px;
+    }
+    body> header> nav> ul> li {
+        padding-left: 13px;
+        font-size: 11px;
+    }
+
+    /*main*/
+    main {
+        padding-top: 11vh;
+    }
+    body> main> section {
+        padding-top: 34px;
+    }
+
+    /*home*/
+    body> main> section:nth-child(1)> div:nth-child(2) {
+        height: 342px;
+        width: 245px;
+        left: 86px;
+        top: -356px;
+    }
+    body> main> section:nth-child(1)> div:nth-child(1) {
+        top: 41%;
+        scale: 0.7;
+    }
+    body> main> section:nth-child(1)> nav {
+        left: 48px;
+        bottom: 74px;
+        scale: 0.8;
+    }
+
+    /*about me*/
+    body> main> section:nth-child(2) {
+        height: 485px;
+    }
+    body> main> section:nth-child(2)> article> img {
+        bottom: -70px;
+    }
+
+    /*education*/
+    body> main> section:nth-child(3)> section {
+        padding: 5px 10px;
+        scale: 0.9;
+    }
+    body> main> section:nth-child(3)> section> section> div> p {
+        font-size: 10px;
+    }
+    body> main> section:nth-child(3)> section> p {
+        padding: 0 24px;
+        font-size: 10px;
+    }
+
+    /*skill and tools*/
+    body> main> section:nth-child(4)> section {
+        scale: 0.4;
+        margin-left: -140px;
+    }
+    body> main> section:nth-child(4)> section> img {
+        padding-left: 22px;
+    }
+
+    /*projects*/
+    body> main> section:nth-child(5)> section> section> div {
+        width: 375px;
+        height: 252px;
+    }
+    body> main> section:nth-child(5)> section> section {
+        margin-bottom: 43px;
+    }
+    body> main> section:nth-child(5)> section> section:nth-child(1)> article {
+        top: 34px;
+        scale: 0.7;
+    }
+    body> main> section:nth-child(5)> section> section:nth-child(2)> article {
+        top: -5px;
+        scale: 0.7;
+    }
+    body> main> section:nth-child(5)> section> section:nth-child(2)> article {
+        top: 16px;
+        scale: 0.7;
+    }
+    body> main> section:nth-child(5)> button {
+        scale: 0.7;
+    }
+
+    /*footer*/
+    body> footer> div:first-child {
+        height: 223px;
+    }
+    body> footer> nav {
+        padding-left: 34vw;
+        scale: 0.6;
+        top: -20px;
+    }
+    body> footer> section {
+        position: relative;
+        top: -1px;
+        scale: 0.7;
+    }
+    body> footer> div:last-child {
+        height: 32px;
+        bottom: 0;
+    }
+    body> footer> div:last-child> p {
+        top: -13px;
+        font-size: 7px;
+    }
+
 
 }
