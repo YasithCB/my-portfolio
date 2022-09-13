@@ -131,8 +131,8 @@
 
     /*projects*/
     body> main> section:nth-child(5)> section> section> div {
-        width: 885px;
-        height: 595px;
+        width: 85vw;
+        height: 57vw;
     }
 
     /*footer*/
@@ -144,9 +144,10 @@
 /*tablet*/
 @media all and (min-width: 426px) and (max-width: 875px) {
     h1 {
-        font-size: 40px;
-        padding-left: 75px;
-        margin: 18px 0;
+        font-size: 8vw;
+        padding: 0;
+        margin: 8px;
+        text-align: center;
     }
     p {
         font-size: 14px;
@@ -209,6 +210,7 @@
     }
     body> main> section:nth-child(1)> div> h1 {
         font-size: 32px;
+        text-align: left;
     }
     body> main> section:nth-child(1)> div> h3 {
         font-size: 15px;
@@ -219,29 +221,28 @@
         font-size: 12px;
     }
 
-    /*skill and tools*/
-    body> main> section:nth-child(4)> section {
-        width: 100%;
-        scale: 0.7;
-    }
-
     /*projects*/
     body> main> section:nth-child(5)> section> section> div {
-        width: 666px;
-        height: 447px;
+        width: 85vw;
+        height: 57vw;
     }
-
+    body> main> section:nth-child(5)> section> section {
+        margin-bottom: 43px;
+    }
+    body> main> section:nth-child(5)> button {
+        scale: 0.7;
+    }
 
 
 }
 
 /*mobile large*/
 @media all and (min-width: 376px) and (max-width: 425px) {
-
     h1 {
-        font-size: 40px;
-        padding-left: 75px;
-        margin: 18px 0;
+        font-size: 8vw;
+        padding: 0;
+        margin: 8px;
+        text-align: center;
     }
     p {
         font-size: 11px;
@@ -313,6 +314,7 @@
     }
     body> main> section:nth-child(1)> div> h1 {
         font-size: 32px;
+        text-align: left;
     }
     body> main> section:nth-child(1)> div> h3 {
         font-size: 15px;
@@ -328,45 +330,22 @@
 
     /*education*/
     body> main> section:nth-child(3)> section {
-        padding: 5px 10px;
         scale: 0.9;
     }
     body> main> section:nth-child(3)> section> section> div> p {
         font-size: 10px;
     }
     body> main> section:nth-child(3)> section> p {
-        padding: 0 24px;
         font-size: 10px;
-    }
-
-    /*skill and tools*/
-    body> main> section:nth-child(4)> section {
-        scale: 0.4;
-        margin-left: -140px;
-    }
-    body> main> section:nth-child(4)> section> img {
-        padding-left: 22px;
     }
 
     /*projects*/
     body> main> section:nth-child(5)> section> section> div {
-        width: 375px;
-        height: 252px;
+        width: 85vw;
+        height: 57vw;
     }
     body> main> section:nth-child(5)> section> section {
         margin-bottom: 43px;
-    }
-    body> main> section:nth-child(5)> section> section:nth-child(1)> article {
-        top: 34px;
-        scale: 0.7;
-    }
-    body> main> section:nth-child(5)> section> section:nth-child(2)> article {
-        top: -5px;
-        scale: 0.7;
-    }
-    body> main> section:nth-child(5)> section> section:nth-child(2)> article {
-        top: 16px;
-        scale: 0.7;
     }
     body> main> section:nth-child(5)> button {
         scale: 0.7;
@@ -401,9 +380,10 @@
 /*mobile medium*/
 @media all and (min-width: 321px) and (max-width: 375px){
     h1 {
-        font-size: 27px;
-        padding-left: 44px;
-        margin: 17px 0;
+        font-size: 8vw;
+        padding: 0;
+        margin: 8px;
+        text-align: center;
     }
     p {
         font-size: 11px;
@@ -468,6 +448,9 @@
         bottom: 10%;
         scale: 80%;
     }
+    body> main> section:nth-child(1)> div> h1 {
+        text-align: left;
+    }
 
     /*about me*/
     body> main> section:nth-child(2) {
@@ -480,45 +463,22 @@
 
     /*education*/
     body> main> section:nth-child(3)> section {
-        padding: 5px 10px;
-        scale: 0.9;
+        scale: 90%;
     }
     body> main> section:nth-child(3)> section> section> div> p {
         font-size: 10px;
     }
     body> main> section:nth-child(3)> section> p {
-        padding: 0 24px;
         font-size: 10px;
-    }
-
-    /*skill and tools*/
-    body> main> section:nth-child(4)> section {
-        scale: 0.4;
-        margin: -6px;
-    }
-    body> main> section:nth-child(4)> section> img {
-        padding-left: 14px;
     }
 
     /*projects*/
     body> main> section:nth-child(5)> section> section> div {
-        width: 339px;
-        height: 228px;
+        width: 85vw;
+        height: 57vw;
     }
     body> main> section:nth-child(5)> section> section {
         margin-bottom: 31px;
-    }
-    body> main> section:nth-child(5)> section> section:nth-child(1)> article {
-        top: -20px;
-        scale: 0.5;
-    }
-    body> main> section:nth-child(5)> section> section:nth-child(2)> article {
-        top: -35px;
-        scale: 0.5;
-    }
-    body> main> section:nth-child(5)> section> section:nth-child(2)> article {
-        top: -12px;
-        scale: 0.5;
     }
     body> main> section:nth-child(5)> button {
         scale: 0.7;
@@ -551,9 +511,10 @@
 /*mobile small*/
 @media all and (max-width: 320px){
     h1 {
-        font-size: 23px;
-        padding-left: 42px;
-        margin: 13px 0;
+        font-size: 8vw;
+        padding: 0;
+        margin: 8px;
+        text-align: center;
     }
     p {
         font-size: 9px;
@@ -618,6 +579,9 @@
         bottom: 10%;
         scale: 80%;
     }
+    body> main> section:nth-child(1)> div> h1 {
+        text-align: left;
+    }
 
     /*about me*/
     body> main> section:nth-child(2) {
@@ -633,45 +597,22 @@
 
     /*education*/
     body> main> section:nth-child(3)> section {
-        padding: 5px 10px;
-        scale: 0.8;
+        scale: 80%;
     }
     body> main> section:nth-child(3)> section> section> div> p {
         font-size: 8px;
     }
     body> main> section:nth-child(3)> section> p {
-        padding: 0 15px;
         font-size: 9px;
-    }
-
-    /*skill and tools*/
-    body> main> section:nth-child(4)> section {
-        scale: 0.3;
-        margin: -6px;
-    }
-    body> main> section:nth-child(4)> section> img {
-        padding-left: 14px;
     }
 
     /*projects*/
     body> main> section:nth-child(5)> section> section> div {
-        width: 284px;
-        height: 191px;
+        width: 85vw;
+        height: 57vw;
     }
     body> main> section:nth-child(5)> section> section {
         margin-bottom: 22px;
-    }
-    body> main> section:nth-child(5)> section> section:nth-child(1)> article {
-        top: -73px;
-        scale: 0.4;
-    }
-    body> main> section:nth-child(5)> section> section:nth-child(2)> article {
-        top: -77px;
-        scale: 0.4;
-    }
-    body> main> section:nth-child(5)> section> section:nth-child(2)> article {
-        top: -71px;
-        scale: 0.4;
     }
     body> main> section:nth-child(5)> button {
         scale: 0.5;

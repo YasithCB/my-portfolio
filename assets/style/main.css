@@ -2,10 +2,11 @@
 body {
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
-    width: 0;
+    width: 10px;
 }
 
 p {
@@ -52,7 +53,8 @@ body> main> section:first-child { /*home section doesn't need a top padding*/
 }
 
 body> header {
-    position: absolute;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.81);
     z-index: 2;
     top: 0;
     height: 10vh;
@@ -167,11 +169,10 @@ body> main> section:nth-child(2)> article> img {
     margin: auto;
     bottom: -78px;
 }/*article--------------end*/
-body> main> section:nth-child(2)> img {
-    width: 375px;
-    position: absolute;
-    margin-left: 173px;
-    margin-top: -54px;
+body> main> section:nth-child(2)> article> img {
+    position: relative;
+    margin-left: 16vw;
+    top: -29px;
 }
 /*about me-------------------------------------------------------------end*/
 
@@ -179,7 +180,7 @@ body> main> section:nth-child(2)> img {
 body> main> section:nth-child(3)> section { /*common to all sections*/
     position: relative;
     display: flex;
-    padding: 10px 40px 10px 40px;
+    padding: 22px 20px;
 }
 body> main> section:nth-child(3)> section> div { /*common to all image containing divs*/
     display: inline-block;
@@ -218,7 +219,7 @@ body> main> section:nth-child(3)> section> p { /*common to all each articles*/
     display: inline-block;
     text-align: left;
     width: 37%;
-    padding: 24px;
+    padding: 14px 3vw 0 3vw;
 }
 
 /*row reversed sections*/
@@ -233,8 +234,16 @@ body> main> section:nth-child(3)> section> p { /*common to all each articles*/
 /*Skill and tools ------------------------------------------------------------start*/
 body> main> section:nth-child(4)> section {
     display: flex;
+    width: 90vw;
+    flex-flow: wrap;
     justify-content: space-evenly;
-    margin: 42px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-top: 16px;
+}
+body> main> section:nth-child(4)> section> img {
+    scale: 60%;
 }
 /*skill and tools ----------------------------------------------------------end*/
 
