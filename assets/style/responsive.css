@@ -54,8 +54,8 @@
     body> main> section:nth-child(1)> div:nth-child(2) {
         right: 0;
         top: 79px;
-        scale: 135%;
-        left: auto;
+        scale: 143%;
+        left: 60vw;
     }
 
     /*about me*/
@@ -116,9 +116,9 @@
     }
     body> main> section:nth-child(1)> div:nth-child(2) {
         right: 0;
-        top: 79px;
-        scale: 135%;
-        left: auto;
+        top: 45px;
+        scale: 138%;
+        left: 60vw;
     }
 
     /*about me*/
@@ -581,6 +581,12 @@
     }
     body> main> section:nth-child(1)> div> h1 {
         text-align: left;
+    }
+    body> main> section:nth-child(1)> div:nth-child(2) {
+        right: 0;
+        top: -12vw;
+        scale: 77%;
+        left: -7vw;
     }
 
     /*about me*/
