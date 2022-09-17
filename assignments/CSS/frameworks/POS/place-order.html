@@ -10,7 +10,7 @@
 <body class="bg-dark">
 
     <!--navbar start-->
-    <nav class="navbar navbar-expand-lg mb-5">
+    <nav class="navbar navbar-expand-lg mb-3">
         <div class="container-fluid">
             <a class="navbar-brand text-light" href="#">Uresha POS System  &nbsp; &nbsp;|</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,6 +31,7 @@
 
     <main class="container row ms-5">
 
+        <!--invoice details-->
         <section class=" col">
             <!--add customer form start-->
 
@@ -66,7 +67,7 @@
             <!--add customer form end-->
 
         </section>
-
+        <!--item select-->
         <section class=" col">
             <!--add customer form start-->
 
@@ -95,15 +96,18 @@
                 <input type="text" class="form-control bg-dark text-light" id="orderQty" value="2" placeholder="name@example.com">
                 <label class="text-light" for="orderQty">Order Qty</label>
             </div>
-
             <!--add customer form end-->
 
+            <!--btn add item-->
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-outline-primary" type="button">Add Item</button>
+            </div>
         </section>
-
+        <!--purchase-->
         <section class=" col">
             <!--add customer form start-->
 
-            <h5 class="text-light mt-5 mt-5 mb-3" >Sub Total : RS 400.00</h5>
+            <h5 class="text-light mt-5 mt-5 mb-3" >Sub Total : RS 510.00</h5>
 
             <div class="row">
                 <div class="form-floating mb-2 col">
@@ -116,13 +120,55 @@
                 </div>
             </div>
 
-            <h5 class="text-light text-bg-success" >Total : RS 380.00</h5>
-            <h6 class="text-light" >Balance : RS 4620.00</h6>
-
+            <h5 class="text-light text-bg-success" >Total : RS 490.00</h5>
+            <h6 class="text-light" >Balance : RS 4510.00</h6>
             <!--add customer form end-->
+
+            <!--purchase btn-->
+            <div class="d-grid gap-2 mt-2">
+                <button class="btn btn-outline-success" type="button">Purchase</button>
+            </div>
 
         </section>
 
+        <!--table start-->
+        <h5 class="text-light mb-3 mt-3 bg-primary" >Cart Items</h5>
+        <table class="table table-dark table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Item Code</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Unit Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">I0001</th>
+                <td>Soap</td>
+                <td>200</td>
+                <td>2</td>
+                <td>400</td>
+            </tr>
+            <tr>
+                <th scope="row">I0003</th>
+                <td>Atlas Pen</td>
+                <td>50</td>
+                <td>1</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <th scope="row">I0004</th>
+                <td>Eraser</td>
+                <td>30</td>
+                <td>2</td>
+                <td>60</td>
+            </tr>
+
+            </tbody>
+        </table>
+        <!--table start-->
 
     </main>
 
