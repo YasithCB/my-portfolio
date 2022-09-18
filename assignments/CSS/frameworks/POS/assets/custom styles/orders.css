@@ -5,3 +5,6 @@ nav { /*nav*/
 body h5,p { /*footer*/
     color: white;
 }
+::-webkit-scrollbar {
+    width: 0;
+}
