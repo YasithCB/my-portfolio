@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/custom%20styles/place%20order.css">
 </head>
-<body class="bg-dark">
+<body class="bg-dark justify-content-center">
 
     <!--navbar start-->
     <nav class="navbar navbar-expand-lg mb-3">
         <div class="container-fluid">
             <a class="navbar-brand text-light" href="#">Uresha POS System  &nbsp; &nbsp;|</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler bg-opacity-25 bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse row" id="navbarNavAltMarkup">
-                <div class="navbar-nav col-9">
+                <div class="navbar-nav col-10">
                     <a class="nav-link active text-light" aria-current="page" href="index.html">Home</a>
                     <a class="nav-link active text-light" aria-current="page" href="place-order.html">Place Order</a>
                     <a class="nav-link active text-light" aria-current="page" href="customers.html">Customers</a>
@@ -26,7 +26,7 @@
 
                 </div>
 
-                <div class="ms-2 gap-2 col-2 justify-content-end" role="search">
+                <div class=" gap-2 col-2 justify-content-end" role="search">
                     <button class="btn btn-outline-success btn-sm col" type="submit">SignUp</button>
                     <button class="btn btn-outline-danger btn-sm col" type="submit">LogOut</button>
                 </div>
@@ -35,106 +35,109 @@
     </nav>
     <!--navbar end-->
 
-    <main class="container row ms-5">
+    <main class="container">
 
-        <!--invoice details-->
-        <section class=" col">
-            <!--add customer form start-->
+        <!--fields-->
+        <section class="row">
+            <!--invoice details-->
+            <section class="col-6 col-md">
+                <!--add customer form start-->
 
-            <h5 class="text-light mb-3 mt-2" >Invoice Details</h5>
+                <h5 class="text-light mb-3 mt-2" >Invoice Details</h5>
 
-            <div class="row">
-                <div class="form-floating mb-2 col">
-                    <input type="text" class="form-control bg-dark text-light" id="orderId" value="OD0001" placeholder="name@example.com">
-                    <label class="text-light ms-2" for="orderId">Order ID</label>
+                <div class="row">
+                    <div class="form-floating mb-2 col pe-1">
+                        <input type="text" class="form-control bg-dark text-light" id="orderId" value="OD0001" placeholder="name@example.com">
+                        <label class="text-light ms-2" for="orderId">Order ID</label>
+                    </div>
+                    <div class="form-floating mb-2 col ps-0">
+                        <input type="text" class="form-control bg-dark text-light" id="date" value="01/06/2022" placeholder="name@example.com">
+                        <label class="text-light ms-2" for="date">Date</label>
+                    </div>
                 </div>
-                <div class="form-floating mb-2 col">
-                    <input type="text" class="form-control bg-dark text-light" id="date" value="01/06/2022" placeholder="name@example.com">
-                    <label class="text-light ms-2" for="date">Date</label>
+
+                <div class="form-floating mb-2">
+                    <input type="text" class="form-control bg-dark text-light" id="customerId" value="C0001" placeholder="name@example.com">
+                    <label class="text-light" for="customerId">Customer ID</label>
                 </div>
-            </div>
-
-            <div class="form-floating mb-2">
-                <input type="text" class="form-control bg-dark text-light" id="customerId" value="C0001" placeholder="name@example.com">
-                <label class="text-light" for="customerId">Customer ID</label>
-            </div>
-            <div class="form-floating mb-2">
-                <input type="text" class="form-control bg-dark text-light" id="customerName" value="Yasith" placeholder="name@example.com">
-                <label class="text-light" for="customerName">Customer Name</label>
-            </div>
-            <div class="form-floating mb-2">
-                <input type="text" class="form-control bg-dark text-light" id="salary" value="49000" placeholder="name@example.com">
-                <label class="text-light" for="salary">Salary</label>
-            </div>
-            <div class="form-floating mb-2">
-                <input type="text" class="form-control bg-dark text-light" id="address" value="Opanayaka" placeholder="name@example.com">
-                <label class="text-light" for="address">Customer Address</label>
-            </div>
-            <!--add customer form end-->
-
-        </section>
-        <!--item select-->
-        <section class=" col">
-            <!--add customer form start-->
-
-            <h5 class="text-light mb-3 mt-2" >Items Select</h5>
-
-            <div class="row">
-                <div class="form-floating mb-2 col">
-                    <input type="text" class="form-control bg-dark text-light" id="itemCode" value="I0001" placeholder="name@example.com">
-                    <label class="text-light ms-2" for="itemCode">Item Code</label>
+                <div class="form-floating mb-2">
+                    <input type="text" class="form-control bg-dark text-light" id="customerName" value="Yasith" placeholder="name@example.com">
+                    <label class="text-light" for="customerName">Customer Name</label>
                 </div>
-                <div class="form-floating mb-2 col">
-                    <input type="text" class="form-control bg-dark text-light" id="itemName" value="Soap" placeholder="name@example.com">
-                    <label class="text-light ms-2" for="itemName">Item Name</label>
+                <div class="form-floating mb-2">
+                    <input type="text" class="form-control bg-dark text-light" id="salary" value="49000" placeholder="name@example.com">
+                    <label class="text-light" for="salary">Salary</label>
                 </div>
-            </div>
-
-            <div class="form-floating mb-2">
-                <input type="number" class="form-control bg-dark text-light" id="unitPrice" value="200.00" placeholder="name@example.com">
-                <label class="text-light" for="unitPrice">Unit Price</label>
-            </div>
-            <div class="form-floating mb-2">
-                <input type="number" class="form-control bg-dark text-light" id="qtyOnHand" value="60" placeholder="name@example.com">
-                <label class="text-light" for="qtyOnHand">Qty On Hand</label>
-            </div>
-            <div class="form-floating mb-2">
-                <input type="text" class="form-control bg-dark text-light" id="orderQty" value="2" placeholder="name@example.com">
-                <label class="text-light" for="orderQty">Order Qty</label>
-            </div>
-            <!--add customer form end-->
-
-            <!--btn add item-->
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-outline-primary" type="button">Add Item</button>
-            </div>
-        </section>
-        <!--purchase-->
-        <section class=" col">
-            <!--add customer form start-->
-
-            <h5 class="text-light mt-5 mt-5 mb-3" >Sub Total : RS 510.00</h5>
-
-            <div class="row">
-                <div class="form-floating mb-2 col">
-                    <input type="text" class="form-control bg-dark text-light" id="discount" value="20.00" placeholder="name@example.com">
-                    <label class="text-light ms-2" for="discount">Discount(RS)</label>
+                <div class="form-floating mb-2">
+                    <input type="text" class="form-control bg-dark text-light" id="address" value="Opanayaka" placeholder="name@example.com">
+                    <label class="text-light" for="address">Customer Address</label>
                 </div>
-                <div class="form-floating mb-2 col">
-                    <input type="text" class="form-control bg-dark text-light" id="cash" value="5000" placeholder="name@example.com">
-                    <label class="text-light ms-2" for="cash">Cash</label>
+                <!--add customer form end-->
+
+            </section>
+            <!--item select-->
+            <section class="col-6 col-md">
+                <!--add customer form start-->
+
+                <h5 class="text-light mb-3 mt-2" >Items Select</h5>
+
+                <div class="row">
+                    <div class="form-floating mb-2 col pe-1">
+                        <input type="text" class="form-control bg-dark text-light" id="itemCode" value="I0001" placeholder="name@example.com">
+                        <label class="text-light ms-2" for="itemCode">Item Code</label>
+                    </div>
+                    <div class="form-floating mb-2 col ps-0">
+                        <input type="text" class="form-control bg-dark text-light" id="itemName" value="Soap" placeholder="name@example.com">
+                        <label class="text-light ms-2" for="itemName">Item Name</label>
+                    </div>
                 </div>
-            </div>
 
-            <h5 class="text-light text-bg-success" >Total : RS 490.00</h5>
-            <h6 class="text-light" >Balance : RS 4510.00</h6>
-            <!--add customer form end-->
+                <div class="form-floating mb-2">
+                    <input type="number" class="form-control bg-dark text-light" id="unitPrice" value="200.00" placeholder="name@example.com">
+                    <label class="text-light" for="unitPrice">Unit Price</label>
+                </div>
+                <div class="form-floating mb-2">
+                    <input type="number" class="form-control bg-dark text-light" id="qtyOnHand" value="60" placeholder="name@example.com">
+                    <label class="text-light" for="qtyOnHand">Qty On Hand</label>
+                </div>
+                <div class="form-floating mb-2">
+                    <input type="text" class="form-control bg-dark text-light" id="orderQty" value="2" placeholder="name@example.com">
+                    <label class="text-light" for="orderQty">Order Qty</label>
+                </div>
+                <!--add customer form end-->
 
-            <!--purchase btn-->
-            <div class="d-grid gap-2 mt-2">
-                <button class="btn btn-outline-success" type="button">Purchase</button>
-            </div>
+                <!--btn add item-->
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-outline-primary" type="button">Add Item</button>
+                </div>
+            </section>
+            <!--purchase-->
+            <section class=" col">
+                <!--add customer form start-->
 
+                <h5 class="text-light mt-5 mt-5 mb-3" >Sub Total : RS 510.00</h5>
+
+                <div class="row">
+                    <div class="form-floating mb-2 col">
+                        <input type="text" class="form-control bg-dark text-light" id="discount" value="20.00" placeholder="name@example.com">
+                        <label class="text-light ms-2" for="discount">Discount(RS)</label>
+                    </div>
+                    <div class="form-floating mb-2 col">
+                        <input type="text" class="form-control bg-dark text-light" id="cash" value="5000" placeholder="name@example.com">
+                        <label class="text-light ms-2" for="cash">Cash</label>
+                    </div>
+                </div>
+
+                <h5 class="text-light text-bg-success" >Total : RS 490.00</h5>
+                <h6 class="text-light" >Balance : RS 4510.00</h6>
+                <!--add customer form end-->
+
+                <!--purchase btn-->
+                <div class="d-grid gap-2 mt-2">
+                    <button class="btn btn-outline-success" type="button">Purchase</button>
+                </div>
+
+            </section>
         </section>
 
         <!--table start-->
