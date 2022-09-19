@@ -10,6 +10,10 @@ Mockup URL      :
 SiteMap URL     :
 
 WireFrame URL   : https://wireframe.cc/a4cFNG
+
+![Logo](assets/image/placeOrder.jpg)
+
+
 ## Features
 
 - Place a Order
