@@ -179,6 +179,70 @@
         </table>
         <!--table start-->
 
+        <!--3 buttons after the table start-->
+        <button type="button" class="btn btn-secondary m-1" data-bs-toggle="modal" data-bs-target="#edit">Edit Quantity</button>
+        <button type="button" class="btn btn-danger m-1" data-bs-toggle="modal" data-bs-target="#remove">Remove Item</button>
+        <!--3 buttons after the table end-->
+
+        <!--edit item Modal start-->
+        <div class="modal fade" id="edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Edit Quantity</h5>
+                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <!--add customer form start-->
+
+                        <label class="text-light mb-3" >Item Code : I0001</label>
+
+                        <div class="form-floating mb-3">
+                            <input disabled type="text" class="form-control bg-dark text-secondary" id="nameEdit" value="Soap" placeholder="name@example.com">
+                            <label class="text-light" for="nameEdit">Item Name</label>
+                        </div>
+                        <div class="form-floating mb-3 ">
+                            <input disabled type="number" class="form-control bg-dark text-secondary" id="priceEdit" value="200" placeholder="name@example.com">
+                            <label class="text-light" for="priceEdit">Price</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control bg-dark text-light" id="qtyEdit" value="60" placeholder="name@example.com">
+                            <label class="text-light" for="qtyEdit">Quantity</label>
+                        </div>
+                        <!--add customer form end-->
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Edit Quantity</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--edit item Modal end-->
+
+        <!--delete Item model start-->
+        <div class="modal" id="remove" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Are you Sure?</h5>
+                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Once you Remove this item, <br>
+                            That action can't be undone!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                        <button type="button" class="btn btn-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--delete Item model end-->
+
     </main>
 
     <!--footer start-->
