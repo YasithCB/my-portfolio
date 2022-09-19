@@ -7,7 +7,7 @@ This project used Bootstrap Framework.
 
 Mockup URL      :
 
-SiteMap URL     :
+SiteMap URL     : https://www.gloomaps.com/GpqkVTJMKq
 
 WireFrame URL   : https://wireframe.cc/a4cFNG
 
