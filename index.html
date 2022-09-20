@@ -48,7 +48,7 @@
 <body> <!--Sectioning root-->
 
 <header>
-    <div><!--my logo--></div>
+    <div id="my-logo"><!--my logo--></div>
     <nav>
         <ul>
             <li>Home</li>
@@ -56,10 +56,17 @@
             <li>Education</li>
             <li>Skill</li>
             <li>Projects</li>
+            <li>Assignments</li>
             <li>Contact</li>
         </ul>
     </nav>
 </header>
+
+<!--call now fixed-->
+<div class="water-drop-anim"></div>
+<div class="water-drop-anim2"></div>
+<div id="call"><i class="fa-solid fa-phone"></i></div>
+<!--call now fixed-->
 
 <main>
     <section> <!--Home-->
@@ -158,7 +165,8 @@
 
     </section>
 
-    <section> <!--Skill-->
+    <!--skills-->
+    <section>
         <h1>Skill and Tools</h1>
         <section> <!--imges-->
             <img src="assets/image/java.svg" width="50" alt="">
@@ -177,7 +185,8 @@
         </section>
     </section>
 
-    <section> <!--Projects-->
+    <!--Projects-->
+    <section>
         <h1>Projects</h1>
         <section>
             <section> <!--project 1-->
@@ -217,7 +226,49 @@
         <button type="button" id="moreProjects" name="moreProjects">More Projects</button>
     </section>
 
-    <section> <!--Contact-->
+    <!--assignments-->
+    <section>
+        <h1>Assignments</h1>
+
+        <!--card-->
+        <section class="card-container">
+            <div class="card">
+                <img src="assets/image/css%20cases/case1.jpg" class="card-img" alt="...">
+                <div>
+                    <h6>Card title</h6>
+                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/image/css%20cases/case2.jpg" class="card-img" alt="...">
+                <div>
+                    <h6>Card title</h6>
+                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/image/css%20cases/case3.jpg" class="card-img" alt="...">
+                <div>
+                    <h6>Card title</h6>
+                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/image/css%20cases/case4.jpg" class="card-img" alt="...">
+                <div>
+                    <h6>Card title</h6>
+                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </section>
+        <!--card-->
+
+        <button type="button" class="btn-view-all" name="moreProjects">View All</button>
+
+    </section>
+
+    <!--Contact-->
+    <section>
         <h1>Contact Me</h1>
         <div></div>
     </section>

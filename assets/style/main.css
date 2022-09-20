@@ -1,4 +1,101 @@
 
+.card-img {
+    width: 100%;
+    height: 50%;
+}
+.card-container {
+    margin: 2vw 5vw;
+}
+.card {
+    width: 22vw;
+    height: 300px;
+    margin-left: 35px;
+    display: inline-block;
+}
+.card p,h6 {
+    text-align: left !important;
+}
+
+#call {
+    width: 50px;
+    height: 50px;
+    background-color: #181818;
+    border-radius: 100%;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    margin: auto;
+    padding: 0;
+    z-index: 1;
+}
+#call > i {
+    position: relative;
+    left: 17px;
+    top: 17px;
+    color: chartreuse;
+}
+.water-drop-anim {
+    width: 150px;
+    height: 150px;
+    border: 2px solid gray;
+    border-radius: 100%;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    margin: auto;
+    padding: 0;
+
+    animation-name: circle_animate;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+.water-drop-anim2 {
+    width: 150px;
+    height: 150px;
+    border: 2px solid gray;
+    border-radius: 100%;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    margin: auto;
+    padding: 0;
+
+    animation-name: circle_animate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+@keyframes circle_animate {
+    0% {
+        width: 50px;
+        height: 50px;
+    }
+    100% {
+        opacity: 0;
+        border: 3px solid dodgerblue;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+.btn-view-all {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 220px;
+    height: 46px;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    border-radius: 15px;
+    border: 2px solid gray;
+}
+.btn-view-all:hover {
+    background-color: #181818;
+    color: white;
+}
+
 body {
     height: 100%;
     width: 100%;
@@ -59,7 +156,7 @@ body> header {
     height: 10vh;
     width: 100%;
 }
-body> header> div {
+#my-logo {
     background: url("../image/my-logo.png");
     background-size: cover;
     display: inline-block;
@@ -80,7 +177,7 @@ body> header> nav> ul {
 }
 body> header> nav> ul> li {
     display: inline-block;
-    padding-left: 21px;
+    padding-left: 15px;
     font-size: 15px;
     color: gray;
     cursor: pointer;
@@ -334,7 +431,7 @@ body> main> section:nth-child(5)> button:hover { /*when hovering btn*/
 /*projects ----------------------------------------------------end*/
 
 /*Contact me --------------------------------------------------start*/
-main> section:nth-child(6)> div {
+main> section:nth-child(7)> div {
     background: url("../image/map.jpg");
     background-position: center;
     height: 200px;
