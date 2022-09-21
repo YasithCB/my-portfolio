@@ -1,0 +1,10 @@
+nav { /*nav*/
+    background-color: #212121;
+}
+
+body h5,p { /*footer*/
+    color: white;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
