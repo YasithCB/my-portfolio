@@ -25,12 +25,11 @@
         </button>
         <div class="collapse navbar-collapse row" id="navbarNavAltMarkup">
             <div class="navbar-nav col-10">
-                <a class="nav-link active text-light" aria-current="page" href="index.html">Home</a>
-                <a class="nav-link active text-light" aria-current="page" href="place-order.html">Place Order</a>
-                <a class="nav-link active text-light" aria-current="page" href="customers.html">Customers</a>
-                <a class="nav-link active text-light" aria-current="page" href="items.html">Items</a>
-                <a class="nav-link active text-light" aria-current="page" href="orders.html">Orders</a>
-
+                <a id="btnHome" class="nav-link active text-light" aria-current="page">Home</a>
+                <a id="btnPlaceOrder" class="nav-link active text-light" aria-current="page">Place Order</a>
+                <a id="btnCustomer" class="nav-link active text-light" aria-current="page">Customers</a>
+                <a id="btnItems" class="nav-link active text-light" aria-current="page">Items</a>
+                <a id="btnOrders" class="nav-link active text-light" aria-current="page">Orders</a>
             </div>
 
             <div class=" gap-2 col-2 justify-content-end" role="search">
@@ -43,7 +42,7 @@
 <!--navbar end-->
 
 <!--home start-->
-<main class="container">
+<main id="secHome" class="navbarSec container">
     <!--center buttons grid started-->
     <section class="row justify-content-center mt-5">
         <a href="place-order.html" class="btn btn-outline-primary col-9 mb-2" tabindex="-1" role="button" aria-disabled="true">Place order</a>
@@ -56,7 +55,7 @@
 <!--home end-->
 
 <!--place order start-->
-<main class="container">
+<main id="secPlaceOrder" class="navbarSec container">
 
     <!--fields-->
     <section class="row">
@@ -268,7 +267,7 @@
 <!--place order end-->
 
 <!--items start-->
-<main class="container">
+<main id="secItems" class="navbarSec container">
 
     <!--title-->
     <h4 class="text-light text-center mb-4">Manage Items</h4>
@@ -427,7 +426,7 @@
 <!--items end-->
 
 <!--orders start-->
-<main class="container">
+<main id="secOrders" class="navbarSec container">
 
     <!--title-->
     <h4 class="text-light text-center mb-4">Manage Orders</h4>
@@ -639,7 +638,7 @@
 <!--orders end-->
 
 <!--customers start-->
-<main class="container">
+<main id="secCustomers" class="navbarSec container">
 
     <!--title-->
     <h4 class="text-light text-center mb-4">Manage Customers</h4>
@@ -821,7 +820,26 @@
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script>
 
-
+    $('#btnHome').click(function () {
+        $('.navbarSec').css('display','none');
+        $('#secHome').css('display','block')
+    });
+    $('#btnPlaceOrder').click(function () {
+        $('.navbarSec').css('display','none');
+        $('#secPlaceOrder').css('display','block')
+    });
+    $('#btnItems').click(function () {
+        $('.navbarSec').css('display','none');
+        $('#secItems').css('display','block')
+    });
+    $('#btnOrders').click(function () {
+        $('.navbarSec').css('display','none');
+        $('#secOrders').css('display','block')
+    });
+    $('#btnCustomer').click(function () {
+        $('.navbarSec').css('display','none');
+        $('#secCustomers').css('display','block')
+    });
 
 </script>
 </body>
