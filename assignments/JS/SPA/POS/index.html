@@ -31,11 +31,11 @@
         </button>
         <div class="collapse navbar-collapse row" id="navbarNavAltMarkup">
             <div class="navbar-nav col-10">
-                <a id="btnHome" class="nav-link active text-light" aria-current="page">Home</a>
+                <a class="btnHome nav-link active text-light" aria-current="page">Home</a>
                 <a class="btnPlaceOrder nav-link active text-light" aria-current="page">Place Order</a>
-                <a id="btnCustomer" class="nav-link active text-light" aria-current="page">Customers</a>
-                <a id="btnItems" class="nav-link active text-light" aria-current="page">Items</a>
-                <a id="btnOrders" class="nav-link active text-light" aria-current="page">Orders</a>
+                <a class="btnCustomer nav-link active text-light" aria-current="page">Customers</a>
+                <a class="btnItems nav-link active text-light" aria-current="page">Items</a>
+                <a class="btnOrders nav-link active text-light" aria-current="page">Orders</a>
             </div>
 
             <div class=" gap-2 col-2 justify-content-end" role="search">
@@ -51,10 +51,10 @@
     <section id="secHome" class="navbarSec container" style="display: block">
         <!--center buttons grid started-->
         <section class="row justify-content-center mt-5">
-            <a href="place-order.html" class="btn btn-outline-primary col-9 mb-2" tabindex="-1" role="button" aria-disabled="true">Place order</a>
-            <a href="items.html" class="btn btn-outline-primary col-9 mb-2" tabindex="0" role="button" aria-disabled="true">Items</a>
-            <a href="orders.html" class="btn btn-outline-primary col-9 mb-2" tabindex="-1" role="button" aria-disabled="true">Orders</a>
-            <a href="customers.html" class="btn btn-outline-primary col-9 mb-2" tabindex="-1" role="button" aria-disabled="true">Customers</a>
+            <a class="btn btn-outline-primary col-9 mb-2" tabindex="-1" role="button" aria-disabled="true">Place order</a>
+            <a class="btn btn-outline-primary col-9 mb-2" tabindex="0" role="button" aria-disabled="true">Items</a>
+            <a class="btn btn-outline-primary col-9 mb-2" tabindex="-1" role="button" aria-disabled="true">Orders</a>
+            <a class="btn btn-outline-primary col-9 mb-2" tabindex="-1" role="button" aria-disabled="true">Customers</a>
         </section>
         <!--center buttons grid ended-->
     </section>
@@ -826,7 +826,7 @@
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script>
 
-    $('#btnHome').click(function () {
+    $('.btnHome').click(function () {
         $('.navbarSec').css('display','none');
         $('#secHome').css('display','block')
     });
@@ -834,15 +834,15 @@
         $('.navbarSec').css('display','none');
         $('#secPlaceOrder').css('display','block')
     });
-    $('#btnItems').click(function () {
+    $('.btnItems').click(function () {
         $('.navbarSec').css('display','none');
         $('#secItems').css('display','block')
     });
-    $('#btnOrders').click(function () {
+    $('.btnOrders').click(function () {
         $('.navbarSec').css('display','none');
         $('#secOrders').css('display','block')
     });
-    $('#btnCustomer').click(function () {
+    $('.btnCustomer').click(function () {
         $('.navbarSec').css('display','none');
         $('#secCustomers').css('display','block')
     });
