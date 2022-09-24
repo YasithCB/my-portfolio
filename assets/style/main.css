@@ -5,6 +5,8 @@
 }
 .card-container {
     margin: 2vw 5vw;
+    display: flex;
+    flex-wrap: wrap;
 }
 .card {
     width: 22vw;
