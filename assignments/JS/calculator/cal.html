@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Assignments | JS | Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
 
     <style>
         #main {
@@ -13,21 +13,32 @@
             background-size: cover;
             height: 100vh;
         }
+        #calc {
+            background-color: white;
+            opacity: 27%;
+            height: 83vh;
+            width: 38vw;
+        }
+        .calc-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
     </style>
 
 </head>
 
 <body>
 
-    <main id="main" class="container-fluid bg-image">
+    <main id="main">
 
-        <section class="row">
-            <div class="col bg-secondary"></div>
+        <section class="calc-container">
+            <div id="calc"></div>
         </section>
 
     </main>
 
-<script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <scrip>
 
