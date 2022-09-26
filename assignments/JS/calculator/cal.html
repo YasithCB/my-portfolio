@@ -18,6 +18,7 @@
             opacity: 27%;
             height: 83vh;
             width: 38vw;
+            position: relative;
         }
         .calc-container {
             display: flex;
@@ -25,6 +26,48 @@
             align-items: center;
             height: 100vh;
         }
+        #btn-area {
+            width: 93%;
+            height: 94%;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            position: absolute;
+            display: grid;
+            grid-template-rows: repeat(4,1fr);
+            grid-template-columns: repeat(4,1fr);
+            gap: 11px;
+        }
+        .btn {
+            background-color: black;
+        }
+        .btn:hover {
+            background-color: #454545;
+        }
+        .btn-text {
+            color: white;
+            font-weight: bolder;
+            text-align: center;
+            font-size: 21px;
+        }
+        #display-area {
+            width: 90%;
+            height: 12%;
+            position: absolute;
+            top: 23px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: flex;
+            gap: 10px;
+        }
+        #display {
+            background-color: black;
+            grid-column: 2/5;
+        }
+
     </style>
 
 </head>
@@ -34,7 +77,40 @@
     <main id="main">
 
         <section class="calc-container">
-            <div id="calc"></div>
+            <div id="calc">
+
+                <!--display area start-->
+                <section id="display-area">
+
+                </section>
+                <!--display area end-->
+
+                <!--btn area start-->
+                <section id="btn-area">
+
+                    <button id="btn-clear" class="btn"><p class="btn-text">Clear</p></button>
+                    <input type="number" id="display">
+
+                    <div class="btn"><p class="btn-text">7</p></div>
+                    <div class="btn"><p class="btn-text">8</p></div>
+                    <div class="btn"><p class="btn-text">9</p></div>
+                    <div class="btn"><p class="btn-text">+</p></div>
+                    <div class="btn"><p class="btn-text">4</p></div>
+                    <div class="btn"><p class="btn-text">5</p></div>
+                    <div class="btn"><p class="btn-text">6</p></div>
+                    <div class="btn"><p class="btn-text">-</p></div>
+                    <div class="btn"><p class="btn-text">1</p></div>
+                    <div class="btn"><p class="btn-text">2</p></div>
+                    <div class="btn"><p class="btn-text">3</p></div>
+                    <div class="btn"><p class="btn-text">*</p></div>
+                    <div class="btn"><p class="btn-text">0</p></div>
+                    <div class="btn"><p class="btn-text">.</p></div>
+                    <div class="btn"><p class="btn-text">=</p></div>
+                    <div class="btn"><p class="btn-text">/</p></div>
+                </section>
+                <!--btn area end-->
+
+            </div>
         </section>
 
     </main>
