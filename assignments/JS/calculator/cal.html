@@ -16,7 +16,7 @@
         #calc {
             background-color: white;
             opacity: 27%;
-            height: 83vh;
+            height: 84vh;
             width: 38vw;
             position: relative;
         }
@@ -28,7 +28,7 @@
         }
         #btn-area {
             width: 93%;
-            height: 94%;
+            height: 93%;
             left: 0;
             right: 0;
             top: 0;
@@ -38,7 +38,7 @@
             display: grid;
             grid-template-rows: repeat(4,1fr);
             grid-template-columns: repeat(4,1fr);
-            gap: 11px;
+            gap: 7px;
         }
         .btn {
             background-color: black;
@@ -51,17 +51,6 @@
             font-weight: bolder;
             text-align: center;
             font-size: 21px;
-        }
-        #display-area {
-            width: 90%;
-            height: 12%;
-            position: absolute;
-            top: 23px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            display: flex;
-            gap: 10px;
         }
         #display {
             background-color: black;
@@ -83,24 +72,27 @@
                 <section id="btn-area">
 
                     <button id="btn-clear" class="btn"><p class="btn-text">Clear</p></button>
-                    <input type="number" id="display">
 
-                    <div class="btn"><p class="btn-text">7</p></div>
-                    <div class="btn"><p class="btn-text">8</p></div>
-                    <div class="btn"><p class="btn-text">9</p></div>
-                    <div class="btn"><p class="btn-text">+</p></div>
-                    <div class="btn"><p class="btn-text">4</p></div>
-                    <div class="btn"><p class="btn-text">5</p></div>
-                    <div class="btn"><p class="btn-text">6</p></div>
-                    <div class="btn"><p class="btn-text">-</p></div>
-                    <div class="btn"><p class="btn-text">1</p></div>
-                    <div class="btn"><p class="btn-text">2</p></div>
-                    <div class="btn"><p class="btn-text">3</p></div>
-                    <div class="btn"><p class="btn-text">*</p></div>
-                    <div class="btn"><p class="btn-text">0</p></div>
-                    <div class="btn"><p class="btn-text">.</p></div>
-                    <div class="btn"><p class="btn-text">=</p></div>
-                    <div class="btn"><p class="btn-text">/</p></div>
+                    <!--display start-->
+                    <input type="number" id="display">
+                    <!--display end-->
+
+                    <button id="7" class="btn"><p class="btn-text">7</p></button>
+                    <button id="8" class="btn"><p class="btn-text">8</p></button>
+                    <button id="9" class="btn"><p class="btn-text">9</p></button>
+                    <button id="+" class="btn"><p class="btn-text">+</p></button>
+                    <button id="4" class="btn"><p class="btn-text">4</p></button>
+                    <button id="5" class="btn"><p class="btn-text">5</p></button>
+                    <button id="6" class="btn"><p class="btn-text">6</p></button>
+                    <button id="-" class="btn"><p class="btn-text">-</p></button>
+                    <button id="1" class="btn"><p class="btn-text">1</p></button>
+                    <button id="2" class="btn"><p class="btn-text">2</p></button>
+                    <button id="3" class="btn"><p class="btn-text">3</p></button>
+                    <button id="*" class="btn"><p class="btn-text">*</p></button>
+                    <button id="0" class="btn"><p class="btn-text">0</p></button>
+                    <button id="." class="btn"><p class="btn-text">.</p></button>
+                    <button id="=" class="btn"><p class="btn-text">=</p></button>
+                    <button id="/" class="btn"><p class="btn-text">/</p></button>
                 </section>
                 <!--btn area end-->
 
