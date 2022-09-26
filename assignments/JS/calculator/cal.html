@@ -26,7 +26,7 @@
             height: 100vh;
         }
         #btn-area {
-            width: 93%;
+            width: 84%;
             height: 93%;
             left: 0;
             right: 0;
@@ -35,7 +35,7 @@
             margin: auto;
             position: absolute;
             display: grid;
-            grid-template-rows: repeat(5,1fr);
+            grid-template-rows: repeat(6,1fr);
             grid-template-columns: repeat(4,1fr);
             gap: 7px;
         }
@@ -48,8 +48,7 @@
             font-size: 19px;
         }
         .btn:hover {
-            background-color: #ffffff;
-            color: black;
+            background-color: rgba(11, 76, 206, 0.18);
         }
 
         #display {
@@ -58,6 +57,21 @@
             color: white;
             font-size: 28px;
             text-align: end;
+        }
+        #add {
+            grid-row: 2/4;
+            grid-column: 4/5;
+        }
+        #eq {
+            grid-row: 4/7;
+            grid-column: 4/5;
+            background-color: #0b4cce;
+        }
+        #eq:hover {
+            background-color: rgba(11, 76, 206, 0.18);
+        }
+        #btn-clear:hover {
+            background-color: white;
         }
 
     </style>
@@ -74,10 +88,10 @@
                 <!--btn area start-->
                 <section id="btn-area">
 
-                    <button id="btn-clear" class="btn">Clear</button>
+                    <button id="btn-clear" class="btn">C</button>
 
                     <!--display start-->
-                    <input type="number" id="display">
+                    <div type="number" id="display"></div>
                     <!--display end-->
 
                     <button id="7" class="btn">7</button>
@@ -87,15 +101,17 @@
                     <button id="4" class="btn">4</button>
                     <button id="5" class="btn">5</button>
                     <button id="6" class="btn">6</button>
-                    <button id="sub" class="btn">-</button>
                     <button id="1" class="btn">1</button>
                     <button id="2" class="btn">2</button>
                     <button id="3" class="btn">3</button>
-                    <button id="mul" class="btn">*</button>
-                    <button id="0" class="btn">0</button>
                     <button id="." class="btn">.</button>
+                    <button id="0" class="btn">0</button>
                     <button id="eq" class="btn">=</button>
                     <button id="div" class="btn">/</button>
+                    <button id="sub" class="btn">-</button>
+                    <button id="00" class="btn">00</button>
+                    <button id="mul" class="btn">*</button>
+
                 </section>
                 <!--btn area end-->
 
@@ -107,7 +123,28 @@
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script>
 
+    let display = document.getElementById('display'); /*$('#display');*/
 
+    let buttons = Array.from($('.btn'));
+
+    buttons.map( button => {
+        button.addEventListener('click',(e) => {
+            switch (e.target.innerText) {
+                case '=' :
+                    try{
+                        display.innerText = eval(display.innerText);
+                    }catch {
+                        display.innerText = 'Error!'
+                    }
+                    break;
+                case 'C':
+                    display.innerText = '';
+                    break;
+                default:
+                    display.innerText += e.target.innerText;
+            }
+        });
+    });
 
 </script>
 </body>
