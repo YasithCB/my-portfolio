@@ -349,8 +349,8 @@ body> main> section:nth-child(4)> section> img {
 /*projects ----------------------------------------------------------------start*/
 body> main> section:nth-child(5)> section { /*flex container*/
     display: flex;
-    padding-top: 37px;
-    flex-direction: column;
+    padding-bottom: 149px;
+    flex-direction: row;
     justify-content: space-between;
 }
 body> main> section:nth-child(5)> section> section { /*flex items*/
