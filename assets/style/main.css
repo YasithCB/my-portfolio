@@ -18,6 +18,22 @@
     text-align: left !important;
 }
 
+.assignmentTitles {
+    font-family: fantasy;
+    letter-spacing: 6px;
+    background-color: black;
+    color: white;
+    font-size: 32px;
+    padding: 8px 0;
+}
+
+.assignmentSubTitles {
+    text-align: left;
+    padding: 15px 106px;
+    font-size: 23px;
+    letter-spacing: 6px;
+}
+
 #call {
     width: 50px;
     height: 50px;
