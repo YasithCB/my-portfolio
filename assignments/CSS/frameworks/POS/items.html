@@ -21,7 +21,7 @@
             <div class="navbar-nav col-10">
                 <a class="nav-link active text-light" aria-current="page" href="index.html">Home</a>
                 <a class="nav-link active text-light" aria-current="page" href="place-order.html">Place Order</a>
-                <a class="nav-link active text-light" aria-current="page" href="customers.html">Customers</a>
+                <a class="nav-link active text-light" aria-current="page" href= "customers.html"> Customers</a>
                 <a class="nav-link active text-light" aria-current="page" href="items.html">Items</a>
                 <a class="nav-link active text-light" aria-current="page" href="orders.html">Orders</a>
 
@@ -43,7 +43,7 @@
 
 
     <!--table start-->
-    <table class="table table-dark table-striped table-responsive">
+    <table id="itemTable" class="table table-dark table-striped table-responsive">
         <thead>
         <tr>
             <th scope="col">Code</th>
@@ -103,28 +103,35 @@
                 </div>
                 <div class="modal-body">
 
-                    <!--add customer form start-->
+                    <!--add item form start-->
 
-                    <label class="text-light mb-3" >Item Code : I0001</label>
+                    <!--cus id and search btn-->
+                    <div class="row align-items-center">
+                        <div class="form-floating mb-3 col-7">
+                            <input type="text" class="form-control bg-dark text-light" id="itemCode" placeholder="name@example.com">
+                            <label class="text-light ms-2" for="itemCode">Item Code</label>
+                        </div>
+                        <button id="btnSearchItem" type="button" class="btn btn-primary mb-3 me-1 col-3 h-50">Search</button>
+                    </div>
 
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control bg-dark text-light" id="name" placeholder="name@example.com">
-                        <label class="text-light" for="name">Item Name</label>
+                        <input type="text" class="form-control bg-dark text-light" id="itemName" placeholder="name@example.com">
+                        <label class="text-light" for="itemName">Item Name</label>
                     </div>
                     <div class="form-floating mb-3 ">
-                        <input type="number" class="form-control bg-dark text-light" id="price" placeholder="name@example.com">
-                        <label class="text-light" for="price">Price</label>
+                        <input type="number" class="form-control bg-dark text-light" id="itemPrice" placeholder="name@example.com">
+                        <label class="text-light" for="itemPrice">Price</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="number" class="form-control bg-dark text-light" id="qty" placeholder="name@example.com">
-                        <label class="text-light" for="qty">Quantity</label>
+                        <input type="number" class="form-control bg-dark text-light" id="itemQty" placeholder="name@example.com">
+                        <label class="text-light" for="itemQty">Quantity</label>
                     </div>
-                    <!--add customer form end-->
+                    <!--add item form end-->
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save Item</button>
-                    <button type="button" class="btn btn-primary">Renew</button>
+                    <button id="btnSaveItem" type="button" class="btn btn-primary">Save Item</button>
+                    <button id="btnRenew" type="button" class="btn btn-primary">Renew</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -142,7 +149,7 @@
                 </div>
                 <div class="modal-body">
 
-                    <!--add customer form start-->
+                    <!--add item form start-->
 
                     <label class="text-light mb-3" >Item Code : I0001</label>
 
@@ -158,7 +165,7 @@
                         <input type="number" class="form-control bg-dark text-light" id="qtyEdit" value="60" placeholder="name@example.com">
                         <label class="text-light" for="qtyEdit">Quantity</label>
                     </div>
-                    <!--add customer form end-->
+                    <!--add item form end-->
 
                 </div>
                 <div class="modal-footer">
@@ -168,7 +175,7 @@
             </div>
         </div>
     </div>
-    <!--edit customer Modal end-->
+    <!--edit item Modal end-->
 
     <!--delete Item model start-->
     <div class="modal" id="deleteItem" tabindex="-1">
@@ -210,5 +217,79 @@
 <!--footer end-->
 
 <script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+<script>
+    let items = [];
+
+    /*add sample data*/
+    {
+        let item = {
+            code : 'IT0001',
+            name : 'Soap',
+            price : '60',
+            qty : 100
+        }
+        items.push(item);
+
+        refreshItemsTable();
+    }
+    /*add sample data*/
+
+    /*saving item to array*/
+    $("#btnSaveItem").click(function (){
+        let item = {
+            code: $('#itemCode').val(),
+            name: $('#itemName').val(),
+            price: $('#itemPrice').val(),
+            qty: $('#itemQty').val()
+        };
+        items.push(item);
+        console.log(items);
+        renewFields();
+        refreshItemsTable();
+    });
+    /*saving item to array*/
+
+    /*renew fields*/
+    $('#btnRenew').click(function (){
+        renewFields();
+    });
+    /*renew fields*/
+
+    /*search btn action*/
+    $('#btnSearchItem').click(function (){
+        let available = false;
+        for (let item of items) {
+            if(item.code === $('#itemCode').val()){
+                available = true;
+                $('#itemName').val (item.name);
+                $('#itemPrice').val (item.price);
+                $('#itemQty').val (item.qty);
+            }
+        }
+        if (!available){
+            renewFields();
+            alert('There are no item like this!');
+        }
+    });
+    /*search btn action*/
+
+    function renewFields () {
+        $('#itemCode').val('');
+        $('#itemName').val('');
+        $('#itemPrice').val('');
+        $('#itemQty').val('');
+    }
+
+    function refreshItemsTable(){
+        $('#itemTable').empty();
+
+        for (let item of items) {
+            let row = `<tr><th scope="row">${item.code}</th><td>${item.name}</td><td>${item.price}</td><td>${item.qty}</td></tr>`;
+            $('#itemTable').append(row);
+        }
+    }
+
+</script>
 </body>
 </html>
