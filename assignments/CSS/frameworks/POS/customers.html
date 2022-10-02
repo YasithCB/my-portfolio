@@ -41,7 +41,7 @@
     <h4 class="text-light text-center mb-4">Manage Customers</h4>
 
     <!--table start-->
-    <table class="table table-dark table-striped table-responsive table-hover">
+    <table class="table table-dark table-responsive table-hover ">
       <thead>
       <tr>
         <th scope="col">ID</th>
@@ -51,14 +51,19 @@
       </tr>
       </thead>
       <tbody id="cusTable">
-
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
       </tbody>
     </table>
     <!--table start-->
 
     <!--3 buttons after the table start-->
     <button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#addCustomer">Add New Customer</button>
-    <button type="button" class="btn btn-secondary m-1" data-bs-toggle="modal" data-bs-target="#editCustomer">Edit Customer Details</button>
+    <button id="btnEditCustomer" type="button" class="btn btn-secondary m-1 disabled" data-bs-toggle="modal" data-bs-target="#editCustomer">Edit Customer Details</button>
     <button type="button" class="btn btn-danger m-1" data-bs-toggle="modal" data-bs-target="#deleteCustomer">Delete Customer</button>
     <!--3 buttons after the table end-->
 
@@ -123,19 +128,22 @@
 
             <!--add customer form start-->
 
-            <label class="text-light mb-3" >Customer ID : C0002</label>
-
             <div class="form-floating mb-3">
-              <input type="text" class="form-control bg-dark text-light" id="nameEdit" value="Arunu" placeholder="name@example.com">
-              <label class="text-light" for="nameEdit">Name</label>
+              <input type="text" class="form-control bg-dark text-light" id="editId" placeholder="name@example.com">
+              <label class="text-light" for="editId">Customer ID</label>
+            </div>
+            <!--name-->
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control bg-dark text-light" id="editName" placeholder="name@example.com">
+              <label class="text-light" for="editName">Name</label>
             </div>
             <div class="form-floating mb-3 ">
-              <input type="text" class="form-control bg-dark text-light" id="addressEdit" value="Galhira" placeholder="name@example.com">
-              <label class="text-light" for="addressEdit">Address</label>
+              <input type="text" class="form-control bg-dark text-light" id="editAddress" placeholder="name@example.com">
+              <label class="text-light" for="editAddress">Address</label>
             </div>
             <div class="form-floating mb-3">
-              <input type="number" class="form-control bg-dark text-light" id="salaryEdit" value="50000" placeholder="name@example.com">
-              <label class="text-light" for="salaryEdit">Salary</label>
+              <input type="number" class="form-control bg-dark text-light" id="editSalary" placeholder="name@example.com">
+              <label class="text-light" for="editSalary">Salary</label>
             </div>
             <!--add customer form end-->
 
@@ -204,6 +212,7 @@
     customers.push(customer);
 
     refreshCustomerTable();
+    rowTrigger();
   }
   /*add sample data*/
 
@@ -218,6 +227,7 @@
     customers.push(customer);
     renewFields();
     refreshCustomerTable();
+    rowTrigger();
   });
   /*saving customer to array*/
 
@@ -250,6 +260,18 @@
     $('#cusName').val('');
     $('#cusAddress').val('');
     $('#cusSalary').val('');
+  }
+
+  function rowTrigger() {
+    $('#cusTable>tr').click(function (){
+      /*open edit cus model*/
+      $('#btnEditCustomer').click();
+
+      $('#editId').val($(this).children().eq(0).text());
+      $('#editName').val($(this).children().eq(1).text());
+      $('#editAddress').val($(this).children().eq(2).text());
+      $('#editSalary').val($(this).children().eq(3).text());
+    });
   }
 
   function refreshCustomerTable(){
