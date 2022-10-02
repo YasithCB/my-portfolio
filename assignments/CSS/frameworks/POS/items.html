@@ -43,7 +43,7 @@
 
 
     <!--table start-->
-    <table id="itemTable" class="table table-dark table-striped table-responsive">
+    <table class="table table-dark table-responsive table-hover">
         <thead>
         <tr>
             <th scope="col">Code</th>
@@ -52,7 +52,7 @@
             <th scope="col">Quantity</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody id="itemTable">
         <tr>
             <th scope="row">I0001</th>
             <td>Soap</td>
@@ -221,19 +221,7 @@
 <script>
     let items = [];
 
-    /*add sample data*/
-    {
-        let item = {
-            code : 'IT0001',
-            name : 'Soap',
-            price : '60',
-            qty : 100
-        }
-        items.push(item);
 
-        refreshItemsTable();
-    }
-    /*add sample data*/
 
     /*saving item to array*/
     $("#btnSaveItem").click(function (){
