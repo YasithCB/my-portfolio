@@ -54,34 +54,10 @@
         </thead>
         <tbody id="itemTable">
         <tr>
-            <th scope="row">I0001</th>
-            <td>Soap</td>
-            <td>200</td>
-            <td>60</td>
-        </tr>
-        <tr>
-            <th scope="row">I0002</th>
-            <td>Clogard toothpaste</td>
-            <td>300</td>
-            <td>55</td>
-        </tr>
-        <tr>
-            <th scope="row">I0003</th>
-            <td>Atlas pen</td>
-            <td>50</td>
-            <td>200</td>
-        </tr>
-        <tr>
-            <th scope="row">I0004</th>
-            <td>Eraser</td>
-            <td>30</td>
-            <td>100</td>
-        </tr>
-        <tr>
-            <th scope="row">I0005</th>
-            <td>Atlas pencils</td>
-            <td>30</td>
-            <td>300</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
         </tbody>
     </table>
@@ -89,7 +65,7 @@
 
     <!--3 buttons after the table start-->
     <button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#addItem">Add New Item</button>
-    <button type="button" class="btn btn-secondary m-1" data-bs-toggle="modal" data-bs-target="#editItem">Edit Item Details</button>
+    <button id="btnEditItem" type="button" class="btn btn-secondary m-1" data-bs-toggle="modal" data-bs-target="#editItem">Edit Item Details</button>
     <button type="button" class="btn btn-danger m-1" data-bs-toggle="modal" data-bs-target="#deleteItem">Delete Item</button>
     <!--3 buttons after the table end-->
 
@@ -151,18 +127,20 @@
 
                     <!--add item form start-->
 
-                    <label class="text-light mb-3" >Item Code : I0001</label>
-
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control bg-dark text-light" id="nameEdit" value="Soap" placeholder="name@example.com">
+                        <input type="text" class="form-control bg-dark text-light" id="codeEdit" placeholder="name@example.com">
+                        <label class="text-light" for="codeEdit">Item Code</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control bg-dark text-light" id="nameEdit" placeholder="name@example.com">
                         <label class="text-light" for="nameEdit">Item Name</label>
                     </div>
                     <div class="form-floating mb-3 ">
-                        <input type="number" class="form-control bg-dark text-light" id="priceEdit" value="200" placeholder="name@example.com">
+                        <input type="number" class="form-control bg-dark text-light" id="priceEdit" placeholder="name@example.com">
                         <label class="text-light" for="priceEdit">Price</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="number" class="form-control bg-dark text-light" id="qtyEdit" value="60" placeholder="name@example.com">
+                        <input type="number" class="form-control bg-dark text-light" id="qtyEdit" placeholder="name@example.com">
                         <label class="text-light" for="qtyEdit">Quantity</label>
                     </div>
                     <!--add item form end-->
@@ -221,7 +199,20 @@
 <script>
     let items = [];
 
+    /*add sample data*/
+    {
+        var item = {
+            code : 'IT0001',
+            name : 'Soap',
+            price : 200,
+            qty : 60
+        }
+        items.push(item);
 
+        refreshItemsTable();
+        rowTrigger();
+    }
+    /*add sample data*/
 
     /*saving item to array*/
     $("#btnSaveItem").click(function (){
@@ -232,9 +223,10 @@
             qty: $('#itemQty').val()
         };
         items.push(item);
-        console.log(items);
+
         renewFields();
         refreshItemsTable();
+        rowTrigger();
     });
     /*saving item to array*/
 
@@ -276,6 +268,18 @@
             let row = `<tr><th scope="row">${item.code}</th><td>${item.name}</td><td>${item.price}</td><td>${item.qty}</td></tr>`;
             $('#itemTable').append(row);
         }
+    }
+
+    function rowTrigger() {
+        $('#itemTable>tr').click(function (){
+            /*open edit item model*/
+            $('#btnEditItem').click();
+
+            $('#codeEdit').val($(this).children().eq(0).text());
+            $('#nameEdit').val($(this).children().eq(1).text());
+            $('#priceEdit').val($(this).children().eq(2).text());
+            $('#qtyEdit').val($(this).children().eq(3).text());
+        });
     }
 
 </script>
