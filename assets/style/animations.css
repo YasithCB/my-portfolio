@@ -1,0 +1,13 @@
+
+.fadeInText {
+    width: 53vw;
+}
+
+span {
+    opacity: 0;
+    transition: all 20ms ease;
+}
+
+span.fade {
+    opacity: 1;
+}
