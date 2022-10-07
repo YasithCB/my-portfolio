@@ -3,6 +3,10 @@ html {
     font-size: 5px;
 }
 
+.btn {
+    font-size: 2.5rem;
+}
+
 .card-img {
     width: 100%;
     height: 50%;
@@ -33,7 +37,7 @@ html {
     transition-duration: .2s;
 }
 
-.card p,h6 {
+.card h6 {
     text-align: left !important;
 }
 .card p {
@@ -176,10 +180,11 @@ h5 {
     font-size: 3rem;
     letter-spacing: 13px;
 }
-h2,h4,h6 {
+h6 {
     margin: 0;
     text-align: center;
     font-family: 'Poppins', sans-serif;
+    font-size: 2.4rem;
 }
 
 /*All sections in the main*/
@@ -388,6 +393,7 @@ body> main> section:nth-child(4)> section> img {
 /*skill and tools ----------------------------------------------------------end*/
 
 /*projects ----------------------------------------------------------------start*/
+
 body> main> section:nth-child(5)> section { /*flex container*/
     display: flex;
     padding-bottom: 149px;

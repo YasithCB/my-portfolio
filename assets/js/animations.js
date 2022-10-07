@@ -36,7 +36,7 @@ for (const title of sectionTitlesList) {
     function scrollAppear() {
         var sectionTitle = title;
         var titlePosition = sectionTitle.getBoundingClientRect().top;
-        var screenPosition = window.innerHeight ;
+        var screenPosition = window.innerHeight /1.2 ;
 
         if (titlePosition < screenPosition) {
             sectionTitle.classList.add('sectionTitle-appear');
