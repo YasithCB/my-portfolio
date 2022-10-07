@@ -11,3 +11,13 @@ span {
 span.fade {
     opacity: 1;
 }
+
+.sectionTitle {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s all ease-in-out;
+}
+.sectionTitle-appear {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -71,9 +71,10 @@ html {
 }
 #call > i {
     position: relative;
-    left: 17px;
-    top: 17px;
+    left: 20px;
+    top: 20px;
     color: chartreuse;
+    font-size: 11px;
 }
 .water-drop-anim {
     width: 150px;
@@ -303,18 +304,15 @@ body> main> section:nth-child(2)> article {
 body> main> section:nth-child(2)> article> p {
     text-align: center;
 }
+
 body> main> section:nth-child(2)> article> img {
     position: absolute;
     left: 0;
     right: 0;
     margin: auto;
-    bottom: -78px;
-}/*article--------------end*/
-body> main> section:nth-child(2)> article> img {
-    position: relative;
-    margin-left: 16vw;
-    top: -29px;
 }
+/*article--------------end*/
+
 /*about me-------------------------------------------------------------end*/
 
 /*education-----------------------------------------------------------start*/
