@@ -7,6 +7,10 @@ html {
     font-size: 2.5rem;
 }
 
+.mainSec {
+    height: 100vh;
+}
+
 .card-img {
     width: 100%;
     height: 50%;
@@ -293,10 +297,10 @@ body> main> section:nth-child(1)> div> h1 {
 /*about me-----------------------------------------start*/
 
 /*article----start*/
-body> main> section:nth-child(2) {
-    height: 470px;
+#aboutSection {
+    height: 85vh;
 }
-body> main> section:nth-child(2)> article {
+#aboutSection> article {
     position: absolute;
     left: 0;
     right: 0;
@@ -306,11 +310,11 @@ body> main> section:nth-child(2)> article {
     height: 300px;
     padding-top: 50px;
 }
-body> main> section:nth-child(2)> article> p {
+#aboutSection> article> p {
     text-align: center;
 }
 
-body> main> section:nth-child(2)> article> img {
+#aboutSection> article> img {
     position: absolute;
     left: 0;
     right: 0;
@@ -321,17 +325,17 @@ body> main> section:nth-child(2)> article> img {
 /*about me-------------------------------------------------------------end*/
 
 /*education-----------------------------------------------------------start*/
-body> main> section:nth-child(3)> section { /*common to all sections*/
+#sectionEdu> section { /*common to all sections*/
     position: relative;
     display: flex;
     padding: 22px 20px;
 }
-body> main> section:nth-child(3)> section> div { /*common to all image containing divs*/
+#sectionEdu> section> div { /*common to all image containing divs*/
     display: inline-block;
     position: relative;
     width: 121px;
 }
-body> main> section:nth-child(3)> section> div> img { /*common style to images (logos)*/
+#sectionEdu> section> div> img { /*common style to images (logos)*/
     position: absolute;
     left: 0;
     right: 0;
@@ -339,12 +343,12 @@ body> main> section:nth-child(3)> section> div> img { /*common style to images (
     bottom: 0;
     margin: auto;
 }
-body> main> section:nth-child(3)> section> section { /*common to all rectangle sections*/
+#sectionEdu> section> section { /*common to all rectangle sections*/
     display: inline-block;
     position: relative;
     width: 23%;
 }
-body> main> section:nth-child(3)> section> section> div { /*common to all div(rect)s next to the logo*/
+#sectionEdu> section> section> div { /*common to all div(rect)s next to the logo*/
     position: relative;
     border: 1px solid black;
     border-radius: 13px;
@@ -353,13 +357,13 @@ body> main> section:nth-child(3)> section> section> div { /*common to all div(re
     margin: 4px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
-body> main> section:nth-child(3)> section> section> div> p { /*common to all p inside divs*/
+#sectionEdu> section> section> div> p { /*common to all p inside divs*/
     text-align: center;
     position: relative;
     top: 27px;
     margin: 0;
 }
-body> main> section:nth-child(3)> section> p { /*common to all each articles*/
+#sectionEdu> section> p { /*common to all each articles*/
     position: relative;
     display: inline-block;
     text-align: left;
