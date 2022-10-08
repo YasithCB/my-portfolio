@@ -19,6 +19,13 @@ a {
     height: 50%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
     cursor: pointer;
+    transition-property: all;
+    transition-duration: .2s;
+}
+.card-img:hover {
+    scale: 120%;
+    transition-property: all;
+    transition-duration: .2s;
 }
 
 .card-container {
@@ -32,13 +39,13 @@ a {
     height: 24vw;
     margin-left: 35px;
     display: inline-block;
+    margin-bottom: 55px;
 
     transition-property: all;
     transition-duration: .2s;
 }
 .card:hover {
     background-color: rgba(94, 94, 94, 0.16);
-    scale: 105%;
 
     transition-property: all;
     transition-duration: .2s;
@@ -46,9 +53,15 @@ a {
 
 .card h6 {
     text-align: left !important;
+    font-size: 3rem;
+    padding-top: 20px;
 }
 .card p {
     font-size: 13px;
+}
+.card a {
+    padding-top: 4px;
+    display: inline-block;
 }
 
 .assignmentTitles {
@@ -432,19 +445,19 @@ body> main> section:nth-child(5)> section> section> div:hover { /*when hovering 
 
 /*project 1*/
 body> main> section:nth-child(5)> section> section:nth-child(1)> div {
-    background: url("../image/parking system project.png");
+    background: url("../image/projectsScreenshots/parking system project.png");
     background-size: cover;
 }
 
 /*project 2*/
 body> main> section:nth-child(5)> section> section:nth-child(2)> div {
-    background: url("../image/t4me project.png");
+    background: url("../image/projectsScreenshots/t4me project.png");
     background-size: cover;
 }
 
 /*project 3*/
 body> main> section:nth-child(5)> section> section:nth-child(3)> div {
-    background: url("../image/d24 project.png");
+    background: url("../image/projectsScreenshots/d24 project.png");
     background-size: cover;
 }
 

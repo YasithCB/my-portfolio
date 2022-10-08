@@ -12,6 +12,6 @@ This is a portfolio of Yasith C Bandara
 
 ## Image Previews
 
-![Logo](assets/image/projectScreenshots/Screenshot%202022-09-22%20142501.jpg)
-![Logo](assets/image/projectScreenshots/Screenshot%202022-09-22%20142518.jpg)
+![Logo](assets/image/portfolioScreenshots/Screenshot%202022-09-22%20142501.jpg)
+![Logo](assets/image/portfolioScreenshots/Screenshot%202022-09-22%20142518.jpg)
 
