@@ -201,6 +201,10 @@
 <script>
   let customers = [];
 
+  $('#addCustomer').on('shown.bs.modal', function () {
+    $('#cusId').focus();
+  });
+
   /*add sample data*/
   {
     var customer = {

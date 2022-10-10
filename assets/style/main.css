@@ -397,7 +397,17 @@ body> main> section:nth-child(1)> div> h1 {
 /*Education ------------------------------------------------------------------end*/
 
 /*Skill and tools ------------------------------------------------------------start*/
-body> main> section:nth-child(4)> section {
+
+#sectionSkills img {
+    scale: 100%;
+    transition: 0.2s all;
+}
+#sectionSkills img:hover {
+    scale: 150%;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+#sectionSkills> section {
     display: flex;
     width: 90vw;
     flex-flow: wrap;
@@ -407,9 +417,7 @@ body> main> section:nth-child(4)> section {
     margin: auto;
     padding-top: 16px;
 }
-body> main> section:nth-child(4)> section> img {
-    scale: 100%;
-}
+
 /*skill and tools ----------------------------------------------------------end*/
 
 /*projects ----------------------------------------------------------------start*/
