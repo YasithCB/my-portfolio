@@ -63,7 +63,8 @@
 
     <!--3 buttons after the table start-->
     <button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#addCustomer">Add New Customer</button>
-    <button id="btnEditCustomer" type="button" class="btn btn-secondary m-1 invisible" data-bs-toggle="modal" data-bs-target="#editCustomer">Edit Customer Details</button>
+    <span class="text-light ms-3">Click rows to edit and delete Customers</span>
+    <button id="btnEditDeleteCustomer" type="button" class="btn btn-secondary m-1 invisible" data-bs-toggle="modal" data-bs-target="#editCustomer">Edit Customer Details</button>
     <!--3 buttons after the table end-->
 
     <!--add customer Modal start-->
@@ -132,29 +133,33 @@
             <!--add customer form start-->
 
             <div class="form-floating mb-3">
-              <input type="text" class="form-control bg-dark text-light" id="editId" placeholder="name@example.com">
-              <label class="text-light" for="editId">Customer ID</label>
+              <input type="text" class="form-control bg-dark text-light" id="editCusId" placeholder="name@example.com">
+              <label class="text-light" for="editCusId">Customer ID</label>
+              <span class="control-error"></span>
             </div>
             <!--name-->
             <div class="form-floating mb-3">
-              <input type="text" class="form-control bg-dark text-light" id="editName" placeholder="name@example.com">
-              <label class="text-light" for="editName">Name</label>
+              <input type="text" class="form-control bg-dark text-light" id="editCusName" placeholder="name@example.com">
+              <label class="text-light" for="editCusName">Name</label>
+              <span class="control-error"></span>
             </div>
             <div class="form-floating mb-3 ">
-              <input type="text" class="form-control bg-dark text-light" id="editAddress" placeholder="name@example.com">
-              <label class="text-light" for="editAddress">Address</label>
+              <input type="text" class="form-control bg-dark text-light" id="editCusAddress" placeholder="name@example.com">
+              <label class="text-light" for="editCusAddress">Address</label>
+              <span class="control-error"></span>
             </div>
             <div class="form-floating mb-3">
-              <input type="number" class="form-control bg-dark text-light" id="editSalary" placeholder="name@example.com">
-              <label class="text-light" for="editSalary">Salary</label>
+              <input type="number" class="form-control bg-dark text-light" id="editCusSalary" placeholder="name@example.com">
+              <label class="text-light" for="editCusSalary">Salary</label>
+              <span class="control-error"></span>
             </div>
             <!--add customer form end-->
 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-danger">Delete Customer</button>
-            <button type="button" class="btn btn-primary">Edit Customer</button>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button id="btnDeleteCustomer" type="button" class="btn btn-danger">Delete Customer</button>
+            <button id="btnEditCustomer" type="button" class="btn btn-primary">Edit Customer</button>
+            <button id="btnCloseCustomerEditModel" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -210,11 +215,112 @@
   const cusAddressRegex = /^[0-9/A-z. ,]{7,}$/;
   const cusSalaryRegex = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 
-  let customerValidations = [];
-  customerValidations.push({reg: cusIDRegex, field: $('#cusId'),error:'Customer ID Pattern is Wrong : C001'});
-  customerValidations.push({reg: cusNameRegex, field: $('#cusName'),error:'Customer Name Pattern is Wrong : A-z 5-20'});
-  customerValidations.push({reg: cusAddressRegex, field: $('#cusAddress'),error:'Customer Address Pattern is Wrong : A-z 0-9 ,/'});
-  customerValidations.push({reg: cusSalaryRegex, field: $('#cusSalary'),error:'Customer Salary Pattern is Wrong : 100 or 100.00'});
+  let customerValidationsOnSave = [];
+  customerValidationsOnSave.push({reg: cusIDRegex, field: $('#cusId'),error:'Customer ID Pattern is Wrong : C001'});
+  customerValidationsOnSave.push({reg: cusNameRegex, field: $('#cusName'),error:'Customer Name Pattern is Wrong : A-z 5-20'});
+  customerValidationsOnSave.push({reg: cusAddressRegex, field: $('#cusAddress'),error:'Customer Address Pattern is Wrong : A-z 0-9 ,/'});
+  customerValidationsOnSave.push({reg: cusSalaryRegex, field: $('#cusSalary'),error:'Customer Salary Pattern is Wrong : 100 or 100.00'});
+
+  let customerValidationsOnEdit = [];
+  customerValidationsOnEdit.push({reg: cusIDRegex, field: $('#editCusId'),error:'Customer ID Pattern is Wrong : C001'});
+  customerValidationsOnEdit.push({reg: cusNameRegex, field: $('#editCusName'),error:'Customer Name Pattern is Wrong : A-z 5-20'});
+  customerValidationsOnEdit.push({reg: cusAddressRegex, field: $('#editCusAddress'),error:'Customer Address Pattern is Wrong : A-z 0-9 ,/'});
+  customerValidationsOnEdit.push({reg: cusSalaryRegex, field: $('#editCusSalary'),error:'Customer Salary Pattern is Wrong : 100 or 100.00'});
+
+  /*validate all in any keyPress on anywhere on edit model*/
+  $("#editCusId,#editCusName,#editCusAddress,#editCusSalary").on('keyup', function (event) {
+    validateAllFieldsOnEdit();
+  });
+
+  /*focus next field by enter edit model*/
+  $("#editCusId").on('keydown', function (event) {
+    if (event.key === "Enter" && check(cusIDRegex,$('#editCusId')) ) {
+      $('#editCusName').focus();
+    }else {
+      $('#editCusId').focus();
+    }
+  });
+  $("#editCusName").on('keydown', function (event) {
+    if (event.key === "Enter" && check(cusNameRegex,$('#editCusName')) ) {
+      $('#editCusAddress').focus();
+    }else {
+      $('#editCusName').focus();
+    }
+  });
+  $("#editCusAddress").on('keydown', function (event) {
+    if (event.key === "Enter" && check(cusAddressRegex,$('#editCusAddress')) ) {
+      $('#editCusSalary').focus();
+    }else {
+      $('#editCusAddress').focus();
+    }
+  });
+  $("#editCusSalary").on('keydown', function (event) {
+    if (event.key === "Enter" && check(cusSalaryRegex,$('#editCusSalary'))) {
+      $('#btnEditCustomer').click();
+      $('#editCusId').focus();
+    }
+  });
+  /*focus next field by enter edit model*/
+
+  /*function to check if all fields are correct in edit model*/
+  function validateAllFieldsOnEdit() {
+    let errorCount= 0;
+    for (let validation of customerValidationsOnEdit) {
+      if (check(validation.reg,validation.field)) {
+        makeFieldAsCorrect(validation.field,"");
+      }else {
+        errorCount++;
+        makeFieldAsError(validation.field, validation.error);
+      }
+    }
+    setEditBtnState(errorCount);
+  }
+  function setEditBtnState(errorCount) {
+    if (errorCount > 0) {
+      $('#btnEditCustomer').attr('disabled',true);
+    }else {
+      $('#btnEditCustomer').attr('disabled',false);
+    }
+  }
+  function getEditBtnState() {
+    return $('#btnEditCustomer').attr('disabled') !== true;
+  }
+
+  $('#btnEditCustomer').click(function () {
+    if (confirm('Are you sure to Edit this Customer?') && getEditBtnState()) {
+      let customer = searchCustomer(selectedRowCusId);
+      /*edit*/
+      customer.id = $('#editCusId').val();
+      customer.name = $('#editCusName').val();
+      customer.address = $('#editCusAddress').val();
+      customer.salary = $('#editCusSalary').val();
+
+
+      $('#btnCloseCustomerEditModel').click();
+      refreshCustomerTable();
+    }
+  });
+
+  function searchCustomer (cusId) {
+    for (let customer of customers) {
+      if (customer.id === cusId) {
+        return customer;
+      }
+    }
+    return -1;
+  }
+
+  /*delete btn*/
+  $('#btnDeleteCustomer').click(function () {
+    let customer = searchCustomer(selectedRowCusId);
+    customers.splice(customers.indexOf(customer),1);
+    $('#btnCloseCustomerEditModel').click();
+    refreshCustomerTable();
+
+  });
+
+
+
 
   /*prevent focus another field when pressing tab btn*/
   $("#cusId,#cusName,#cusAddress,#cusSalary").on('keydown', function (event) {
@@ -223,12 +329,12 @@
     }
   });
 
-  /*validate all in any keyPress on anywhere*/
+  /*validate all in any keyPress on anywhere on save model*/
   $("#cusId,#cusName,#cusAddress,#cusSalary").on('keyup', function (event) {
-    validateAllFields();
+    validateAllFieldsOnSave();
   });
 
-  /*focus next field by enter*/
+  /*focus next field by enter save model*/
   $("#cusId").on('keydown', function (event) {
     if (event.key === "Enter" && check(cusIDRegex,$('#cusId')) ) {
       $('#cusName').focus();
@@ -258,12 +364,12 @@
       }
     }
   });
-  /*focus next field by enter*/
+  /*focus next field by enter save model*/
 
-  /*function to check if all fields are correct*/
-  function validateAllFields() {
+  /*function to check if all fields are correct in save model*/
+  function validateAllFieldsOnSave() {
     let errorCount= 0;
-    for (let validation of customerValidations) {
+    for (let validation of customerValidationsOnSave) {
       if (check(validation.reg,validation.field)) {
         makeFieldAsCorrect(validation.field,"");
       }else {
@@ -331,7 +437,7 @@
     $('#cusId').focus();
   });
   $('#editCustomer').on('shown.bs.modal', function () {
-    $('#editId').focus();
+    $('#editCusId').focus();
   });
 
   /*add sample data*/
@@ -393,17 +499,27 @@
     $('#cusName').val('');
     $('#cusAddress').val('');
     $('#cusSalary').val('');
+
+    $('#editCusId').val('');
+    $('#editCusName').val('');
+    $('#editCusAddress').val('');
+    $('#editCusSalary').val('');
   }
 
+  var selectedRowCusId = '';
   function rowTrigger() {
     $('#cusTable>tr').click(function (){
       /*open edit cus model*/
-      $('#btnEditCustomer').click();
+      console.log('clicked')
+      $('#btnEditDeleteCustomer').click();
+      selectedRowCusId = $(this).children().eq(0).text();
 
-      $('#editId').val($(this).children().eq(0).text());
-      $('#editName').val($(this).children().eq(1).text());
-      $('#editAddress').val($(this).children().eq(2).text());
-      $('#editSalary').val($(this).children().eq(3).text());
+      $('#editCusId').val(selectedRowCusId);
+      $('#editCusName').val($(this).children().eq(1).text());
+      $('#editCusAddress').val($(this).children().eq(2).text());
+      $('#editCusSalary').val($(this).children().eq(3).text());
+
+
     });
   }
 
