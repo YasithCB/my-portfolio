@@ -8,3 +8,8 @@ body h5,p { /*footer*/
 ::-webkit-scrollbar {
     width: 0;
 }
+
+.control-error {
+    color: #c36b6b;
+    font-size: 11px;
+}
