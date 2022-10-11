@@ -325,9 +325,9 @@
         <!--table start-->
 
         <!--3 buttons after the table start-->
-        <button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#addItem">Add New Item</button>
-        <button type="button" class="btn btn-secondary m-1" data-bs-toggle="modal" data-bs-target="#editItem">Edit Item Details</button>
-        <button type="button" class="btn btn-danger m-1" data-bs-toggle="modal" data-bs-target="#deleteItem">Delete Item</button>
+        <button id="btnAddItem" type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#addItem">Add New Item</button>
+        <span class="text-light ms-3">Click rows to edit and delete Customers</span>
+        <button id="btnEditDeleteItem" type="button" class="btn btn-secondary m-1 invisible" data-bs-toggle="modal" data-bs-target="#editItem">Edit Item Details</button>
         <!--3 buttons after the table end-->
 
         <!--add Item Modal start-->
@@ -342,27 +342,29 @@
 
                         <!--add customer form start-->
 
-                        <label class="text-light mb-3" >Item Code : I0001</label>
-
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control bg-dark text-light" id="nameOnItem" placeholder="name@example.com">
-                            <label class="text-light" for="nameOnItem">Item Name</label>
+                            <input type="text" class="form-control bg-dark text-light" id="itemCode" placeholder="name@example.com">
+                            <label class="text-light" for="itemCode">Item Code</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control bg-dark text-light" id="itemName" placeholder="name@example.com">
+                            <label class="text-light" for="itemName">Item Name</label>
                         </div>
                         <div class="form-floating mb-3 ">
-                            <input type="number" class="form-control bg-dark text-light" id="priceOnItem" placeholder="name@example.com">
-                            <label class="text-light" for="priceOnItem">Price</label>
+                            <input type="number" class="form-control bg-dark text-light" id="itemPrice" placeholder="name@example.com">
+                            <label class="text-light" for="itemPrice">Price</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="number" class="form-control bg-dark text-light" id="qty" placeholder="name@example.com">
-                            <label class="text-light" for="qty">Quantity</label>
+                            <input type="number" class="form-control bg-dark text-light" id="itemQty" placeholder="name@example.com">
+                            <label class="text-light" for="itemQty">Quantity</label>
                         </div>
                         <!--add customer form end-->
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Save Item</button>
-                        <button type="button" class="btn btn-primary">Renew</button>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button id="btnSaveItem" type="button" class="btn btn-primary">Save Item</button>
+                        <button id="btnRenew" type="button" class="btn btn-primary">Renew</button>
+                        <button id="btnCloseAddItemModal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -380,27 +382,29 @@
                     <div class="modal-body">
 
                         <!--add customer form start-->
-
-                        <label class="text-light mb-3" >Item Code : I0001</label>
-
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control bg-dark text-light" id="nameEditOnItem" value="Soap" placeholder="name@example.com">
-                            <label class="text-light" for="nameEditOnItem">Item Name</label>
+                            <input type="text" class="form-control bg-dark text-light" id="editItemCode" placeholder="name@example.com">
+                            <label class="text-light" for="editItemCode">Item Code</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control bg-dark text-light" id="editItemName" placeholder="name@example.com">
+                            <label class="text-light" for="editItemName">Item Name</label>
                         </div>
                         <div class="form-floating mb-3 ">
-                            <input type="number" class="form-control bg-dark text-light" id="priceEditOnItem" value="200" placeholder="name@example.com">
-                            <label class="text-light" for="priceEditOnItem">Price</label>
+                            <input type="number" class="form-control bg-dark text-light" id="editItemPrice" placeholder="name@example.com">
+                            <label class="text-light" for="editItemPrice">Price</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="number" class="form-control bg-dark text-light" id="qtyEditOnItem" value="60" placeholder="name@example.com">
-                            <label class="text-light" for="qtyEditOnItem">Quantity</label>
+                            <input type="number" class="form-control bg-dark text-light" id="editItemQty" placeholder="name@example.com">
+                            <label class="text-light" for="editItemQty">Quantity</label>
                         </div>
                         <!--add customer form end-->
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Edit Item Details</button>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button id="btnDeleteItem" type="button" class="btn btn-danger">Delete Item</button>
+                        <button id="btnEditItem" type="button" class="btn btn-primary">Edit Item Details</button>
+                        <button id="btnCloseItemModal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>

@@ -17,12 +17,71 @@ customerValidationsOnEdit.push({reg: cusNameRegex, field: $('#editCusName'),erro
 customerValidationsOnEdit.push({reg: cusAddressRegex, field: $('#editCusAddress'),error:'Customer Address Pattern is Wrong : A-z 0-9 ,/'});
 customerValidationsOnEdit.push({reg: cusSalaryRegex, field: $('#editCusSalary'),error:'Customer Salary Pattern is Wrong : 100 or 100.00'});
 
+/*prevent focus another field when pressing tab btn*/
+$("#cusId,#cusName,#cusAddress,#cusSalary,#editCusId,#editCusName,#editCusAddress,#editCusSalary").on('keydown', function (event) {
+    if (event.key === "Tab") {
+        event.preventDefault();
+    }
+});
+/*focus on modal starting*/
+$('#addCustomer').on('shown.bs.modal', function () {
+    $('#cusId').focus();
+});
+$('#editCustomer').on('shown.bs.modal', function () {
+    $('#editCusId').focus();
+});
+/*focus on modal starting*/
+
+/*common functions started*/
+function check(reg,field){
+    let value = field.val();
+    return reg.test(value);
+}
+
+function makeFieldAsCorrect(field,error) {
+    if (field.val().length <= 0) {
+        defaultText(field,error);
+    }else {
+        correctText(field,error);
+    }
+}
+function makeFieldAsError(field,error) {
+    if (field.val().length <= 0) {
+        defaultText(field,"");
+    }else {
+        errorText(field,error);
+    }
+}
+
+function errorText(field,error) {
+    field.css('border','1px solid red');
+    field.parent().children('span').text(error);
+}
+
+function correctText(field,error) {
+    field.css('border','1px solid green');
+    field.parent().children('span').text(error);
+}
+
+function defaultText(field,error) {
+    field.css("border",'1px solid white');
+    field.parent().children('span').text(error);
+}
+/*common functions end*/
+
+
+
+
+
+
+/*edit customer start*/
+
 /*validate all in any keyPress on anywhere on edit model*/
-$("#editCusId,#editCusName,#editCusAddress,#editCusSalary").on('keyup', function (event) {
+$("#editCusId,#editCusName,#editCusAddress,#editCusSalary").on('keyup', function () {
     validateAllFieldsOnEdit();
 });
 
-/*focus next field by enter edit model*/
+/*focus next field*/
 $("#editCusId").on('keydown', function (event) {
     if (event.key === "Enter" && check(cusIDRegex,$('#editCusId')) ) {
         $('#editCusName').focus();
@@ -50,31 +109,7 @@ $("#editCusSalary").on('keydown', function (event) {
         $('#editCusId').focus();
     }
 });
-/*focus next field by enter edit model*/
-
-/*function to check if all fields are correct in edit model*/
-function validateAllFieldsOnEdit() {
-    let errorCount= 0;
-    for (let validation of customerValidationsOnEdit) {
-        if (check(validation.reg,validation.field)) {
-            makeFieldAsCorrect(validation.field,"");
-        }else {
-            errorCount++;
-            makeFieldAsError(validation.field, validation.error);
-        }
-    }
-    setEditBtnState(errorCount);
-}
-function setEditBtnState(errorCount) {
-    if (errorCount > 0) {
-        $('#btnEditCustomer').attr('disabled',true);
-    }else {
-        $('#btnEditCustomer').attr('disabled',false);
-    }
-}
-function getEditBtnState() {
-    return $('#btnEditCustomer').attr('disabled') !== true;
-}
+/*focus next field*/
 
 $('#btnEditCustomer').click(function () {
     if (confirm('Are you sure to Edit this Customer?') && getEditBtnState()) {
@@ -91,6 +126,32 @@ $('#btnEditCustomer').click(function () {
     }
 });
 
+/*function to check if all fields are correct*/
+function validateAllFieldsOnEdit() {
+    let errorCount= 0;
+    for (let validation of customerValidationsOnEdit) {
+        if (check(validation.reg,validation.field)) {
+            makeFieldAsCorrect(validation.field,"");
+        }else {
+            errorCount++;
+            makeFieldAsError(validation.field, validation.error);
+        }
+    }
+    setEditBtnState(errorCount);
+}
+
+function setEditBtnState(errorCount) {
+    if (errorCount > 0) {
+        $('#btnEditCustomer').attr('disabled',true);
+    }else {
+        $('#btnEditCustomer').attr('disabled',false);
+    }
+}
+
+function getEditBtnState() {
+    return $('#btnEditCustomer').attr('disabled') !== true;
+}
+
 function searchCustomer (cusId) {
     for (let customer of customers) {
         if (customer.id === cusId) {
@@ -100,7 +161,16 @@ function searchCustomer (cusId) {
     return -1;
 }
 
-/*delete btn*/
+/*edit customer end*/
+
+
+
+
+
+
+
+/*delete customer start*/
+
 $('#btnDeleteCustomer').click(function () {
     let customer = searchCustomer(selectedRowCusId);
     customers.splice(customers.indexOf(customer),1);
@@ -109,16 +179,12 @@ $('#btnDeleteCustomer').click(function () {
 
 });
 
+/*delete customer end*/
 
 
 
-/*prevent focus another field when pressing tab btn*/
-$("#cusId,#cusName,#cusAddress,#cusSalary").on('keydown', function (event) {
-    if (event.key === "Tab") {
-        event.preventDefault();
-    }
-});
 
+/*save customer start*/
 /*validate all in any keyPress on anywhere on save model*/
 $("#cusId,#cusName,#cusAddress,#cusSalary").on('keyup', function (event) {
     validateAllFieldsOnSave();
@@ -170,11 +236,6 @@ function validateAllFieldsOnSave() {
     setSaveBtnState(errorCount);
 }
 
-function check(reg,field){
-    let value = field.val();
-    return reg.test(value);
-}
-
 function setSaveBtnState(errorCount) {
     if (errorCount > 0) {
         $('#btnSaveCustomer').attr('disabled',true);
@@ -183,52 +244,15 @@ function setSaveBtnState(errorCount) {
     }
 }
 function getSaveBtnState() {
-    if ($('#btnSaveCustomer').attr('disabled') === true) {
-        return false;
-    }else {
-        return true;
-    }
+    return $('#btnSaveCustomer').attr('disabled') !== true;
 }
+/*save customer end*/
 
-function makeFieldAsCorrect(field,error) {
-    if (field.val().length <= 0) {
-        defaultText(field,error);
-    }else {
-        correctText(field,error);
-    }
-}
-function makeFieldAsError(field,error) {
-    if (field.val().length <= 0) {
-        defaultText(field,"");
-    }else {
-        errorText(field,error);
-    }
-}
 
-function errorText(field,error) {
-    field.css('border','1px solid red');
-    field.parent().children('span').text(error);
-}
 
-function correctText(field,error) {
-    field.css('border','1px solid green');
-    field.parent().children('span').text(error);
-}
-
-function defaultText(field,error) {
-    field.css("border",'1px solid white');
-    field.parent().children('span').text(error);
-}
 
 
 let customers = [];
-
-$('#addCustomer').on('shown.bs.modal', function () {
-    $('#cusId').focus();
-});
-$('#editCustomer').on('shown.bs.modal', function () {
-    $('#editCusId').focus();
-});
 
 /*add sample data*/
 {
