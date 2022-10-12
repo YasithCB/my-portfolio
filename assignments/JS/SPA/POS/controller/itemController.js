@@ -1,34 +1,36 @@
 
 // customer regular expressions
-const cusIDRegex = /^(C)[0-9]{3}$/;
-const cusNameRegex = /^[A-z ]{5,20}$/;
-const cusAddressRegex = /^[0-9/A-z. ,]{7,}$/;
-const cusSalaryRegex = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
+const itemCodeRegex = /^(I)[0-9]{3}$/;
+const itemNameRegex = /^[A-z ]{3,20}$/;
+const itemPriceRegex = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
+const itemQtyRegex = /^[0-9]{1,}[.]?[0-9]{1,3}$/;
 
-let customerValidationsOnSave = [];
-customerValidationsOnSave.push({reg: cusIDRegex, field: $('#cusId'),error:'Customer ID Pattern is Wrong : C001'});
-customerValidationsOnSave.push({reg: cusNameRegex, field: $('#cusName'),error:'Customer Name Pattern is Wrong : A-z 5-20'});
-customerValidationsOnSave.push({reg: cusAddressRegex, field: $('#cusAddress'),error:'Customer Address Pattern is Wrong : A-z 0-9 ,/'});
-customerValidationsOnSave.push({reg: cusSalaryRegex, field: $('#cusSalary'),error:'Customer Salary Pattern is Wrong : 100 or 100.00'});
+let itemsValidationOnSave = [];
+itemsValidationOnSave.push({reg: itemCodeRegex, field: $('#itemCode'),error:'Item Code Pattern is Wrong : I001'});
+itemsValidationOnSave.push({reg: itemNameRegex, field: $('#itemName'),error:'Item name Pattern is Wrong : A-z 5-20'});
+itemsValidationOnSave.push({reg: itemPriceRegex, field: $('#itemPrice'),error:'Item price Pattern is Wrong : 100 or 100.00'});
+itemsValidationOnSave.push({reg: itemQtyRegex, field: $('#itemQty'),error:'item qty Pattern is Wrong : 100 or 100.5'});
 
-let customerValidationsOnEdit = [];
-customerValidationsOnEdit.push({reg: cusIDRegex, field: $('#editCusId'),error:'Customer ID Pattern is Wrong : C001'});
-customerValidationsOnEdit.push({reg: cusNameRegex, field: $('#editCusName'),error:'Customer Name Pattern is Wrong : A-z 5-20'});
-customerValidationsOnEdit.push({reg: cusAddressRegex, field: $('#editCusAddress'),error:'Customer Address Pattern is Wrong : A-z 0-9 ,/'});
-customerValidationsOnEdit.push({reg: cusSalaryRegex, field: $('#editCusSalary'),error:'Customer Salary Pattern is Wrong : 100 or 100.00'});
+let itemsValidationOnEdit = [];
+itemsValidationOnEdit.push({reg: itemCodeRegex, field: $('#editItemCode'),error:'Item Code Pattern is Wrong : I001'});
+itemsValidationOnEdit.push({reg: itemNameRegex, field: $('#editItemName'),error:'Item name Pattern is Wrong : A-z 5-20'});
+itemsValidationOnEdit.push({reg: itemPriceRegex, field: $('#editItemPrice'),error:'Item price Pattern is Wrong : 100 or 100.00'});
+itemsValidationOnEdit.push({reg: itemQtyRegex, field: $('#editItemQty'),error:'item qty Pattern is Wrong : 100 or 100.5'});
 
-/*prevent focus another field when pressing tab btn*/
-$("#cusId,#cusName,#cusAddress,#cusSalary,#editCusId,#editCusName,#editCusAddress,#editCusSalary").on('keydown', function (event) {
+/*prevent focus another field when pressing tab btn*
+
+ */
+$("#itemCode,#itemName,#itemPrice,#itemQty,#editItemCode,#editItemName,#editItemPrice,#editItemQty").on('keydown', function (event) {
     if (event.key === "Tab") {
         event.preventDefault();
     }
 });
 /*focus on modal starting*/
-$('#addCustomer').on('shown.bs.modal', function () {
-    $('#cusId').focus();
+$('#addItem').on('shown.bs.modal', function () {
+    $('#itemCode').focus();
 });
-$('#editCustomer').on('shown.bs.modal', function () {
-    $('#editCusId').focus();
+$('#editItem').on('shown.bs.modal', function () {
+    $('#editItemCode').focus();
 });
 /*focus on modal starting*/
 
@@ -74,62 +76,61 @@ function defaultText(field,error) {
 
 
 
-/*edit customer start*/
+/*edit items start*/
 
 /*validate all in any keyPress on anywhere on edit model*/
-$("#editCusId,#editCusName,#editCusAddress,#editCusSalary").on('keyup', function () {
+$("#editItemCode,#editItemName,#editItemPrice,#editItemQty").on('keyup', function () {
     validateAllFieldsOnEdit();
 });
 
 /*focus next field*/
-$("#editCusId").on('keydown', function (event) {
-    if (event.key === "Enter" && check(cusIDRegex,$('#editCusId')) ) {
-        $('#editCusName').focus();
+$("#editItemCode").on('keydown', function (event) {
+    if (event.key === "Enter" && check(itemCodeRegex,$('#editItemCode')) ) {
+        $('#editItemName').focus();
     }else {
-        $('#editCusId').focus();
+        $('#editItemCode').focus();
     }
 });
-$("#editCusName").on('keydown', function (event) {
-    if (event.key === "Enter" && check(cusNameRegex,$('#editCusName')) ) {
-        $('#editCusAddress').focus();
+$("#editItemName").on('keydown', function (event) {
+    if (event.key === "Enter" && check(itemNameRegex,$('#editItemName')) ) {
+        $('#editItemPrice').focus();
     }else {
-        $('#editCusName').focus();
+        $('#editItemName').focus();
     }
 });
-$("#editCusAddress").on('keydown', function (event) {
-    if (event.key === "Enter" && check(cusAddressRegex,$('#editCusAddress')) ) {
-        $('#editCusSalary').focus();
+$("#editItemPrice").on('keydown', function (event) {
+    if (event.key === "Enter" && check(itemPriceRegex,$('#editItemPrice')) ) {
+        $('#editItemQty').focus();
     }else {
-        $('#editCusAddress').focus();
+        $('#editItemPrice').focus();
     }
 });
-$("#editCusSalary").on('keydown', function (event) {
-    if (event.key === "Enter" && check(cusSalaryRegex,$('#editCusSalary'))) {
-        $('#btnEditCustomer').click();
-        $('#editCusId').focus();
+$("#editItemQty").on('keydown', function (event) {
+    if (event.key === "Enter" && check(itemQtyRegex,$('#editItemQty'))) {
+        $('#btnEditItem').click();
     }
 });
 /*focus next field*/
 
-$('#btnEditCustomer').click(function () {
-    if (confirm('Are you sure to Edit this Customer?') && getEditBtnState()) {
-        let customer = searchCustomer(selectedRowCusId);
+$('#btnEditItem').click(function () {
+    if (confirm('Are you sure to Edit this Item?') && getEditBtnState()) {
+        let item = searchItem(selectedRowItemCode);
         /*edit*/
-        customer.id = $('#editCusId').val();
-        customer.name = $('#editCusName').val();
-        customer.address = $('#editCusAddress').val();
-        customer.salary = $('#editCusSalary').val();
+        item.code = $('#editItemCode').val();
+        item.name = $('#editItemName').val();
+        item.price = $('#editItemPrice').val();
+        item.qty = $('#editItemQty').val();
 
-
-        $('#btnCloseCustomerEditModel').click();
-        refreshCustomerTable();
+        $('#btnCloseEditItemModal').click();
+        refreshItemTable();
+        rowTrigger();
     }
 });
 
 /*function to check if all fields are correct*/
 function validateAllFieldsOnEdit() {
     let errorCount= 0;
-    for (let validation of customerValidationsOnEdit) {
+    for (let validation of itemsValidationOnEdit) {
         if (check(validation.reg,validation.field)) {
             makeFieldAsCorrect(validation.field,"");
         }else {
@@ -142,20 +143,20 @@ function validateAllFieldsOnEdit() {
 
 function setEditBtnState(errorCount) {
     if (errorCount > 0) {
-        $('#btnEditCustomer').attr('disabled',true);
+        $('#btnEditItem').attr('disabled',true);
     }else {
-        $('#btnEditCustomer').attr('disabled',false);
+        $('#btnEditItem').attr('disabled',false);
     }
 }
 
 function getEditBtnState() {
-    return $('#btnEditCustomer').attr('disabled') !== true;
+    return $('#btnEditItem').attr('disabled') !== true;
 }
 
-function searchCustomer (cusId) {
-    for (let customer of customers) {
-        if (customer.id === cusId) {
-            return customer;
+function searchItem (code) {
+    for (let item of items) {
+        if (item.code === code) {
+            return item;
         }
     }
     return -1;
@@ -171,11 +172,11 @@ function searchCustomer (cusId) {
 
 /*delete customer start*/
 
-$('#btnDeleteCustomer').click(function () {
-    let customer = searchCustomer(selectedRowCusId);
-    customers.splice(customers.indexOf(customer),1);
-    $('#btnCloseCustomerEditModel').click();
-    refreshCustomerTable();
+$('#btnDeleteItem').click(function () {
+    let item = searchItem(selectedRowItemCode);
+    items.splice(items.indexOf(item),1);
+    $('#btnCloseEditItemModal').click();
+    refreshItemTable();
 
 });
 
@@ -186,37 +187,38 @@ $('#btnDeleteCustomer').click(function () {
 
 /*save customer start*/
 /*validate all in any keyPress on anywhere on save model*/
-$("#cusId,#cusName,#cusAddress,#cusSalary").on('keyup', function (event) {
+$("#itemCode,#itemName,#itemPrice,#itemQty").on('keyup', function () {
     validateAllFieldsOnSave();
 });
 
 /*focus next field by enter save model*/
-$("#cusId").on('keydown', function (event) {
-    if (event.key === "Enter" && check(cusIDRegex,$('#cusId')) ) {
-        $('#cusName').focus();
+$("#itemCode").on('keydown', function (event) {
+    if (event.key === "Enter" && check(itemCodeRegex,$('#itemCode')) ) {
+        $('#itemName').focus();
     }else {
-        $('#cusId').focus();
+        $('#itemCode').focus();
     }
 });
-$("#cusName").on('keydown', function (event) {
-    if (event.key === "Enter" && check(cusNameRegex,$('#cusName')) ) {
-        $('#cusAddress').focus();
+$("#itemName").on('keydown', function (event) {
+    if (event.key === "Enter" && check(itemNameRegex,$('#itemName')) ) {
+        $('#itemPrice').focus();
     }else {
-        $('#cusName').focus();
+        $('#itemName').focus();
     }
 });
-$("#cusAddress").on('keydown', function (event) {
-    if (event.key === "Enter" && check(cusAddressRegex,$('#cusAddress')) ) {
-        $('#cusSalary').focus();
+$("#itemPrice").on('keydown', function (event) {
+    if (event.key === "Enter" && check(itemPriceRegex,$('#itemPrice')) ) {
+        $('#itemQty').focus();
     }else {
-        $('#cusAddress').focus();
+        $('#itemPrice').focus();
     }
 });
-$("#cusSalary").on('keydown', function (event) {
-    if (event.key === "Enter" && check(cusSalaryRegex,$('#cusSalary'))) {
-        if (confirm('Are you sure to add this Customer?') && getSaveBtnState()) {
-            $('#btnSaveCustomer').click();
-            $('#cusId').focus();
+$("#itemQty").on('keydown', function (event) {
+    console.log(check(itemQtyRegex,$('#itemQty')));
+    if (event.key === "Enter" && check(itemQtyRegex,$('#itemQty'))) {
+        if (confirm('Are you sure to add this Item?') && getSaveBtnState()) {
+            $('#btnSaveItem').click();
+            $('#itemCode').focus();
         }
     }
 });
@@ -225,7 +227,7 @@ $("#cusSalary").on('keydown', function (event) {
 /*function to check if all fields are correct in save model*/
 function validateAllFieldsOnSave() {
     let errorCount= 0;
-    for (let validation of customerValidationsOnSave) {
+    for (let validation of itemsValidationOnSave) {
         if (check(validation.reg,validation.field)) {
             makeFieldAsCorrect(validation.field,"");
         }else {
@@ -238,60 +240,60 @@ function validateAllFieldsOnSave() {
 
 function setSaveBtnState(errorCount) {
     if (errorCount > 0) {
-        $('#btnSaveCustomer').attr('disabled',true);
+        $('#btnSaveItem').attr('disabled',true);
     }else {
-        $('#btnSaveCustomer').attr('disabled',false);
+        $('#btnSaveItem').attr('disabled',false);
     }
 }
 function getSaveBtnState() {
-    return $('#btnSaveCustomer').attr('disabled') !== true;
+    return $('#btnSaveItem').attr('disabled') !== true;
 }
-/*save customer end*/
+/*save Item end*/
 
 
 
 
 
-let customers = [];
+let items = [];
 
 /*add sample data*/
 {
-    var customer = {
-        id : 'C001',
-        name : 'Yasith',
-        address : 'Opanayaka',
-        salary : 49000
+    var item = {
+        code : 'I001',
+        name : 'Soap',
+        price : 200,
+        qty : 60
     }
-    customers.push(customer);
+    items.push(item);
 
-    refreshCustomerTable();
+    refreshItemTable();
     rowTrigger();
 }
 /*add sample data*/
 
-/*saving customer to array*/
-$("#btnSaveCustomer").click(function (){
-    let customer = {
-        id: $('#cusId').val(),
-        name: $('#cusName').val(),
-        address: $('#cusAddress').val(),
-        salary: $('#cusSalary').val(),
+/*saving items to array*/
+$("#btnSaveItem").click(function (){
+    let item = {
+        code: $('#itemCode').val(),
+        name: $('#itemName').val(),
+        price: $('#itemPrice').val(),
+        qty: $('#itemQty').val(),
     };
-    customers.push(customer);
+    items.push(item);
     renewFields();
-    refreshCustomerTable();
+    refreshItemTable();
     rowTrigger();
 });
-/*saving customer to array*/
+/*saving items to array*/
 
 /*renew fields*/
-$('#btnRenew').click(function (){
+$('.btnRenew').click(function (){
     renewFields();
 });
 /*renew fields*/
 
 /*search btn action*/
-$('#btnSearchCustomer').click(function (){
+/*$('#btnSearchCustomer').click(function (){
     let available = false;
     for (let customer of customers) {
         if (customer.id === $('#cusId').val()){
@@ -305,43 +307,42 @@ $('#btnSearchCustomer').click(function (){
         renewFields();
         alert('There are no customer like this!');
     }
-});
+});*/
 /*search btn action*/
 
 function renewFields () {
-    $('#cusId').val('');
-    $('#cusName').val('');
-    $('#cusAddress').val('');
-    $('#cusSalary').val('');
+    $('#itemCode').val('');
+    $('#itemName').val('');
+    $('#itemPrice').val('');
+    $('#itemQty').val('');
 
-    $('#editCusId').val('');
-    $('#editCusName').val('');
-    $('#editCusAddress').val('');
-    $('#editCusSalary').val('');
+    $('#editItemCode').val('');
+    $('#editItemName').val('');
+    $('#editItemPrice').val('');
+    $('#editItemQty').val('');
 }
 
-var selectedRowCusId = '';
+var selectedRowItemCode = '';
 function rowTrigger() {
-    $('#cusTable>tr').click(function (){
-        /*open edit cus model*/
-        console.log('clicked')
-        $('#btnEditDeleteCustomer').click();
-        selectedRowCusId = $(this).children().eq(0).text();
+    $('#itemTable>tr').click(function (){
+        /*open edit item model*/
+        $('#btnEditDeleteItem').click();
+        selectedRowItemCode = $(this).children().eq(0).text();
 
-        $('#editCusId').val(selectedRowCusId);
-        $('#editCusName').val($(this).children().eq(1).text());
-        $('#editCusAddress').val($(this).children().eq(2).text());
-        $('#editCusSalary').val($(this).children().eq(3).text());
+        $('#editItemCode').val(selectedRowItemCode);
+        $('#editItemName').val($(this).children().eq(1).text());
+        $('#editItemPrice').val($(this).children().eq(2).text());
+        $('#editItemQty').val($(this).children().eq(3).text());
 
 
     });
 }
 
-function refreshCustomerTable(){
-    $('#cusTable').empty();
+function refreshItemTable(){
+    $('#itemTable').empty();
 
-    for (let customer of customers) {
-        let row = `<tr><th scope="row">${customer.id}</th><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td></tr>`
-        $('#cusTable').append(row);
+    for (let item of items) {
+        let row = `<tr><th scope="row">${item.code}</th><td>${item.name}</td><td>${item.price}</td><td>${item.qty}</td></tr>`
+        $('#itemTable').append(row);
     }
 }

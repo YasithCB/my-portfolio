@@ -109,11 +109,11 @@
 
                 <div class="row">
                     <div class="form-floating mb-2 col pe-1">
-                        <input type="text" class="form-control bg-dark text-light" id="itemCode" value="I0001" placeholder="name@example.com">
+                        <input type="text" class="form-control bg-dark text-light" id="234" value="I0001" placeholder="name@example.com">
                         <label class="text-light ms-2" for="itemCode">Item Code</label>
                     </div>
                     <div class="form-floating mb-2 col ps-0">
-                        <input type="text" class="form-control bg-dark text-light" id="itemName" value="Soap" placeholder="name@example.com">
+                        <input type="text" class="form-control bg-dark text-light" id="22" value="Soap" placeholder="name@example.com">
                         <label class="text-light ms-2" for="itemName">Item Name</label>
                     </div>
                 </div>
@@ -289,36 +289,12 @@
                 <th scope="col">Quantity</th>
             </tr>
             </thead>
-            <tbody>
+            <tbody id="itemTable">
             <tr>
-                <th scope="row">I0001</th>
+                <td scope="row">I0001</td>
                 <td>Soap</td>
                 <td>200</td>
                 <td>60</td>
-            </tr>
-            <tr>
-                <th scope="row">I0002</th>
-                <td>Clogard toothpaste</td>
-                <td>300</td>
-                <td>55</td>
-            </tr>
-            <tr>
-                <th scope="row">I0003</th>
-                <td>Atlas pen</td>
-                <td>50</td>
-                <td>200</td>
-            </tr>
-            <tr>
-                <th scope="row">I0004</th>
-                <td>Eraser</td>
-                <td>30</td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <th scope="row">I0005</th>
-                <td>Atlas pencils</td>
-                <td>30</td>
-                <td>300</td>
             </tr>
             </tbody>
         </table>
@@ -363,7 +339,7 @@
                     </div>
                     <div class="modal-footer">
                         <button id="btnSaveItem" type="button" class="btn btn-primary">Save Item</button>
-                        <button id="btnRenew" type="button" class="btn btn-primary">Renew</button>
+                        <button type="button" class="btn btn-primary btnRenew">Renew</button>
                         <button id="btnCloseAddItemModal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -404,7 +380,7 @@
                     <div class="modal-footer">
                         <button id="btnDeleteItem" type="button" class="btn btn-danger">Delete Item</button>
                         <button id="btnEditItem" type="button" class="btn btn-primary">Edit Item Details</button>
-                        <button id="btnCloseItemModal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button id="btnCloseEditItemModal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -725,7 +701,7 @@
                     </div>
                     <div class="modal-footer">
                         <button id="btnSaveCustomer" type="button" class="btn btn-primary">Save Customer</button>
-                        <button id="btnRenew" type="button" class="btn btn-primary">Renew</button>
+                        <button type="button" class="btn btn-primary btnRenew">Renew</button>
                         <button type="button" class="btn btn-secondary btn-ho" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -823,6 +799,7 @@
 
 <script src="controller/homeController.js"></script>
 <script src="controller/customerController.js"></script>
+<script src="controller/itemController.js"></script>
 <script>
 
 
