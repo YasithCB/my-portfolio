@@ -34,3 +34,15 @@ function defaultText(field,error) {
     field.css("border",'1px solid white');
     field.parent().children('span').text(error);
 }
+
+function renewFields () {
+    $('#itemCode').val('');
+    $('#itemName').val('');
+    $('#itemPrice').val('');
+    $('#itemQty').val('');
+
+    $('#editItemCode').val('');
+    $('#editItemName').val('');
+    $('#editItemPrice').val('');
+    $('#editItemQty').val('');
+}

@@ -109,10 +109,6 @@ function searchItem (code) {
 
 
 
-
-
-
-
 /*delete customer start*/
 
 $('#btnDeleteItem').click(function () {
@@ -126,7 +122,6 @@ $('#btnDeleteItem').click(function () {
 });
 
 /*delete customer end*/
-
 
 
 
@@ -197,10 +192,6 @@ function getSaveBtnState() {
 
 
 
-
-
-let items = [];
-
 /*add sample data*/
 {
     var item = {
@@ -255,21 +246,7 @@ $('.btnRenew').click(function (){
 });*/
 /*search btn action*/
 
-function renewFields () {
-    $('#itemCode').val('');
-    $('#itemName').val('');
-    $('#itemPrice').val('');
-    $('#itemQty').val('');
-
-    $('#editItemCode').val('');
-    $('#editItemName').val('');
-    $('#editItemPrice').val('');
-    $('#editItemQty').val('');
-}
-
-var selectedRowItemCode = '';
 function rowTrigger() {
-
     $('#itemTable>tr').click(function (){
         /*open edit item model*/
         $('#btnEditDeleteItem').click();
@@ -280,8 +257,6 @@ function rowTrigger() {
         $('#editItemPrice').val($(this).children().eq(2).text());
         $('#editItemQty').val($(this).children().eq(3).text());
     });
-
-
 }
 
 function refreshItemTable(){

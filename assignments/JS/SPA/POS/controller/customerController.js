@@ -16,8 +16,6 @@ $('#editCustomer').on('shown.bs.modal', function () {
 /*focus on modal starting*/
 
 
-
-
 /*edit customer start*/
 
 /*validate all in any keyPress on anywhere on edit model*/
@@ -193,11 +191,6 @@ function getSaveBtnState() {
 /*save customer end*/
 
 
-
-
-
-let customers = [];
-
 /*add sample data*/
 {
     var customer = {
@@ -252,19 +245,7 @@ $('#btnSearchCustomer').click(function (){
 });
 /*search btn action*/
 
-function renewFields () {
-    $('#cusId').val('');
-    $('#cusName').val('');
-    $('#cusAddress').val('');
-    $('#cusSalary').val('');
 
-    $('#editCusId').val('');
-    $('#editCusName').val('');
-    $('#editCusAddress').val('');
-    $('#editCusSalary').val('');
-}
-
-var selectedRowCusId = '';
 function rowTrigger() {
     $('#cusTable>tr').click(function (){
         /*open edit cus model*/
@@ -276,8 +257,6 @@ function rowTrigger() {
         $('#editCusName').val($(this).children().eq(1).text());
         $('#editCusAddress').val($(this).children().eq(2).text());
         $('#editCusSalary').val($(this).children().eq(3).text());
-
-
     });
 }
 

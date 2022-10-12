@@ -1,6 +1,8 @@
 
 
 /*customer details start*/
+let customers = [];
+var selectedRowCusId = '';
 
 // customer regular expressions
 const cusIDRegex = /^(C)[0-9]{3}$/;
@@ -19,14 +21,15 @@ customerValidationsOnEdit.push({reg: cusIDRegex, field: $('#editCusId'),error:'C
 customerValidationsOnEdit.push({reg: cusNameRegex, field: $('#editCusName'),error:'Customer Name Pattern is Wrong : A-z 5-20'});
 customerValidationsOnEdit.push({reg: cusAddressRegex, field: $('#editCusAddress'),error:'Customer Address Pattern is Wrong : A-z 0-9 ,/'});
 customerValidationsOnEdit.push({reg: cusSalaryRegex, field: $('#editCusSalary'),error:'Customer Salary Pattern is Wrong : 100 or 100.00'});
-
 /*customer details end*/
 
 
 
 /*item details start*/
+let items = [];
+var selectedRowItemCode = '';
 
-// customer regular expressions
+// item regular expressions
 const itemCodeRegex = /^(I)[0-9]{3}$/;
 const itemNameRegex = /^[A-z ]{3,20}$/;
 const itemPriceRegex = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
@@ -43,5 +46,4 @@ itemsValidationOnEdit.push({reg: itemCodeRegex, field: $('#editItemCode'),error:
 itemsValidationOnEdit.push({reg: itemNameRegex, field: $('#editItemName'),error:'Item name Pattern is Wrong : A-z 5-20'});
 itemsValidationOnEdit.push({reg: itemPriceRegex, field: $('#editItemPrice'),error:'Item price Pattern is Wrong : 100 or 100.00'});
 itemsValidationOnEdit.push({reg: itemQtyRegex, field: $('#editItemQty'),error:'item qty Pattern is Wrong : 100 or 100.5'});
-
 /*item details end*/
