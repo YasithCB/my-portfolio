@@ -1,25 +1,6 @@
 
-// customer regular expressions
-const itemCodeRegex = /^(I)[0-9]{3}$/;
-const itemNameRegex = /^[A-z ]{3,20}$/;
-const itemPriceRegex = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
-const itemQtyRegex = /^[0-9]{1,}[.]?[0-9]{1,3}$/;
 
-let itemsValidationOnSave = [];
-itemsValidationOnSave.push({reg: itemCodeRegex, field: $('#itemCode'),error:'Item Code Pattern is Wrong : I001'});
-itemsValidationOnSave.push({reg: itemNameRegex, field: $('#itemName'),error:'Item name Pattern is Wrong : A-z 5-20'});
-itemsValidationOnSave.push({reg: itemPriceRegex, field: $('#itemPrice'),error:'Item price Pattern is Wrong : 100 or 100.00'});
-itemsValidationOnSave.push({reg: itemQtyRegex, field: $('#itemQty'),error:'item qty Pattern is Wrong : 100 or 100.5'});
-
-let itemsValidationOnEdit = [];
-itemsValidationOnEdit.push({reg: itemCodeRegex, field: $('#editItemCode'),error:'Item Code Pattern is Wrong : I001'});
-itemsValidationOnEdit.push({reg: itemNameRegex, field: $('#editItemName'),error:'Item name Pattern is Wrong : A-z 5-20'});
-itemsValidationOnEdit.push({reg: itemPriceRegex, field: $('#editItemPrice'),error:'Item price Pattern is Wrong : 100 or 100.00'});
-itemsValidationOnEdit.push({reg: itemQtyRegex, field: $('#editItemQty'),error:'item qty Pattern is Wrong : 100 or 100.5'});
-
-/*prevent focus another field when pressing tab btn*
-
- */
+/*prevent focus another field when pressing tab btn*/
 $("#itemCode,#itemName,#itemPrice,#itemQty,#editItemCode,#editItemName,#editItemPrice,#editItemQty").on('keydown', function (event) {
     if (event.key === "Tab") {
         event.preventDefault();
@@ -33,44 +14,6 @@ $('#editItem').on('shown.bs.modal', function () {
     $('#editItemCode').focus();
 });
 /*focus on modal starting*/
-
-/*common functions started*/
-function check(reg,field){
-    let value = field.val();
-    return reg.test(value);
-}
-
-function makeFieldAsCorrect(field,error) {
-    if (field.val().length <= 0) {
-        defaultText(field,error);
-    }else {
-        correctText(field,error);
-    }
-}
-function makeFieldAsError(field,error) {
-    if (field.val().length <= 0) {
-        defaultText(field,"");
-    }else {
-        errorText(field,error);
-    }
-}
-
-function errorText(field,error) {
-    field.css('border','1px solid red');
-    field.parent().children('span').text(error);
-}
-
-function correctText(field,error) {
-    field.css('border','1px solid green');
-    field.parent().children('span').text(error);
-}
-
-function defaultText(field,error) {
-    field.css("border",'1px solid white');
-    field.parent().children('span').text(error);
-}
-/*common functions end*/
-
 
 
 

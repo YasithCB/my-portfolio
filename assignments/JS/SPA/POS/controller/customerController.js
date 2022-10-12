@@ -1,21 +1,4 @@
 
-// customer regular expressions
-const cusIDRegex = /^(C)[0-9]{3}$/;
-const cusNameRegex = /^[A-z ]{5,20}$/;
-const cusAddressRegex = /^[0-9/A-z. ,]{7,}$/;
-const cusSalaryRegex = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
-
-let customerValidationsOnSave = [];
-customerValidationsOnSave.push({reg: cusIDRegex, field: $('#cusId'),error:'Customer ID Pattern is Wrong : C001'});
-customerValidationsOnSave.push({reg: cusNameRegex, field: $('#cusName'),error:'Customer Name Pattern is Wrong : A-z 5-20'});
-customerValidationsOnSave.push({reg: cusAddressRegex, field: $('#cusAddress'),error:'Customer Address Pattern is Wrong : A-z 0-9 ,/'});
-customerValidationsOnSave.push({reg: cusSalaryRegex, field: $('#cusSalary'),error:'Customer Salary Pattern is Wrong : 100 or 100.00'});
-
-let customerValidationsOnEdit = [];
-customerValidationsOnEdit.push({reg: cusIDRegex, field: $('#editCusId'),error:'Customer ID Pattern is Wrong : C001'});
-customerValidationsOnEdit.push({reg: cusNameRegex, field: $('#editCusName'),error:'Customer Name Pattern is Wrong : A-z 5-20'});
-customerValidationsOnEdit.push({reg: cusAddressRegex, field: $('#editCusAddress'),error:'Customer Address Pattern is Wrong : A-z 0-9 ,/'});
-customerValidationsOnEdit.push({reg: cusSalaryRegex, field: $('#editCusSalary'),error:'Customer Salary Pattern is Wrong : 100 or 100.00'});
 
 /*prevent focus another field when pressing tab btn*/
 $("#cusId,#cusName,#cusAddress,#cusSalary,#editCusId,#editCusName,#editCusAddress,#editCusSalary").on('keydown', function (event) {
@@ -31,45 +14,6 @@ $('#editCustomer').on('shown.bs.modal', function () {
     $('#editCusId').focus();
 });
 /*focus on modal starting*/
-
-/*common functions started*/
-function check(reg,field){
-    let value = field.val();
-    return reg.test(value);
-}
-
-function makeFieldAsCorrect(field,error) {
-    if (field.val().length <= 0) {
-        defaultText(field,error);
-    }else {
-        correctText(field,error);
-    }
-}
-function makeFieldAsError(field,error) {
-    if (field.val().length <= 0) {
-        defaultText(field,"");
-    }else {
-        errorText(field,error);
-    }
-}
-
-function errorText(field,error) {
-    field.css('border','1px solid red');
-    field.parent().children('span').text(error);
-}
-
-function correctText(field,error) {
-    field.css('border','1px solid green');
-    field.parent().children('span').text(error);
-}
-
-function defaultText(field,error) {
-    field.css("border",'1px solid white');
-    field.parent().children('span').text(error);
-}
-/*common functions end*/
-
-
 
 
 
