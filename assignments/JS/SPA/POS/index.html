@@ -67,108 +67,105 @@
         <section class="row">
             <!--invoice details-->
             <section class="col-6 col-md">
-                <!--add customer form start-->
-
                 <h5 class="text-light mb-3 mt-2" >Invoice Details</h5>
 
                 <div class="row">
                     <div class="form-floating mb-2 col pe-1">
-                        <input type="text" class="form-control bg-dark text-light" id="orderId" value="OD0001" placeholder="name@example.com">
-                        <label class="text-light ms-2" for="orderId">Order ID</label>
+                        <input type="text" class="form-control bg-dark text-light" id="orderIdOnPO" placeholder="name@example.com">
+                        <label class="text-light ms-2" for="orderIdOnPO">Order ID</label>
                     </div>
                     <div class="form-floating mb-2 col ps-0">
-                        <input type="text" class="form-control bg-dark text-light" id="date" value="01/06/2022" placeholder="name@example.com">
-                        <label class="text-light ms-2" for="date">Date</label>
+                        <input type="text" class="form-control bg-dark text-light" id="dateOnPO" placeholder="name@example.com">
+                        <label class="text-light ms-2" for="dateOnPO">Date</label>
                     </div>
                 </div>
 
                 <div class="form-floating mb-2">
-                    <input type="text" class="form-control bg-dark text-light" id="customerId" value="C0001" placeholder="name@example.com">
-                    <label class="text-light" for="customerId">Customer ID</label>
+                    <input type="text" class="form-control bg-dark text-light" id="cusIdOnPO" placeholder="name@example.com">
+                    <label class="text-light" for="cusIdOnPO">Customer ID</label>
                 </div>
                 <div class="form-floating mb-2">
-                    <input type="text" class="form-control bg-dark text-light" id="customerName" value="Yasith" placeholder="name@example.com">
-                    <label class="text-light" for="customerName">Customer Name</label>
+                    <input type="text" class="form-control bg-dark text-light" id="cusNameOnPO" placeholder="name@example.com">
+                    <label class="text-light" for="cusNameOnPO">Customer Name</label>
                 </div>
                 <div class="form-floating mb-2">
-                    <input type="text" class="form-control bg-dark text-light" id="salaryOnPO" value="49000" placeholder="name@example.com">
+                    <input type="text" class="form-control bg-dark text-light" id="salaryOnPO" placeholder="name@example.com">
                     <label class="text-light" for="salaryOnPO">Salary</label>
                 </div>
                 <div class="form-floating mb-2">
-                    <input type="text" class="form-control bg-dark text-light" id="addressOnPO" value="Opanayaka" placeholder="name@example.com">
+                    <input type="text" class="form-control bg-dark text-light" id="addressOnPO" placeholder="name@example.com">
                     <label class="text-light" for="addressOnPO">Customer Address</label>
                 </div>
-                <!--add customer form end-->
 
             </section>
             <!--item select-->
             <section class="col-6 col-md">
-                <!--add customer form start-->
-
                 <h5 class="text-light mb-3 mt-2" >Items Select</h5>
 
                 <div class="row">
                     <div class="form-floating mb-2 col pe-1">
-                        <input type="text" class="form-control bg-dark text-light" id="234" value="I0001" placeholder="name@example.com">
-                        <label class="text-light ms-2" for="itemCode">Item Code</label>
+                        <input type="text" class="form-control bg-dark text-light" id="itemCodeOnPO" placeholder="name@example.com">
+                        <label class="text-light ms-2" for="itemCodeOnPO">Item Code</label>
                     </div>
                     <div class="form-floating mb-2 col ps-0">
-                        <input type="text" class="form-control bg-dark text-light" id="22" value="Soap" placeholder="name@example.com">
-                        <label class="text-light ms-2" for="itemName">Item Name</label>
+                        <input type="text" class="form-control bg-dark text-light" id="itemNameOnPO" placeholder="name@example.com">
+                        <label class="text-light ms-2" for="itemNameOnPO">Item Name</label>
                     </div>
                 </div>
 
                 <div class="form-floating mb-2">
-                    <input type="number" class="form-control bg-dark text-light" id="unitPrice" value="200.00" placeholder="name@example.com">
-                    <label class="text-light" for="unitPrice">Unit Price</label>
+                    <input type="number" class="form-control bg-dark text-light" id="unitPriceOnPO" placeholder="name@example.com">
+                    <label class="text-light" for="unitPriceOnPO">Unit Price</label>
                 </div>
                 <div class="form-floating mb-2">
-                    <input type="number" class="form-control bg-dark text-light" id="qtyOnHand" value="60" placeholder="name@example.com">
-                    <label class="text-light" for="qtyOnHand">Qty On Hand</label>
+                    <input type="number" class="form-control bg-dark text-light" id="qtyOnHandOnPO" placeholder="name@example.com">
+                    <label class="text-light" for="qtyOnHandOnPO">Qty On Hand</label>
                 </div>
                 <div class="form-floating mb-2">
-                    <input type="text" class="form-control bg-dark text-light" id="orderQty" value="2" placeholder="name@example.com">
-                    <label class="text-light" for="orderQty">Order Qty</label>
+                    <input type="text" class="form-control bg-dark text-light" id="orderQtyOnPO" placeholder="name@example.com">
+                    <label class="text-light" for="orderQtyOnPO">Order Qty</label>
                 </div>
-                <!--add customer form end-->
 
                 <!--btn add item-->
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button class="btn btn-outline-primary" type="button">Add Item</button>
+                    <button id="btnAddItemOnPO" class="btn btn-outline-primary" type="button">Add Item</button>
                 </div>
             </section>
             <!--purchase-->
             <section class=" col">
-                <!--add customer form start-->
-
                 <h5 class="text-light mt-5 mt-5 mb-3" >Sub Total : RS 510.00</h5>
 
                 <div class="row">
                     <div class="form-floating mb-2 col">
-                        <input type="text" class="form-control bg-dark text-light" id="discount" value="20.00" placeholder="name@example.com">
-                        <label class="text-light ms-2" for="discount">Discount(RS)</label>
+                        <input type="text" class="form-control bg-dark text-light" id="discountOnPO" placeholder="name@example.com">
+                        <label class="text-light ms-2" for="discountOnPO">Discount(RS)</label>
                     </div>
                     <div class="form-floating mb-2 col">
-                        <input type="text" class="form-control bg-dark text-light" id="cash" value="5000" placeholder="name@example.com">
-                        <label class="text-light ms-2" for="cash">Cash</label>
+                        <input type="text" class="form-control bg-dark text-light" id="cashOnPO" placeholder="name@example.com">
+                        <label class="text-light ms-2" for="cashOnPO">Cash</label>
                     </div>
                 </div>
 
-                <h5 class="text-light text-bg-success" >Total : RS 490.00</h5>
-                <h6 class="text-light" >Balance : RS 4510.00</h6>
-                <!--add customer form end-->
+                <div class="bg-success mb-1">
+                    <h5 class="text-light d-inline" >Total : Rs </h5>
+                    <h5 id="totalOnPO" class="text-light d-inline" >490.00</h5>
+                </div>
+                <div>
+                    <h6 class="text-light d-inline" >Balance : Rs </h6>
+                    <h6 id="balanceOnPO" class="text-light d-inline" >4510.00</h6>
+                </div>
 
                 <!--purchase btn-->
                 <div class="d-grid gap-2 mt-2">
-                    <button class="btn btn-outline-success" type="button">Purchase</button>
+                    <button id="btnPurchaseOnPO" class="btn btn-outline-success" type="button">Purchase</button>
                 </div>
 
             </section>
         </section>
 
         <!--table start-->
-        <h5 class="text-light mb-3 mt-3 bg-primary" >Cart Items</h5>
-        <table class="table table-dark table-striped table-responsive">
+        <h5 class="text-light p-1 mb-3 mt-3 bg-primary" >Cart Items</h5>
+        <table class="table table-dark table-hover table-responsive">
             <thead>
             <tr>
                 <th scope="col">Item Code</th>
@@ -178,7 +175,7 @@
                 <th scope="col">Total</th>
             </tr>
             </thead>
-            <tbody>
+            <tbody id="tblCart">
             <tr>
                 <th scope="row">I0001</th>
                 <td>Soap</td>
@@ -186,32 +183,16 @@
                 <td>2</td>
                 <td>400</td>
             </tr>
-            <tr>
-                <th scope="row">I0003</th>
-                <td>Atlas Pen</td>
-                <td>50</td>
-                <td>1</td>
-                <td>50</td>
-            </tr>
-            <tr>
-                <th scope="row">I0004</th>
-                <td>Eraser</td>
-                <td>30</td>
-                <td>2</td>
-                <td>60</td>
-            </tr>
-
             </tbody>
         </table>
-        <!--table start-->
+        <!--table end-->
 
         <!--3 buttons after the table start-->
-        <button type="button" class="btn btn-secondary m-1" data-bs-toggle="modal" data-bs-target="#edit">Edit Quantity</button>
-        <button type="button" class="btn btn-danger m-1" data-bs-toggle="modal" data-bs-target="#remove">Remove Item</button>
+        <button id="btnEditCart" type="button" class="btn btn-secondary m-1 invisible" data-bs-toggle="modal" data-bs-target="#editCartItem">Edit Quantity</button>
         <!--3 buttons after the table end-->
 
         <!--edit item Modal start-->
-        <div class="modal fade" id="edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="editCartItem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content bg-dark">
                     <div class="modal-header">
@@ -220,54 +201,34 @@
                     </div>
                     <div class="modal-body">
 
-                        <!--add customer form start-->
-
-                        <label class="text-light mb-3" >Item Code : I0001</label>
-
                         <div class="form-floating mb-3">
-                            <input disabled type="text" class="form-control bg-dark text-secondary" id="nameEditOnPO" value="Soap" placeholder="name@example.com">
-                            <label class="text-light" for="nameEditOnPO">Item Name</label>
+                            <input disabled type="text" class="form-control bg-dark text-secondary" id="editItemCodeOnPO" placeholder="name@example.com">
+                            <label class="text-light" for="editItemCodeOnPO">Item Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input disabled type="text" class="form-control bg-dark text-secondary" id="editItemNameOnPO" placeholder="name@example.com">
+                            <label class="text-light" for="editItemNameOnPO">Item Name</label>
                         </div>
                         <div class="form-floating mb-3 ">
-                            <input disabled type="number" class="form-control bg-dark text-secondary" id="priceEditOnPO" value="200" placeholder="name@example.com">
-                            <label class="text-light" for="priceEditOnPO">Price</label>
+                            <input disabled type="number" class="form-control bg-dark text-secondary" id="editPriceOnPO" placeholder="name@example.com">
+                            <label class="text-light" for="editPriceOnPO">Price</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="number" class="form-control bg-dark text-light" id="qtyEditOnPO" value="60" placeholder="name@example.com">
-                            <label class="text-light" for="qtyEditOnPO">Quantity</label>
+                            <input type="number" class="form-control bg-dark text-light" id="editQtyOnPO" placeholder="name@example.com">
+                            <label class="text-light" for="editQtyOnPO">Quantity</label>
                         </div>
-                        <!--add customer form end-->
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Edit Quantity</button>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button id="btnEditCartItemO" type="button" class="btn btn-primary">Edit Quantity</button>
+                        <button id="btnRemoveCartItem" type="button" class="btn btn-danger">Remove from Cart</button>
+                        <button id="btnCloseEditCart" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
         </div>
         <!--edit item Modal end-->
 
-        <!--delete Item model start-->
-        <div class="modal" id="remove" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content bg-dark">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Are you Sure?</h5>
-                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Once you Remove this item, <br>
-                            That action can't be undone!</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                        <button type="button" class="btn btn-danger">Delete</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--delete Item model end-->
 
     </section>
     <!--place order end-->
@@ -526,7 +487,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary">Edit Order Details</button>
-                        <button type="button" class="btn btn-primary btn-danger">Delete Order</button>
+                        <button type="button" class="btn btn-danger">Delete Order</button>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
