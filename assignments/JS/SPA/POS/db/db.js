@@ -47,3 +47,12 @@ itemsValidationOnEdit.push({reg: itemNameRegex, field: $('#editItemName'),error:
 itemsValidationOnEdit.push({reg: itemPriceRegex, field: $('#editItemPrice'),error:'Item price Pattern is Wrong : 100 or 100.00'});
 itemsValidationOnEdit.push({reg: itemQtyRegex, field: $('#editItemQty'),error:'item qty Pattern is Wrong : 100 or 100.5'});
 /*item details end*/
+
+
+/*order details start*/
+
+/*order details end*/
+
+/*PO details start*/
+
+/*PO details end*/
