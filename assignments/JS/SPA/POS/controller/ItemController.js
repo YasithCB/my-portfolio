@@ -67,6 +67,8 @@ $('#btnEditItem').click(function () {
         $('#btnCloseEditItemModal').click();
         refreshItemTable();
         rowTrigger();
+
+        loadItemDropdown();
     }
 });
 
@@ -219,6 +221,8 @@ $("#btnSaveItem").click(function (){
     renewFields();
     refreshItemTable();
     rowTrigger();
+
+    loadItemDropdown();
 });
 /*saving items to array*/
 

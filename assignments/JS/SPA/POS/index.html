@@ -73,28 +73,34 @@
                     <div class="form-floating mb-2 col pe-1">
                         <input type="text" class="form-control bg-dark text-light" id="orderIdOnPO" placeholder="name@example.com">
                         <label class="text-light ms-2" for="orderIdOnPO">Order ID</label>
+                        <span class="control-error" style="color: wheat;font-size: 11px;"></span>
                     </div>
                     <div class="form-floating mb-2 col ps-0">
-                        <input type="text" class="form-control bg-dark text-light" id="dateOnPO" placeholder="name@example.com">
+                        <input type="date" class="form-control bg-dark text-light" id="dateOnPO" placeholder="name@example.com">
                         <label class="text-light ms-2" for="dateOnPO">Date</label>
+                        <span class="control-error" style="color: wheat;font-size: 11px;"></span>
                     </div>
                 </div>
 
                 <div class="form-floating mb-2">
                     <input type="text" class="form-control bg-dark text-light" id="cusIdOnPO" placeholder="name@example.com">
                     <label class="text-light" for="cusIdOnPO">Customer ID</label>
+                    <span class="control-error" style="color: wheat;font-size: 11px;"></span>
                 </div>
                 <div class="form-floating mb-2">
                     <input type="text" class="form-control bg-dark text-light" id="cusNameOnPO" placeholder="name@example.com">
                     <label class="text-light" for="cusNameOnPO">Customer Name</label>
+                    <span class="control-error" style="color: wheat;font-size: 11px;"></span>
                 </div>
                 <div class="form-floating mb-2">
-                    <input type="text" class="form-control bg-dark text-light" id="salaryOnPO" placeholder="name@example.com">
+                    <input type="number" class="form-control bg-dark text-light" id="salaryOnPO" placeholder="name@example.com">
                     <label class="text-light" for="salaryOnPO">Salary</label>
+                    <span class="control-error" style="color: wheat;font-size: 11px;"></span>
                 </div>
                 <div class="form-floating mb-2">
                     <input type="text" class="form-control bg-dark text-light" id="addressOnPO" placeholder="name@example.com">
                     <label class="text-light" for="addressOnPO">Customer Address</label>
+                    <span class="control-error" style="color: wheat;font-size: 11px;"></span>
                 </div>
 
             </section>
@@ -102,27 +108,26 @@
             <section class="col-6 col-md">
                 <h5 class="text-light mb-3 mt-2" >Items Select</h5>
 
-                <div class="row">
-                    <div class="form-floating mb-2 col pe-1">
-                        <input type="text" class="form-control bg-dark text-light" id="itemCodeOnPO" placeholder="name@example.com">
-                        <label class="text-light ms-2" for="itemCodeOnPO">Item Code</label>
-                    </div>
-                    <div class="form-floating mb-2 col ps-0">
-                        <input type="text" class="form-control bg-dark text-light" id="itemNameOnPO" placeholder="name@example.com">
-                        <label class="text-light ms-2" for="itemNameOnPO">Item Name</label>
-                    </div>
-                </div>
+                <!--item code dropdown-->
+                <select id="selectItemOnPO" class="form-select form-select-sm bg-dark text-light mb-2" aria-label=".form-select-sm example">
+                    <option selected>Select Item</option>
+                </select>
+                <!--item code dropdown-->
 
                 <div class="form-floating mb-2">
-                    <input type="number" class="form-control bg-dark text-light" id="unitPriceOnPO" placeholder="name@example.com">
-                    <label class="text-light" for="unitPriceOnPO">Unit Price</label>
+                    <h6 class="text-light d-inline" >Item Name :  </h6>
+                    <h6 id="itemNameOnPO" class="text-light d-inline" ></h6>
                 </div>
                 <div class="form-floating mb-2">
-                    <input type="number" class="form-control bg-dark text-light" id="qtyOnHandOnPO" placeholder="name@example.com">
-                    <label class="text-light" for="qtyOnHandOnPO">Qty On Hand</label>
+                    <h6 class="text-light d-inline" >Unit Price :  </h6>
+                    <h6 id="unitPriceOnPO" class="text-light d-inline" ></h6>
                 </div>
                 <div class="form-floating mb-2">
-                    <input type="text" class="form-control bg-dark text-light" id="orderQtyOnPO" placeholder="name@example.com">
+                    <h6 class="text-light d-inline" >Qty On Hand :  </h6>
+                    <h6 id="qtyOnHand" class="text-light d-inline" ></h6>
+                </div>
+                <div class="form-floating mb-2">
+                    <input type="number" class="form-control bg-dark text-light" id="orderQtyOnPO" placeholder="name@example.com">
                     <label class="text-light" for="orderQtyOnPO">Order Qty</label>
                 </div>
 
@@ -133,26 +138,28 @@
             </section>
             <!--purchase-->
             <section class=" col">
-                <h5 class="text-light mt-5 mt-5 mb-3" >Sub Total : RS 510.00</h5>
+                <h5 class="text-light mb-3 mt-2" >Purchase</h5>
 
                 <div class="row">
                     <div class="form-floating mb-2 col">
-                        <input type="text" class="form-control bg-dark text-light" id="discountOnPO" placeholder="name@example.com">
+                        <input type="number" class="form-control bg-dark text-light" id="discountOnPO" placeholder="name@example.com">
                         <label class="text-light ms-2" for="discountOnPO">Discount(RS)</label>
+                        <span class="control-error" style="color: wheat;font-size: 9px;"></span>
                     </div>
                     <div class="form-floating mb-2 col">
-                        <input type="text" class="form-control bg-dark text-light" id="cashOnPO" placeholder="name@example.com">
+                        <input type="number" class="form-control bg-dark text-light" id="cashOnPO" placeholder="name@example.com">
                         <label class="text-light ms-2" for="cashOnPO">Cash</label>
+                        <span class="control-error" style="color: wheat;font-size: 9px;"></span>
                     </div>
                 </div>
 
                 <div class="bg-success mb-1">
                     <h5 class="text-light d-inline" >Total : Rs </h5>
-                    <h5 id="totalOnPO" class="text-light d-inline" >490.00</h5>
+                    <h5 id="totalOnPO" class="text-light d-inline" ></h5>
                 </div>
                 <div>
                     <h6 class="text-light d-inline" >Balance : Rs </h6>
-                    <h6 id="balanceOnPO" class="text-light d-inline" >4510.00</h6>
+                    <h6 id="balanceOnPO" class="text-light d-inline" ></h6>
                 </div>
 
                 <!--purchase btn-->
@@ -172,7 +179,7 @@
                 <th scope="col">Item Name</th>
                 <th scope="col">Unit Price</th>
                 <th scope="col">Quantity</th>
-                <th scope="col">Total</th>
+                <th scope="col">Subtotal</th>
             </tr>
             </thead>
             <tbody id="tblCart">
@@ -203,7 +210,7 @@
 
                         <div class="form-floating mb-3">
                             <input disabled type="text" class="form-control bg-dark text-secondary" id="editItemCodeOnPO" placeholder="name@example.com">
-                            <label class="text-light" for="editItemCodeOnPO">Item Name</label>
+                            <label class="text-light" for="editItemCodeOnPO">Item Code</label>
                         </div>
                         <div class="form-floating mb-3">
                             <input disabled type="text" class="form-control bg-dark text-secondary" id="editItemNameOnPO" placeholder="name@example.com">
@@ -220,7 +227,7 @@
 
                     </div>
                     <div class="modal-footer">
-                        <button id="btnEditCartItemO" type="button" class="btn btn-primary">Edit Quantity</button>
+                        <button id="btnEditCartItem" type="button" class="btn btn-primary">Edit Quantity</button>
                         <button id="btnRemoveCartItem" type="button" class="btn btn-danger">Remove from Cart</button>
                         <button id="btnCloseEditCart" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
@@ -671,13 +678,14 @@
 
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
-
-<script src="controller/homeController.js"></script>
-<script src="controller/customerController.js"></script>
-<script src="controller/itemController.js"></script>
-
 <script src="db/db.js"></script>
 <script src="util/commonFunctions.js"></script>
+
+<script src="controller/HomeController.js"></script>
+<script src="controller/CustomerController.js"></script>
+<script src="controller/ItemController.js"></script>
+<script src="controller/POController.js"></script>
+<script src="controller/OrderController.js"></script>
 <script>
 
 
