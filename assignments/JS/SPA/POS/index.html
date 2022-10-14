@@ -184,11 +184,7 @@
             </thead>
             <tbody id="tblCart">
             <tr>
-                <th scope="row">I0001</th>
-                <td>Soap</td>
-                <td>200</td>
-                <td>2</td>
-                <td>400</td>
+
             </tr>
             </tbody>
         </table>
@@ -423,11 +419,11 @@
         <!--3 buttons after the table start-->
         <a type="button" class="btnPlaceOrder btn btn-primary m-1">Place a Order</a>
         <span class="text-light ms-3">Click rows to edit and delete Orders</span>
-        <button type="button" class="btn btn-secondary m-1 invisible" data-bs-toggle="modal" data-bs-target="#editOrder">Edit Order Details</button>
+        <button id="EditOrder" type="button" class="btn btn-secondary m-1 invisible" data-bs-toggle="modal" data-bs-target="#editOrderModal">Edit Order Details</button>
         <!--3 buttons after the table end-->
 
         <!--edit order Modal start-->
-        <div class="modal fade" id="editOrder" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="editOrderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content bg-dark">
                     <div class="modal-header">
@@ -437,8 +433,8 @@
                     <div class="modal-body">
 
                         <!--edit order form start-->
-                        <div class="form-floating mb-3 ">
-                            <input type="text" class="form-control bg-dark text-light" id="editOrderId" placeholder="name@example.com">
+                        <div class="form-floating mb-3">
+                            <input disabled type="text" class="form-control bg-dark text-light" id="editOrderId" placeholder="name@example.com">
                             <label class="text-light" for="editOrderId">Order ID</label>
                         </div>
                         <div class="form-floating mb-3 ">
@@ -458,8 +454,8 @@
                             <label class="text-light" for="editItemCodeOnOrder">Item Code</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control bg-dark text-light" id="itemNameEdit" placeholder="name@example.com">
-                            <label class="text-light" for="itemNameEdit">Item Name</label>
+                            <input type="text" class="form-control bg-dark text-light" id="editItemNameOnOrder" placeholder="name@example.com">
+                            <label class="text-light" for="editItemNameOnOrder">Item Name</label>
                         </div>
 
                         <div class="row">
@@ -493,9 +489,9 @@
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Edit Order Details</button>
-                        <button type="button" class="btn btn-danger">Delete Order</button>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button id="btnEditOrder" type="button" class="btn btn-primary">Edit Order Details</button>
+                        <button id="btnDeleteOrder" type="button" class="btn btn-danger">Delete Order</button>
+                        <button id="btnCloseEditOrderModal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>

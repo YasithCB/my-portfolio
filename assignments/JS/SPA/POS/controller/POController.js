@@ -104,12 +104,12 @@ $('#btnAddItemOnPO').click(function () {
     };
     cartItems.push(cartItem);
 
-    $('#totalOnPO').text(calcTotal());
-    $('#balanceOnPO').text(calcBal());
-
     renewFields();
     refreshTblCart();
     cartRowTrigger();
+
+    $('#totalOnPO').text(calcTotal());
+    $('#balanceOnPO').text(calcBal());
 });
 /*add item func*/
 
@@ -126,7 +126,7 @@ function calcBal (){
 
 /*edit item func*/
 $('#btnEditCartItem').click(function () {
-    if (confirm('Are you sure to Edit this Qty?') && getEditBtnState()) {
+    if (confirm('Are you sure to Edit this Qty?')) {
         let cartItem = searchItem(selectedRowOnCart);
         let price = $('#editPriceOnPO').val();
         let qty = $('#editQtyOnPO').val();
@@ -161,61 +161,51 @@ $('#btnRemoveCartItem').click(function () {
 /*purchase func*/
 $('#btnPurchaseOnPO').click(function () {
 
-    let qty =  $('#orderQtyOnPO').val();
-    let unitPrice = $('#unitPriceOnPO').val();
+    let qty =  parseFloat($('#orderQtyOnPO').val());
+    let unitPrice = parseFloat($('#unitPriceOnPO').text());
     let order = {
         orderId: $('#orderIdOnPO').val(),
         cusId: $('#cusIdOnPO').val(),
         cusName: $('#cusNameOnPO').val(),
         cusAddress: $('#addressOnPO').val(),
-        itemCode: $('#itemCodeOnPO').val(),
-        itemname: $('#itemNameOnPO').val(),
+        itemCode: $('#selectItemOnPO').val(),
+        itemName: $('#itemNameOnPO').val(),
         qty: qty,
         unitPrice: unitPrice,
         subTotal: qty * unitPrice,
-        discount: $('#discountOnPO').val(),
+        discount: parseFloat($('#discountOnPO').val()),
         total: calcTotal()
     };
     orders.push(order);
 
-    renewFieldsOnPO();
-    refreshTblCart();
-    cartRowTrigger();
     alert('Order Placed!');
+    cartItems = [];
+    refreshTblCart();
+    renewFieldsOnPO();
+    cartRowTrigger();
 });
 /*purchase func*/
 
+/*auto change subTotal when type dis and cash*/
+$('#discountOnPO,#cashOnPO,#orderQtyOnPO').on('keyup',function () {
+    $('#totalOnPO').text(calcTotal());
+    $('#balanceOnPO').text(calcBal());
+})
+/*auto change subTotal when type dis and cash*/
+
 function renewFieldsOnPO() {
-    $("#orderIdOnPO,#dateOnPO,#cusIdOnPO,#cusNameOnPO,#salaryOnPO,#addressOnPO,#itemCodeOnPO,#itemNameOnPO,#unitPriceOnPO,#qtyOnHandOnPO,#orderQtyOnPO,#discountOnPO,#cashOnPO").val('');
+    $("#orderIdOnPO,#dateOnPO,#cusIdOnPO,#cusNameOnPO,#salaryOnPO,#addressOnPO,#orderQtyOnPO,#discountOnPO,#cashOnPO").val('');
     $("#totalOnPO,#balanceOnPO").text('');
 }
 
 function searchItem (code) {
-    for (let item of cartItems) {
+    for (let item of items) {
         if (item.code === code) {
             return item;
         }
     }
     return -1;
 }
-
-
-/*add sample data*/
-{
-    var cartItem = {
-        code : 'I001',
-        name : 'Soap',
-        price : 200,
-        qty : 60,
-        subtotal : 12000
-    }
-    cartItems.push(cartItem);
-
-    refreshTblCart();
-    cartRowTrigger();
-}
-/*add sample data*/
-
 
 function cartRowTrigger() {
     $('#tblCart>tr').click(function (){
@@ -252,6 +242,7 @@ function validateAllFieldsOnPO() {
     }
     setBtnStates(errorCount);
 }
+
 function setBtnStates(errorCount) {
     if (errorCount > 0) {
         $('#btnPurchaseOnPO').attr('disabled',true);
@@ -263,17 +254,17 @@ function setBtnStates(errorCount) {
 /*load items for dropdown*/
 loadItemDropdown();
 
-let cmbSelectItem = $('#selectItemOnPO');
 function loadItemDropdown(){
-    cmbSelectItem.empty();
+    $('#selectItemOnPO').empty();
     for (const item of items) {
-        cmbSelectItem.append(`<option>Select a Item</option>`);
-        cmbSelectItem.append(`<option>${item.code}</option>`);
+        $('#selectItemOnPO').append(`<option>Select a Item</option>`);
+        $('#selectItemOnPO').append(`<option>${item.code}</option>`);
     }
 }
 
-cmbSelectItem.change(function (e){
+$('#selectItemOnPO').change(function (e){
     let item = searchItem(e.target.value);
+    console.log(item);
     $('#itemNameOnPO').text(item.name);
     $('#unitPriceOnPO').text(item.price);
     $('#qtyOnHand').text(item.qty);

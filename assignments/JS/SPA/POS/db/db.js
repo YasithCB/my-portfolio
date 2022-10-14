@@ -33,7 +33,7 @@ var selectedRowItemCode = '';
 const itemCodeRegex = /^(I)[0-9]{3}$/;
 const itemNameRegex = /^[A-z ]{3,20}$/;
 const itemPriceRegex = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
-const itemQtyRegex = /^[0-9]{1,}[.]?[0-9]{1,3}$/;
+const itemQtyRegex = /^[1-9]*[.]?[0-9]{1,3}$/;
 
 var itemsValidationOnSave = [];
 itemsValidationOnSave.push({reg: itemCodeRegex, field: $('#itemCode'),error:'Item Code Pattern is Wrong : I001'});
@@ -68,9 +68,6 @@ POValidation.push({reg: cusNameRegex, field: $('#cusNameOnPO'),error:'Customer N
 POValidation.push({reg: cusSalaryRegex, field: $('#salaryOnPO'),error:'Customer Salary Pattern is Wrong : 100 or 100.00'});
 POValidation.push({reg: cusAddressRegex, field: $('#addressOnPO'),error:'Customer Address Pattern is Wrong : A-z 0-9 ,/'});
 
-POValidation.push({reg: itemCodeRegex, field: $('#itemCodeOnPO'),error:'Item Code Pattern is Wrong : I001'});
-POValidation.push({reg: itemNameRegex, field: $('#itemNameOnPO'),error:'Item name Pattern is Wrong : A-z 5-20'});
-POValidation.push({reg: itemPriceRegex, field: $('#unitPriceOnPO'),error:'Item price Pattern is Wrong : 100 or 100.00'});
 POValidation.push({reg: itemQtyRegex, field: $('#orderQtyOnPO'),error:'item qty Pattern is Wrong : 100 or 100.5'});
 
 POValidation.push({reg: itemQtyRegex, field: $('#discountOnPO'),error:'Discount Pattern is Wrong : 100 or 100.00'});
