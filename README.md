@@ -18,7 +18,7 @@ This is a portfolio of Yasith C Bandara
 
 ## This site is On also
 - [GitHub Pages URL](https://yasithcb.github.io/my-portfolio/)
-- [000WebHost URL](http://yasithcbandara.epizy.com/)
+- [InfinityFree URL](http://yasithcbandara.epizy.com/)
 
 ## Image Previews
 
