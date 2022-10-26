@@ -57,10 +57,10 @@ $('#btnEditCustomer').click(function () {
     if (confirm('Are you sure to Edit this Customer?') && getEditBtnState()) {
         let customer = searchCustomer(selectedRowCusId);
         /*edit*/
-        customer.id = $('#editCusId').val();
-        customer.name = $('#editCusName').val();
-        customer.address = $('#editCusAddress').val();
-        customer.salary = $('#editCusSalary').val();
+        customer.setId($('#editCusId').val());
+        customer.setName($('#editCusName').val());
+        customer.setAddress($('#editCusAddress').val());
+        customer.setSalary($('#editCusSalary').val());
 
 
         $('#btnCloseCustomerEditModel').click();
@@ -96,7 +96,7 @@ function getEditBtnState() {
 
 function searchCustomer (cusId) {
     for (let customer of customers) {
-        if (customer.id === cusId) {
+        if (customer.getId() === cusId) {
             return customer;
         }
     }
@@ -193,12 +193,13 @@ function getSaveBtnState() {
 
 /*add sample data*/
 {
-    var customer = {
-        id : 'C001',
-        name : 'Yasith',
-        address : 'Opanayaka',
-        salary : 49000
-    }
+    let customer= new Customer(
+        'C001',
+        'Yasith',
+        'Opanayaka',
+        49000
+    );
+
     customers.push(customer);
 
     refreshCustomerTable();
@@ -208,12 +209,13 @@ function getSaveBtnState() {
 
 /*saving customer to array*/
 $("#btnSaveCustomer").click(function (){
-    let customer = {
-        id: $('#cusId').val(),
-        name: $('#cusName').val(),
-        address: $('#cusAddress').val(),
-        salary: $('#cusSalary').val(),
-    };
+    let customer = new Customer(
+        $('#cusId').val(),
+        $('#cusName').val(),
+        $('#cusAddress').val(),
+        $('#cusSalary').val()
+    );
+
     customers.push(customer);
     renewFields();
     refreshCustomerTable();
@@ -231,11 +233,11 @@ $('#btnRenew').click(function (){
 $('#btnSearchCustomer').click(function (){
     let available = false;
     for (let customer of customers) {
-        if (customer.id === $('#cusId').val()){
+        if (customer.getId() === $('#cusId').val()){
             available = true;
-            $('#cusName').val(customer.name);
-            $('#cusAddress').val(customer.address);
-            $('#cusSalary').val(customer.salary);
+            $('#cusName').val(customer.getName());
+            $('#cusAddress').val(customer.getAddress());
+            $('#cusSalary').val(customer.getSalary());
         }
     }
     if (!available){
@@ -249,7 +251,6 @@ $('#btnSearchCustomer').click(function (){
 function rowTrigger() {
     $('#cusTable>tr').click(function (){
         /*open edit cus model*/
-        console.log('clicked')
         $('#btnEditDeleteCustomer').click();
         selectedRowCusId = $(this).children().eq(0).text();
 
@@ -264,7 +265,7 @@ function refreshCustomerTable(){
     $('#cusTable').empty();
 
     for (let customer of customers) {
-        let row = `<tr><th scope="row">${customer.id}</th><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td></tr>`
+        let row = `<tr><th scope="row">${customer.getId()}</th><td>${customer.getName()}</td><td>${customer.getAddress()}</td><td>${customer.getSalary()}</td></tr>`
         $('#cusTable').append(row);
     }
 }
