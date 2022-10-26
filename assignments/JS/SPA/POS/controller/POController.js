@@ -95,13 +95,13 @@ $('#btnAddItemOnPO').click(function () {
     let unitPrice = $('#unitPriceOnPO').text();
     let orderQty = $('#orderQtyOnPO').val();
 
-    let cartItem = {
-        code: $('#selectItemOnPO').val(),
-        name: $('#itemNameOnPO').text(),
-        price: unitPrice,
-        qty: orderQty,
-        subtotal: unitPrice * orderQty,
-    };
+    let cartItem = new CartItem(
+        $('#selectItemOnPO').val(),
+        $('#itemNameOnPO').text(),
+        unitPrice,
+        orderQty,
+        unitPrice * orderQty
+    );
     cartItems.push(cartItem);
 
     renewFields();
@@ -132,11 +132,11 @@ $('#btnEditCartItem').click(function () {
         let qty = $('#editQtyOnPO').val();
 
         /*edit*/
-        cartItem.code = $('#editItemCodeOnPO').val();
-        cartItem.name = $('#editItemNameOnPO').val();
-        cartItem.price = price;
-        cartItem.qty = qty;
-        cartItem.subtotal = price * qty;
+        cartItem.setCode($('#editItemCodeOnPO').val());
+        cartItem.setName($('#editItemNameOnPO').val());
+        cartItem.setPrice(price);
+        cartItem.setQty(qty);
+        cartItem.setSubTotal(price * qty);
 
         $('#btnCloseEditCart').click();
         refreshTblCart();
@@ -163,19 +163,19 @@ $('#btnPurchaseOnPO').click(function () {
 
     let qty =  parseFloat($('#orderQtyOnPO').val());
     let unitPrice = parseFloat($('#unitPriceOnPO').text());
-    let order = {
-        orderId: $('#orderIdOnPO').val(),
-        cusId: $('#cusIdOnPO').val(),
-        cusName: $('#cusNameOnPO').val(),
-        cusAddress: $('#addressOnPO').val(),
-        itemCode: $('#selectItemOnPO').val(),
-        itemName: $('#itemNameOnPO').val(),
-        qty: qty,
-        unitPrice: unitPrice,
-        subTotal: qty * unitPrice,
-        discount: parseFloat($('#discountOnPO').val()),
-        total: calcTotal()
-    };
+    let order = new Order(
+        $('#orderIdOnPO').val(),
+        $('#cusIdOnPO').val(),
+        $('#cusNameOnPO').val(),
+        $('#addressOnPO').val(),
+        $('#selectItemOnPO').val(),
+        $('#itemNameOnPO').val(),
+        qty,
+        unitPrice,
+        qty * unitPrice,
+        parseFloat($('#discountOnPO').val()),
+        calcTotal()
+    );
     orders.push(order);
 
     alert('Order Placed!');
@@ -200,7 +200,7 @@ function renewFieldsOnPO() {
 
 function searchItem (code) {
     for (let item of items) {
-        if (item.code === code) {
+        if (item.getCode() === code) {
             return item;
         }
     }
@@ -224,7 +224,7 @@ function refreshTblCart(){
     $('#tblCart').empty();
 
     for (let item of cartItems) {
-        let row = `<tr><th scope="row">${item.code}</th><td>${item.name}</td><td>${item.price}</td><td>${item.qty}</td></td><td>${item.subtotal}</td></tr>`
+        let row = `<tr><th scope="row">${item.getCode()}</th><td>${item.getName()}</td><td>${item.getPrice()}</td><td>${item.getQty()}</td></td><td>${item.getSubTotal()}</td></tr>`
         $('#tblCart').append(row);
     }
 }
@@ -258,14 +258,14 @@ function loadItemDropdown(){
     $('#selectItemOnPO').empty();
     for (const item of items) {
         $('#selectItemOnPO').append(`<option>Select a Item</option>`);
-        $('#selectItemOnPO').append(`<option>${item.code}</option>`);
+        $('#selectItemOnPO').append(`<option>${item.getCode()}</option>`);
     }
 }
 
 $('#selectItemOnPO').change(function (e){
     let item = searchItem(e.target.value);
     console.log(item);
-    $('#itemNameOnPO').text(item.name);
-    $('#unitPriceOnPO').text(item.price);
-    $('#qtyOnHand').text(item.qty);
+    $('#itemNameOnPO').text(item.getName());
+    $('#unitPriceOnPO').text(item.getPrice());
+    $('#qtyOnHand').text(item.getQty());
 })
