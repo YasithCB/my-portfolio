@@ -59,10 +59,10 @@ $('#btnEditItem').click(function () {
     if (confirm('Are you sure to Edit this Item?') && getEditBtnState()) {
         let item = searchItem(selectedRowItemCode);
         /*edit*/
-        item.code = $('#editItemCode').val();
-        item.name = $('#editItemName').val();
-        item.price = $('#editItemPrice').val();
-        item.qty = $('#editItemQty').val();
+        item.setCode($('#editItemCode').val());
+        item.setName($('#editItemName').val());
+        item.setPrice($('#editItemPrice').val());
+        item.setQty($('#editItemQty').val());
 
         $('#btnCloseEditItemModal').click();
         refreshItemTable();
@@ -100,18 +100,18 @@ function getEditBtnState() {
 
 function searchItem (code) {
     for (let item of items) {
-        if (item.code === code) {
+        if (item.getCode() === code) {
             return item;
         }
     }
     return -1;
 }
 
-/*edit customer end*/
+/*edit item end*/
 
 
 
-/*delete customer start*/
+/*delete item start*/
 
 $('#btnDeleteItem').click(function () {
     if (confirm('Are you sure to delete this Item?')) {
@@ -123,11 +123,11 @@ $('#btnDeleteItem').click(function () {
 
 });
 
-/*delete customer end*/
+/*delete item end*/
 
 
 
-/*save customer start*/
+/*save item start*/
 /*validate all in any keyPress on anywhere on save model*/
 $("#itemCode,#itemName,#itemPrice,#itemQty").on('keyup', function () {
     validateAllFieldsOnSave();
@@ -196,12 +196,12 @@ function getSaveBtnState() {
 
 /*add sample data*/
 {
-    var item = {
-        code : 'I001',
-        name : 'Soap',
-        price : 200,
-        qty : 60
-    }
+    var item = new Item(
+        'I001',
+        'Soap',
+        200,
+        60
+    );
     items.push(item);
 
     refreshItemTable();
@@ -211,12 +211,12 @@ function getSaveBtnState() {
 
 /*saving items to array*/
 $("#btnSaveItem").click(function (){
-    let item = {
-        code: $('#itemCode').val(),
-        name: $('#itemName').val(),
-        price: $('#itemPrice').val(),
-        qty: $('#itemQty').val(),
-    };
+    let item = new Item(
+        $('#itemCode').val(),
+        $('#itemName').val(),
+        $('#itemPrice').val(),
+        $('#itemQty').val()
+    );
     items.push(item);
     renewFields();
     refreshItemTable();
@@ -267,7 +267,7 @@ function refreshItemTable(){
     $('#itemTable').empty();
 
     for (let item of items) {
-        let row = `<tr><th scope="row">${item.code}</th><td>${item.name}</td><td>${item.price}</td><td>${item.qty}</td></tr>`
+        let row = `<tr><th scope="row">${item.getCode()}</th><td>${item.getName()}</td><td>${item.getPrice()}</td><td>${item.getQty()}</td></tr>`
         $('#itemTable').append(row);
     }
 }
