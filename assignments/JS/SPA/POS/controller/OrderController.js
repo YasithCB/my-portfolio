@@ -1,19 +1,19 @@
 
 /*add sample data*/
 {
-    let order = {
-        orderId: 'OD001',
-        cusId: 'C001',
-        cusName: 'Yasith',
-        cusAddress: 'Opanayaka',
-        itemCode: 'I001',
-        itemName: 'Soap',
-        qty: 2,
-        unitPrice: 200,
-        subTotal: 400,
-        discount: 20,
-        total: 380
-    };
+    let order = new Order(
+        'OD001',
+        'C001',
+        'Yasith',
+        'Opanayaka',
+        'I001',
+        'Soap',
+        2,
+        200,
+        400,
+        20,
+        380
+    );
     orders.push(order);
 
     refreshTblOrder();
@@ -51,17 +51,17 @@ $('#btnEditOrder').click(function () {
         let subTotal =  qty * unitPrice;
 
         /*edit*/
-        order.orderId = $('#editOrderId').val();
-        order.cusId = $('#editCusIdOnOrder').val();
-        order.cusName = $('#editCusNameOnOrder').val();
-        order.cusAddress = $('#editCusAddressOnOrder').val();
-        order.itemCode = $('#editItemCodeOnOrder').val();
-        order.itemName = $('#editItemNameOnOrder').val();
-        order.qty = qty;
-        order.unitPrice = unitPrice;
-        order.subTotal = subTotal;
-        order.discount = discount;
-        order.total = subTotal - discount;
+        order.setoId($('#editOrderId').val());
+        order.setcId($('#editCusIdOnOrder').val());
+        order.setcName($('#editCusNameOnOrder').val());
+        order.setcAddress($('#editCusAddressOnOrder').val());
+        order.setiCode($('#editItemCodeOnOrder').val());
+        order.setiName($('#editItemNameOnOrder').val());
+        order.setiQty(qty);
+        order.setiPrice(unitPrice);
+        order.setSubTotal(subTotal);
+        order.setDiscount(discount);
+        order.setTotal(subTotal - discount);
 
         $('#btnCloseEditOrderModal').click();
         refreshTblOrder();
@@ -75,14 +75,14 @@ function refreshTblOrder(){
     $('#tblOrders').empty();
 
     for (let order of orders) {
-        let row = `<tr><th scope="row">${order.orderId}</th><td>${order.cusId}</td><td>${order.cusName}</td><td>${order.cusAddress}</td></td><td>${order.itemCode}</td><td>${order.itemName}</td><td>${order.qty}</td><td>${order.unitPrice}</td><td>${order.subtotal}</td><td>${order.discount}</td><td>${order.total}</td></tr>`
+        let row = `<tr><th scope="row">${order.getoId()}</th><td>${order.getcId()}</td><td>${order.getcName()}</td><td>${order.getcAddress()}</td></td><td>${order.getiCode()}</td><td>${order.getiName()}</td><td>${order.getiQty()}</td><td>${order.getiPrice()}</td><td>${order.getSubTotal()}</td><td>${order.getDiscount()}</td><td>${order.getTotal()}</td></tr>`
         $('#tblOrders').append(row);
     }
 }
 
 function searchOrder (id) {
     for (let order of orders) {
-        if (order.orderId === id) {
+        if (order.getoId() === id) {
             return order;
         }
     }
