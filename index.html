@@ -49,28 +49,32 @@
 
 <body> <!--Sectioning root-->
 
-<header>
+<header id="header">
     <div id="my-logo"><!--my logo--></div>
-    <nav>
+    <nav id="mainNavbar">
         <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Education</li>
-            <li>Skill</li>
-            <li>Projects</li>
-            <li>Assignments</li>
-            <li>Contact</li>
+            <a href="#homeSection"><li>Home</li></a>
+            <a href=""><li >About</li></a>
+            <a href=""><li>Education</li></a>
+            <a href=""><li>Skill</li></a>
+            <a href=""><li>Projects</li></a>
+            <a href="#sectionAssignments"><li>Assignments</li></a>
+            <a href=""><li>Contact</li></a>
         </ul>
     </nav>
 </header>
 
-<!--call now fixed-->
-<div class="water-drop-anim"></div>
-<div class="water-drop-anim2"></div>
-<a href="tel:+94767722095"><div id="call"><i class="fa-solid fa-phone"></i></div></a>
-<!--call now fixed-->
+<main id="main">
 
-<main>
+    <!--call now-->
+    <aside>
+        <!--call now fixed-->
+        <div class="water-drop-anim"></div>
+        <div class="water-drop-anim2"></div>
+        <a href="tel:+94767722095"><div id="call"><i class="fa-solid fa-phone"></i></div></a>
+        <!--call now fixed-->
+    </aside>
+
     <!--home-->
     <section id="homeSection" > <!--Home-->
 
@@ -238,12 +242,11 @@
             </div>
         </section>
 
-        <button type="button" id="btnMoreProjects" class="btn" name="moreProjects">More Projects</button>
+        <a href="pages/projects.html"><button type="button" id="btnMoreProjects" class="btn" name="moreProjects">More Projects</button></a>
     </section>
 
     <!--assignments-->
     <section id="sectionAssignments">
-
         <h1 class="sectionTitle">Assignments</h1>
 
         <!--CSS assignments start-->
@@ -331,6 +334,7 @@
     </section>
 
 </main>
+
 
 <footer>
     <div></div>

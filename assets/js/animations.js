@@ -48,3 +48,15 @@ for (const title of sectionTitlesList) {
 /*section titles animation*/
 
 
+
+/*loading screen*/
+$(window).on('load',function (){
+    $('#loader').css('transform','translateX(100vw)');
+    $('#loader').css('transition','all 1s');
+    $('#main,#footer,#header').css('visibility','visible');
+
+    setTimeout(function (){
+        mainTitleWritingAnimation();
+    },500);
+});
+/*loading screen*/
