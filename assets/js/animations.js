@@ -47,3 +47,4 @@ for (const title of sectionTitlesList) {
 
 /*section titles animation*/
 
+

@@ -2,9 +2,44 @@
 html {
     font-size: 5px;
 }
+main {
+    width: 100%;
+    height: 100%;
+    padding-top: 10vh;
+}
 a {
     text-decoration: none;
 }
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+#main, #header, #footer {
+    visibility: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/*loader*/
+#loader {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    border-left: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#loader> img {
+    scale: 40%;
+}
+/*loader*/
 
 .btn {
     font-size: 2.5rem;
@@ -37,9 +72,9 @@ a {
 .card {
     width: 22vw;
     height: 24vw;
-    margin-left: 35px;
+    margin-left: 7rem;
     display: inline-block;
-    margin-bottom: 55px;
+    margin-bottom: 11rem;
 
     transition-property: all;
     transition-duration: .2s;
@@ -54,40 +89,36 @@ a {
 .card h6 {
     text-align: left !important;
     font-size: 3rem;
-    padding-top: 20px;
-}
-.card p {
-    font-size: 13px;
+    padding-top: 4rem;
 }
 .card a {
-    padding-top: 4px;
+    padding-top: 0.5rem;
     display: inline-block;
 }
 
 .assignmentTitles {
     font-family: fantasy;
-    letter-spacing: 6px;
+    letter-spacing: 1.2rem;
     background-color: black;
     color: white;
-    font-size: 32px;
-    padding: 8px 0;
+    padding: 1.5rem 0;
 }
 
 .assignmentSubTitles {
     text-align: left;
-    padding: 15px 106px;
-    font-size: 23px;
-    letter-spacing: 6px;
+    padding: 2rem 8rem;
+    font-size: 4.2rem;
+    letter-spacing: 1rem;
 }
 
 #call {
-    width: 50px;
-    height: 50px;
+    width: 10rem;
+    height: 10rem;
     background-color: #181818;
     border-radius: 100%;
     position: fixed;
-    right: 25px;
-    bottom: 25px;
+    right: 5rem;
+    bottom: 5rem;
     margin: auto;
     padding: 0;
     z-index: 1;
@@ -95,19 +126,19 @@ a {
 }
 #call > i {
     position: relative;
-    left: 20px;
-    top: 20px;
+    left: 4rem;
+    top: 4rem;
     color: chartreuse;
-    font-size: 11px;
+    font-size: 2rem;
 }
 .water-drop-anim {
-    width: 150px;
-    height: 150px;
-    border: 2px solid gray;
+    width: 30rem;
+    height: 30rem;
+    border: 0.4rem solid gray;
     border-radius: 100%;
     position: fixed;
-    right: 25px;
-    bottom: 25px;
+    right: 5rem;
+    bottom: 5rem;
     margin: auto;
     padding: 0;
 
@@ -117,13 +148,13 @@ a {
     animation-timing-function: ease-in;
 }
 .water-drop-anim2 {
-    width: 150px;
-    height: 150px;
-    border: 2px solid gray;
+    width: 30rem;
+    height: 30rem;
+    border: 0.3rem solid gray;
     border-radius: 100%;
     position: fixed;
-    right: 25px;
-    bottom: 25px;
+    right: 5rem;
+    bottom: 5rem;
     margin: auto;
     padding: 0;
 
@@ -134,14 +165,14 @@ a {
 }
 @keyframes circle_animate {
     0% {
-        width: 50px;
-        height: 50px;
+        width: 10rem;
+        height: 10rem;
     }
     100% {
         opacity: 0;
-        border: 3px solid dodgerblue;
-        width: 100px;
-        height: 100px;
+        border: 0.5rem solid dodgerblue;
+        width: 20rem;
+        height: 20rem;
     }
 }
 
@@ -150,30 +181,21 @@ a {
     position: relative;
     display: block;
     margin: auto;
-    width: 220px;
-    height: 46px;
+    width: 44rem;
+    height: 9rem;
     font-family: 'Poppins', sans-serif;
     background-color: white;
-    border-radius: 15px;
-    border: 2px solid gray;
+    border-radius: 3rem;
+    border: 0.35rem solid gray;
 }
 .btn-view-all:hover {
     background-color: #181818;
     color: white;
 }
 
-body {
-    height: 100%;
-    width: 100%;
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
 p {
     font-family: 'Poppins', sans-serif;
-    font-size: 13px;
+    font-size: 2.8rem;
 }
 
 h1 {
@@ -181,8 +203,8 @@ h1 {
     color: #404040;
     font-family: 'Poppins', sans-serif;
     font-size: 9rem;
-    padding-left: 89px;
-    margin: 42px;
+    padding-left: 17rem;
+    margin: 8.1rem;
     margin-left: 0;
 }
 h3 {
@@ -191,14 +213,14 @@ h3 {
     font-family: 'Port Lligat Sans', sans-serif;
     font-size: 3rem;
     font-weight: 100;
-    margin: 6px 0 0 0;
+    margin: 1.1rem 0 0 0;
 }
 h5 {
     text-align: center;
     color: #404040;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 3rem;
-    letter-spacing: 13px;
+    letter-spacing: 2.5rem;
 }
 h6 {
     margin: 0;
@@ -209,13 +231,13 @@ h6 {
 
 /*All sections in the main*/
 body> main> section {
-    padding-top: 98px;
+    padding-top: 20rem;
 }
-body> main> section:first-child { /*home section doesn't need a top padding*/
+#homeSection { /*home section doesn't need a top padding*/
     padding-top: 0;
 }
 
-body> header {
+#header {
     position: fixed;
     background-color: rgba(255, 255, 255, 0.81);
     z-index: 2;
@@ -227,39 +249,33 @@ body> header {
     background: url("../image/my-logo.png");
     background-size: cover;
     display: inline-block;
-    width: 235px;
-    height: 70px;
-    padding-left: 10px;
+    width: 28rem;
+    height: 14rem;
+    padding-left: 2rem;
 }
-body> header> nav {
+#mainNavbar {
     position: relative;
-    left: 169px;
-    bottom: 27px;
+    left: 34rem;
+    bottom: 5.5rem;
     display: inline-block;
 }
-body> header> nav> ul {
+#mainNavbar> ul {
     list-style: none;
-    padding-top: 6px;
+    padding-top: 1.2rem;
     margin: 0;
 }
-body> header> nav> ul> li {
+#mainNavbar> ul> a> li {
     display: inline-block;
-    padding-left: 15px;
-    font-size: 15px;
+    padding-left: 3rem;
+    font-size: 3rem;
     color: gray;
     cursor: pointer;
 }
-body> header> nav> ul> li:hover {
+#mainNavbar> ul> a> li:hover {
     color: red;
 }
 
 
-/*main*/
-main {
-    width: 100%;
-    height: 100%;
-    padding-top: 10vh;
-}
 
 /*home*/
 #homeSection {
@@ -281,7 +297,7 @@ main {
 }
 
 #socialNav img {
-    padding-bottom: 7px;
+    padding-bottom: 1.45rem;
     cursor: pointer;
 }
 #homeTextDiv {
@@ -297,14 +313,14 @@ main {
     grid-column: 7/10;
 }
 
-body> main> section:nth-child(1)> div> h3 {
+#homeSection> div> h3 {
     text-align: left;
 }
-body> main> section:nth-child(1)> div> h5 {
+#homeSection> div> h5 {
     text-align: left;
-    margin: 12px 0;
+    margin: 2.45rem 0;
 }
-body> main> section:nth-child(1)> div> h1 {
+#homeSection> div> h1 {
     padding-left: 0;
     margin: 0;
     color: black;
@@ -323,8 +339,8 @@ body> main> section:nth-child(1)> div> h1 {
     margin: auto;
     display: inline-block;
     width: 50vw;
-    height: 300px;
-    padding-top: 50px;
+    height: 60rem;
+    padding-top: 10rem;
 }
 #aboutSection> article> p {
     text-align: center;
@@ -344,16 +360,16 @@ body> main> section:nth-child(1)> div> h1 {
 #sectionEdu> section { /*common to all sections*/
     position: relative;
     display: flex;
-    padding: 22px 20px;
+    padding: 4.45rem 4rem;
 }
 #sectionEdu> section> div { /*common to all image containing divs*/
     display: inline-block;
     position: relative;
-    width: 121px;
+    width: 24rem;
 }
 #sectionEdu> section> div> img { /*common style to images (logos)*/
     position: absolute;
-    left: 0;
+    left: -12px;
     right: 0;
     top: 0;
     bottom: 0;
@@ -366,17 +382,17 @@ body> main> section:nth-child(1)> div> h1 {
 }
 #sectionEdu> section> section> div { /*common to all div(rect)s next to the logo*/
     position: relative;
-    border: 1px solid black;
-    border-radius: 13px;
+    border: 0.2rem solid black;
+    border-radius: 2.5rem;
     width: 100%;
-    height: 96px;
-    margin: 4px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    height: 19rem;
+    margin: 0.8rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 3rem 10rem -2rem;
 }
 #sectionEdu> section> section> div> p { /*common to all p inside divs*/
     text-align: center;
     position: relative;
-    top: 27px;
+    top: 5.4rem;
     margin: 0;
 }
 #sectionEdu> section> p { /*common to all each articles*/
@@ -384,7 +400,7 @@ body> main> section:nth-child(1)> div> h1 {
     display: inline-block;
     text-align: left;
     width: 37%;
-    padding: 14px 3vw 0 3vw;
+    padding: 2.9rem 3vw 0 3vw;
 }
 
 /*row reversed sections*/
@@ -415,155 +431,155 @@ body> main> section:nth-child(1)> div> h1 {
     left: 0;
     right: 0;
     margin: auto;
-    padding-top: 16px;
+    padding-top: 3rem;
 }
 
 /*skill and tools ----------------------------------------------------------end*/
 
 /*projects ----------------------------------------------------------------start*/
 
-body> main> section:nth-child(5)> section { /*flex container*/
+#sectionProjects> section { /*flex container*/
     display: flex;
-    padding-bottom: 149px;
+    padding-bottom: 30rem;
     flex-direction: row;
     justify-content: space-between;
 }
-body> main> section:nth-child(5)> section> section { /*flex items*/
-    margin-bottom: 69px;
+#sectionProjects> section> section { /*flex items*/
+    margin-bottom: 14rem;
     position: relative;
 }
-body> main> section:nth-child(5)> section> section> div { /*all project images*/
-    width: 951px;
-    height: 639px;
-    border-radius: 18px;
-    box-shadow: 11px 6px 25px -3px #00000057;
+#sectionProjects> section> section> div { /*all project images*/
+    width: 190rem;
+    height: 128rem;
+    border-radius: 3.5rem;
+    box-shadow: 2.1rem 1.2rem 5rem -0.6rem #00000057;
     left: 0;
     right: 0;
     margin: auto;
     transition: all 0.2s;
 }
-body> main> section:nth-child(5)> section> section> div:hover + article { /*when hover all articles show*/
+#sectionProjects> section> section> div:hover + article { /*when hover all articles show*/
     opacity: 1;
 }
-body> main> section:nth-child(5)> section> section> div:hover { /*when hovering all divs*/
+#sectionProjects> section> section> div:hover { /*when hovering all divs*/
     cursor: pointer;
     filter: brightness(0.16);
     transition: all 0.2s;
 }
 
 /*project 1*/
-body> main> section:nth-child(5)> section> section:nth-child(1)> div {
+#sectionProjects> section> section:nth-child(1)> div {
     background: url("../image/projectsScreenshots/parking system project.png");
     background-size: cover;
 }
 
 /*project 2*/
-body> main> section:nth-child(5)> section> section:nth-child(2)> div {
+#sectionProjects> section> section:nth-child(2)> div {
     background: url("../image/projectsScreenshots/t4me project.png");
     background-size: cover;
 }
 
 /*project 3*/
-body> main> section:nth-child(5)> section> section:nth-child(3)> div {
+#sectionProjects> section> section:nth-child(3)> div {
     background: url("../image/projectsScreenshots/d24 project.png");
     background-size: cover;
 }
 
-body> main> section:nth-child(5)> section> section> article { /*all description articles*/
-    padding-top: 15px;
-    padding-bottom: 15px;
+#sectionProjects> section> section> article { /*all description articles*/
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     text-align: center;
     color: white;
     position: absolute;
     left: 0;
     right: 0;
-    top: 206px;
+    top: 41rem;
     opacity: 0;
 }
-body> main> section:nth-child(5)> section> section> article> p {
-    font-size: 15px;
+#sectionProjects> section> section> article> p {
+    font-size: 3rem;
 }
-body> main> section:nth-child(5)> section> section> article> h5 {
+#sectionProjects> section> section> article> h5 {
     color: white;
-    font-size: 38px;
-    margin: 0 0 31px 0;
+    font-size: 8rem;
+    margin: 0 0 6rem 0;
     font-family: 'Poppins', sans-serif;
-    letter-spacing: 6px;
+    letter-spacing: 1.2rem;
 }
-body> main> section:nth-child(5)> button {
+#btnMoreProjects {
     position: relative;
     display: block;
     margin: auto;
-    width: 220px;
-    height: 46px;
+    width: 44rem;
+    height: 9rem;
     font-family: 'Poppins', sans-serif;
     background-color: white;
-    border-radius: 15px;
-    border: 2px solid gray;
+    border-radius: 3rem;
+    border: 0.35rem solid gray;
 }
-body> main> section:nth-child(5)> button:hover { /*when hovering btn*/
+#btnMoreProjects:hover { /*when hovering btn*/
     background-color: #181818;
     color: white;
 }
 /*projects ----------------------------------------------------end*/
 
 /*Contact me --------------------------------------------------start*/
-main> section:nth-child(7)> div {
+#sectionContact> div {
     background: url("../image/map.jpg");
     background-position: center;
-    height: 200px;
+    height: 40rem;
     width: 80vw;
     left: 0;
     right: 0;
     margin: auto;
-    margin-top: 32px;
-    margin-bottom: 80px;
-    box-shadow: 3px 7px 12px -3px #80808099
+    margin-top: 8.3rem;
+    margin-bottom: 16rem;
+    box-shadow: 1rem 1.5rem 2.5rem -0.5rem #80808099
 }
 /*Contact me --------------------------------------------------end*/
 
 /*footer --------------------------------------------------start*/
-body> footer> div:first-child {
+#footer> div:first-child {
     position: absolute;
     z-index: 0;
-    height: 383px;
+    height: 77rem;
     width: 100%;
     background-color: #000000e3;
     left: 0;
     right: 0;
     margin: auto;
-    border-top-left-radius: 650px;
-    border-top-right-radius: 650px;
-    box-shadow: 4px 0px 95px 7px #808080bf;
+    border-top-left-radius: 130rem;
+    border-top-right-radius: 130rem;
+    box-shadow: 0.8rem 0 19rem 1.5rem #808080bf;
 }
-body> footer> section {
+#footer> section {
     position: relative;
-    top: 67px;
+    top: 14rem;
 }
-body> footer> section> p {
+#footer> section> p {
     text-align: center;
     color: white;
-    padding-top: 17px;
+    padding-top: 3.5rem;
 }
-body> footer> nav {
+#footer> nav {
     position: relative;
-    top: 88px;
+    top: 18rem;
     padding-left: 45vw;
 }
-body> footer> nav> img {
-    padding-right: 4px;
+#footer> nav> img {
+    padding-right: 0.8rem;
 }
-body> footer> div:last-child {
+#footer> div:last-child {
     background-color: black;
-    height: 40px;
+    height: 8rem;
     position: relative;
-    bottom: -126px;
+    bottom: -25rem;
 }
-body> footer> div:last-child> p {
+#footer> div:last-child> p {
     color: white;
     text-align: center;
-    top: -14px;
+    top: -3rem;
     position: relative;
-    font-size: 10px;
+    font-size: 2rem;
 }
 /*footer --------------------------------------------------end*/

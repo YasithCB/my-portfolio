@@ -1,655 +1,131 @@
 
-/*laptop large*/
-@media all and (min-width: 1025px) {
-    h1 {
-        font-size: 62px;
-        padding-left: 106px;
+@media all and (max-width: 390px) {
+    html {
+        font-size: 2px;
     }
-    p {
-        font-size: 14px;
+    #sectionSkills img {
+        scale: 55%;
+        transition: 0.2s all;
     }
-    h3 {
-        font-size: 31px;
+    #socialNav img {
+        padding-bottom: 0;
+        scale: 48%;
     }
-    h5 {
-        font-size: 20px;
-        letter-spacing: 10px;
-        margin: 14px;
+    #homeMainImage {
+        width: 93%;
+        height: 72%;
+        grid-column: 3/10;
     }
-    h6 {
-        font-size: 14px;
+    #sectionEdu> section> div> img {
+        scale: 36%;
     }
-
-    /*head*/
-    body> header> div {
-        width: 329px;
-        height: 80px;
-        padding-left: 37px;
-    }
-    body> header> nav {
-        left: 1vw;
-        bottom: 33px;
-        font-size: 67px;
+    body> footer> nav {
+        padding-left: 35vw;
+        scale: 50%;
     }
 
-    /*home*/
-    body> main> section:nth-child(1)> div> h5 {
-        font-size: 22px;
+    #mainNavbar {
+        position: static;
     }
-    body> main> section:nth-child(1)> div> h1 {
-        font-size: 64px;
-    }
-    body> main> section:nth-child(1)> div> h3 {
-        font-size: 26px;
-    }
-    body> main> section:nth-child(1)> div:nth-child(1) {
-        bottom: 12%;
-        padding: 0 5vw 0 12vw;
-    }
-    body> main> section:nth-child(1)> nav {
-        left: 5vw;
-        bottom: 10%;
-        scale: 80%;
-    }
-    body> main> section:nth-child(1)> div:nth-child(2) {
-        right: 0;
-        top: 79px;
-        scale: 143%;
-        left: 60vw;
-    }
-
-    /*about me*/
-    body> main> section:nth-child(2) {
-        height: 501px;
-    }
-    body> main> section:nth-child(2)> article> img {
-        bottom: -110px;
-    }
-}
-
-/*laptop*/
-@media all and (min-width: 876px) and (max-width: 1024px) {
-
-    h1 {
-        font-size: 53px;
-        padding-left: 75px;
-        margin: 39px;
-    }
-
-    /*head*/
-    body> header> div {
-        width: 232px;
-        height: 60px;
-    }
-    body> header> nav {
-        left: 1vw;
-        bottom: 26px;
+    #my-logo {
+        display: block;
+        width: 25%;
+        height: 13rem;
     }
     body> header {
-        height: 8vh;
-    }
-
-    /*main*/
-    main {
-        padding-top: 8vh;
-    }
-
-    /*home*/
-    body> main> section:nth-child(1)> div> h5 {
-        margin: 11px;
-        font-size: 15px;
-    }
-    body> main> section:nth-child(1)> div> h1 {
-        font-size: 48px;
-    }
-    body> main> section:nth-child(1)> div> h3 {
-        font-size: 20px;
-    }
-    body> main> section:nth-child(1)> div:nth-child(1) {
-        bottom: 12%;
-        padding-left: 12vw;
-    }
-    body> main> section:nth-child(1)> nav {
-        left: 5vw;
-        bottom: 10%;
-        scale: 80%;
-    }
-    body> main> section:nth-child(1)> div:nth-child(2) {
-        right: 0;
-        top: 45px;
-        scale: 138%;
-        left: 60vw;
-    }
-
-    /*about me*/
-    body> main> section:nth-child(2) {
-        height: 501px;
-    }
-    body> main> section:nth-child(2)> article> img {
-        bottom: -110px;
-    }
-
-    /*projects*/
-    body> main> section:nth-child(5)> section> section> div {
-        width: 85vw;
-        height: 57vw;
-    }
-
-    /*footer*/
-    body> footer> nav {
-        padding-left: 44vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     }
 }
 
-/*tablet*/
-@media all and (min-width: 426px) and (max-width: 875px) {
-    h1 {
-        font-size: 8vw;
-        padding: 0;
-        margin: 8px;
-        text-align: center;
-    }
-    p {
-        font-size: 14px;
-    }
-    h3 {
-        font-size: 20px;
-    }
-    h5 {
-        font-size: 16px;
-        letter-spacing: 5px;
-        margin: 14px 0;
-    }
-    h6 {
-        font-size: 12px;
-    }
-
-    /*header*/
-    body> header> div {
-        width: 206px;
-        height: 46px;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-    body> header> nav {
-        position: absolute;
-        right: 0;
-        left: 0;
-        margin: auto;
-    }
-    body> header> nav> ul {
-        list-style: none;
-        padding: 0;
-        position: absolute;
-        margin: auto;
-        width: max-content;
-        left: 0;
-        right: 0;
-        bottom: -11px;
-    }
-    body> header> nav> ul> li {
-        font-size: 12px;
-    }
-
-    /*home*/
-    body> main> section:nth-child(1)> div:nth-child(1) {
-        bottom: 12%;
-        padding: 0 5vw 0 12vw;
-    }
-    body> main> section:nth-child(1)> nav {
-        left: 5vw;
-        bottom: 10%;
-        scale: 80%;
-    }
-    body> main> section:nth-child(1)> div> h5 {
-        margin: 9px 0;
-        font-size: 11px;
-        letter-spacing: 8px;
-    }
-    body> main> section:nth-child(1)> div> h1 {
-        font-size: 32px;
-        text-align: left;
-    }
-    body> main> section:nth-child(1)> div> h3 {
-        font-size: 15px;
-    }
-
-    /*education*/
-    body> main> section:nth-child(3)> section> p {
-        font-size: 12px;
-    }
-
-    /*projects*/
-    body> main> section:nth-child(5)> section> section> div {
-        width: 85vw;
-        height: 57vw;
-    }
-    body> main> section:nth-child(5)> section> section {
-        margin-bottom: 43px;
-    }
-    body> main> section:nth-child(5)> button {
-        scale: 0.7;
-    }
-
-
-}
-
-/*mobile large*/
-@media all and (min-width: 376px) and (max-width: 425px) {
-    h1 {
-        font-size: 8vw;
-        padding: 0;
-        margin: 8px;
-        text-align: center;
-    }
-    p {
-        font-size: 11px;
-    }
-    h3 {
-        font-size: 19px;
-    }
-    h5 {
-        font-size: 11px;
-        letter-spacing: 3px;
-        margin: 11px;
-    }
-    h6 {
-        font-size: 9px;
-    }
-
-    /*header*/
-    body> header> div {
-        width: 206px;
-        height: 46px;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-    body> header> nav {
-        position: absolute;
-        right: 0;
-        left: 0;
-        margin: auto;
-    }
-    body> header> nav> ul {
-        list-style: none;
-        padding: 0;
-        position: absolute;
-        margin: auto;
-        width: max-content;
-        left: 0;
-        right: 0;
-        bottom: -11px;
-    }
-    body> header> nav> ul> li {
-        padding-left: 13px;
-        font-size: 11px;
-    }
-
-    /*main*/
-    main {
-        padding-top: 11vh;
-    }
-    body> main> section {
-        padding-top: 34px;
-    }
-
-    /*home*/
-    body> main> section:nth-child(1)> div:nth-child(1) {
-        bottom: 12%;
-        padding: 0 5vw 0 12vw;
-    }
-    body> main> section:nth-child(1)> nav {
-        left: 5vw;
-        bottom: 10%;
-        scale: 80%;
-    }
-    body> main> section:nth-child(1)> div> h5 {
-        margin: 9px 0;
-        font-size: 11px;
-        letter-spacing: 8px;
-    }
-    body> main> section:nth-child(1)> div> h1 {
-        font-size: 32px;
-        text-align: left;
-    }
-    body> main> section:nth-child(1)> div> h3 {
-        font-size: 15px;
-    }
-
-    /*about me*/
-    body> main> section:nth-child(2) {
-        height: 485px;
-    }
-    body> main> section:nth-child(2)> article> img {
-        bottom: -70px;
-    }
-
-    /*education*/
-    body> main> section:nth-child(3)> section {
-        scale: 0.9;
-    }
-    body> main> section:nth-child(3)> section> section> div> p {
-        font-size: 10px;
-    }
-    body> main> section:nth-child(3)> section> p {
-        font-size: 10px;
-    }
-
-    /*projects*/
-    body> main> section:nth-child(5)> section> section> div {
-        width: 85vw;
-        height: 57vw;
-    }
-    body> main> section:nth-child(5)> section> section {
-        margin-bottom: 43px;
-    }
-    body> main> section:nth-child(5)> button {
-        scale: 0.7;
-    }
-
-    /*footer*/
-    body> footer> div:first-child {
-        height: 223px;
-    }
-    body> footer> nav {
-        padding-left: 34vw;
-        scale: 0.6;
-        top: -20px;
-    }
-    body> footer> section {
-        position: relative;
-        top: -1px;
-        scale: 0.7;
-    }
-    body> footer> div:last-child {
-        height: 32px;
-        bottom: 0;
-    }
-    body> footer> div:last-child> p {
-        top: -13px;
-        font-size: 7px;
-    }
-
-
-}
-
-/*mobile medium*/
-@media all and (min-width: 321px) and (max-width: 375px){
-    h1 {
-        font-size: 8vw;
-        padding: 0;
-        margin: 8px;
-        text-align: center;
-    }
-    p {
-        font-size: 11px;
-    }
-    h3 {
-        font-size: 19px;
-    }
-    h5 {
-        font-size: 11px;
-        letter-spacing: 3px;
-        margin: 11px;
-    }
-    h6 {
-        font-size: 9px;
-    }
-
-    /*header*/
-    body> header> div {
-        width: 206px;
-        height: 46px;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-    body> header> nav {
-        position: absolute;
-        right: 0;
-        left: 0;
-        margin: auto;
-    }
-    body> header> nav> ul {
-        list-style: none;
-        padding: 0;
-        position: absolute;
-        margin: auto;
-        width: max-content;
-        left: 0;
-        right: 0;
-        bottom: -11px;
-    }
-    body> header> nav> ul> li {
-        padding-left: 13px;
-        font-size: 11px;
-    }
-
-    /*main*/
-    main {
-        padding-top: 11vh;
-    }
-    body> main> section {
-        padding-top: 34px;
-    }
-
-    /*home*/
-    body> main> section:nth-child(1)> div:nth-child(1) {
-        bottom: 12%;
-        padding: 0 5vw 0 12vw;
-    }
-    body> main> section:nth-child(1)> nav {
-        left: 5vw;
-        bottom: 10%;
-        scale: 80%;
-    }
-    body> main> section:nth-child(1)> div> h1 {
-        text-align: left;
-    }
-
-    /*about me*/
-    body> main> section:nth-child(2) {
-        height: 485px;
-    }
-    body> main> section:nth-child(2)> article> img {
-        bottom: -89px;
-        scale: 0.7;
-    }
-
-    /*education*/
-    body> main> section:nth-child(3)> section {
-        scale: 90%;
-    }
-    body> main> section:nth-child(3)> section> section> div> p {
-        font-size: 10px;
-    }
-    body> main> section:nth-child(3)> section> p {
-        font-size: 10px;
-    }
-
-    /*projects*/
-    body> main> section:nth-child(5)> section> section> div {
-        width: 85vw;
-        height: 57vw;
-    }
-    body> main> section:nth-child(5)> section> section {
-        margin-bottom: 31px;
-    }
-    body> main> section:nth-child(5)> button {
-        scale: 0.7;
-    }
-
-    /*footer*/
-    body> footer> div:first-child {
-        height: 223px;
-    }
-    body> footer> nav {
-        padding-left: 34vw;
-        scale: 0.6;
-        top: -20px;
-    }
-    body> footer> section {
-        position: relative;
-        top: -1px;
-        scale: 0.7;
-    }
-    body> footer> div:last-child {
-        height: 32px;
-        bottom: 0;
-    }
-    body> footer> div:last-child> p {
-        top: -13px;
-        font-size: 7px;
+@media all and (min-width: 391px) and (max-width: 700px) {
+    html {
+        font-size: 3px;
+    }
+    #homeMainImage {
+        width: 64%;
+        height: 70%;
+        grid-column: 5/10;
+    }
+    #mainNavbar {
+        position: static;
+    }
+    #my-logo {
+        display: block;
+        width: 25%;
+        height: 13rem;
+    }
+    body> header {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    #socialNav img {
+        padding-bottom: 0;
+        scale: 65%;
     }
 }
-
-/*mobile small*/
-@media all and (max-width: 320px){
-    h1 {
-        font-size: 8vw;
-        padding: 0;
-        margin: 8px;
-        text-align: center;
+@media all and (min-width: 701px) and (max-width: 1024px) {
+    html {
+        font-size: 4px;
     }
-    p {
-        font-size: 9px;
+    body> header {
+        position: fixed;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.81);
+        z-index: 2;
+        top: 0;
+        height: 10vh;
+        width: 100%;
     }
-    h3 {
-        font-size: 17px;
-    }
-    h5 {
-        font-size: 11px;
-        letter-spacing: 3px;
-        margin: 11px;
-    }
-    h6 {
-        font-size: 8px;
-    }
-
-    /*header*/
-    body> header> div {
-        width: 206px;
-        height: 46px;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-    body> header> nav {
-        position: absolute;
-        right: 0;
-        left: 0;
-        margin: auto;
-    }
-    body> header> nav> ul {
-        list-style: none;
-        padding: 0;
-        position: absolute;
-        margin: auto;
-        width: max-content;
-        left: 0;
-        right: 0;
-        bottom: -11px;
-    }
-    body> header> nav> ul> li {
-        padding-left: 9px;
-        font-size: 10px;
-    }
-
-    /*main*/
-    main {
-        padding-top: 11vh;
-    }
-    body> main> section {
-        padding-top: 34px;
-    }
-
-    /*home*/
-    body> main> section:nth-child(1)> div:nth-child(1) {
-        bottom: 12%;
-        padding: 0 5vw 0 12vw;
-    }
-    body> main> section:nth-child(1)> nav {
-        left: 5vw;
-        bottom: 10%;
-        scale: 80%;
-    }
-    body> main> section:nth-child(1)> div> h1 {
-        text-align: left;
-    }
-    body> main> section:nth-child(1)> div:nth-child(2) {
-        right: 0;
-        top: -12vw;
-        scale: 77%;
-        left: -7vw;
-    }
-
-    /*about me*/
-    body> main> section:nth-child(2) {
-        height: 395px;
-    }
-    body> main> section:nth-child(2)> article {
-        padding-top: 31px;
-    }
-    body> main> section:nth-child(2)> article> img {
-        bottom: -36px;
-        scale: 0.5;
-    }
-
-    /*education*/
-    body> main> section:nth-child(3)> section {
-        scale: 80%;
-    }
-    body> main> section:nth-child(3)> section> section> div> p {
-        font-size: 8px;
-    }
-    body> main> section:nth-child(3)> section> p {
-        font-size: 9px;
-    }
-
-    /*projects*/
-    body> main> section:nth-child(5)> section> section> div {
-        width: 85vw;
-        height: 57vw;
-    }
-    body> main> section:nth-child(5)> section> section {
-        margin-bottom: 22px;
-    }
-    body> main> section:nth-child(5)> button {
-        scale: 0.5;
-    }
-
-    /*contact*/
-    main> section:nth-child(6)> div {
+    #my-logo {
+        background: url("../image/my-logo.png");
         background-size: cover;
-        height: 106px;
+        width: 49rem;
+        height: 12rem;
     }
+    #mainNavbar {
+        position: static;
+    }
+    #socialNav img {
+        padding-bottom: 0.5rem;
+        scale: 75%;
+    }
+}
 
-    /*footer*/
-    body> footer> div:first-child {
-        height: 223px;
-    }
-    body> footer> nav {
-        padding-left: 30vw;
-        scale: 0.6;
-        top: -10px;
-    }
-    body> footer> section {
-        position: relative;
-        top: 12px;
-        scale: 0.7;
-    }
-    body> footer> div:last-child {
-        height: 32px;
-        bottom: 0;
-    }
-    body> footer> div:last-child> p {
-        top: -9px;
+@media all and (min-width: 1025px) {
+    html {
         font-size: 5px;
     }
+    body> header {
+        position: fixed;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.81);
+        z-index: 2;
+        top: 0;
+        height: 10vh;
+        width: 100%;
+    }
+    #my-logo {
+        background: url("../image/my-logo.png");
+        background-size: cover;
+        width: 49rem;
+        height: 12rem;
+    }
+    #mainNavbar {
+        position: static;
+        padding-left: 12rem;
+    }
+    #socialNav img {
+        padding-bottom: 1.5rem;
+        scale: 100%;
+    }
 }
+
