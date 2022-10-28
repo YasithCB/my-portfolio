@@ -357,17 +357,17 @@ body> main> section {
 /*about me-------------------------------------------------------------end*/
 
 /*education-----------------------------------------------------------start*/
-#sectionEdu> section { /*common to all sections*/
+.education_part { /*common to all sections*/
     position: relative;
     display: flex;
     padding: 4.45rem 4rem;
 }
-#sectionEdu> section> div { /*common to all image containing divs*/
+.education_part> div { /*common to all image containing divs*/
     display: inline-block;
     position: relative;
     width: 24rem;
 }
-#sectionEdu> section> div> img { /*common style to images (logos)*/
+.education_part> div> img { /*common style to images (logos)*/
     position: absolute;
     left: -12px;
     right: 0;
@@ -375,12 +375,12 @@ body> main> section {
     bottom: 0;
     margin: auto;
 }
-#sectionEdu> section> section { /*common to all rectangle sections*/
+.education_part> section { /*common to all rectangle sections*/
     display: inline-block;
     position: relative;
     width: 23%;
 }
-#sectionEdu> section> section> div { /*common to all div(rect)s next to the logo*/
+.education_part> section> div { /*common to all div(rect)s next to the logo*/
     position: relative;
     border: 0.2rem solid black;
     border-radius: 2.5rem;
@@ -389,19 +389,57 @@ body> main> section {
     margin: 0.8rem;
     box-shadow: rgba(0, 0, 0, 0.2) 0 3rem 10rem -2rem;
 }
-#sectionEdu> section> section> div> p { /*common to all p inside divs*/
+.education_part> section> div> p { /*common to all p inside divs*/
     text-align: center;
     position: relative;
     top: 5.4rem;
     margin: 0;
 }
-#sectionEdu> section> p { /*common to all each articles*/
+.education_part> p { /*common to all each articles*/
     position: relative;
     display: inline-block;
     text-align: left;
     width: 37%;
     padding: 2.9rem 3vw 0 3vw;
 }
+#certificates{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#certificates> h1 {
+    padding: 0;
+    margin: 0.67em 0;
+}
+#certificate_grid_container{
+    width: 100%;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr 8fr 1fr;
+}
+#certificate_grid_container img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+#certificate_grid_container i {
+    color: white;
+    font-size: 40px;
+    position: relative;
+    top: 46%;
+    left: 34%;
+    cursor: pointer;
+}
+#certificate_grid_container i:hover {
+    color: #ff2f2f;
+}
+#certificate_desc p{
+    color: white;
+    padding: 5rem 36rem;
+    text-align: center;
+}
+
 
 /*row reversed sections*/
 .row_reversed_education { /*common to all sections*/

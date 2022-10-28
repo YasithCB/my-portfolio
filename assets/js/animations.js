@@ -1,30 +1,32 @@
 
 /*main title animation*/
-const text = document.querySelector('.fadeInText');
-const strText = text.textContent;
-const splitText = strText.split("");
+function mainTitleWritingAnimation(){
+    const text = document.querySelector('.fadeInText');
+    const strText = text.textContent;
+    const splitText = strText.split("");
 
-text.textContent = "";
-for (let i=0; i < splitText.length; i++){
-    text.innerHTML += "<span>" + splitText[i] + "</span>";
-}
-
-let char = 0;
-let timer = setInterval(onTick, 50);
-
-function onTick() {
-    const span = text.querySelectorAll('span')[char];
-    span.classList.add("fade");
-    char++;
-    if (char === splitText.length) {
-        complete();
-        return;
+    text.textContent = "";
+    for (let i=0; i < splitText.length; i++){
+        text.innerHTML += "<span>" + splitText[i] + "</span>";
     }
-}
 
-function complete() {
-    clearInterval(timer);
-    timer = null;
+    let char = 0;
+    let timer = setInterval(onTick, 50);
+
+    function onTick() {
+        const span = text.querySelectorAll('span')[char];
+        span.classList.add("fade");
+        char++;
+        if (char === splitText.length) {
+            complete();
+            return;
+        }
+    }
+
+    function complete() {
+        clearInterval(timer);
+        timer = null;
+    }
 }
 /*main title animation*/
 
@@ -44,9 +46,7 @@ for (const title of sectionTitlesList) {
     }
     window.addEventListener('scroll',scrollAppear);
 }
-
 /*section titles animation*/
-
 
 
 /*loading screen*/
@@ -60,3 +60,4 @@ $(window).on('load',function (){
     },500);
 });
 /*loading screen*/
+

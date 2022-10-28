@@ -53,13 +53,27 @@
     <div id="my-logo"><!--my logo--></div>
     <nav id="mainNavbar">
         <ul>
-            <a href="#homeSection"><li>Home</li></a>
-            <a href=""><li >About</li></a>
-            <a href=""><li>Education</li></a>
-            <a href=""><li>Skill</li></a>
-            <a href=""><li>Projects</li></a>
-            <a href="#sectionAssignments"><li>Assignments</li></a>
-            <a href=""><li>Contact</li></a>
+            <a href="#homeSection">
+                <li>Home</li>
+            </a>
+            <a href="">
+                <li>About</li>
+            </a>
+            <a href="">
+                <li>Education</li>
+            </a>
+            <a href="">
+                <li>Skill</li>
+            </a>
+            <a href="">
+                <li>Projects</li>
+            </a>
+            <a href="#sectionAssignments">
+                <li>Assignments</li>
+            </a>
+            <a href="">
+                <li>Contact</li>
+            </a>
         </ul>
     </nav>
 </header>
@@ -71,12 +85,14 @@
         <!--call now fixed-->
         <div class="water-drop-anim"></div>
         <div class="water-drop-anim2"></div>
-        <a href="tel:+94767722095"><div id="call"><i class="fa-solid fa-phone"></i></div></a>
+        <a href="tel:+94767722095">
+            <div id="call"><i class="fa-solid fa-phone"></i></div>
+        </a>
         <!--call now fixed-->
     </aside>
 
     <!--home-->
-    <section id="homeSection" > <!--Home-->
+    <section id="homeSection"> <!--Home-->
 
         <div id="homeTextDiv">
             <h5>YASITH C BANDARA</h5>
@@ -89,12 +105,16 @@
         <div id="homeMainImage"><!--my-portrait--></div>
 
         <nav id="socialNav">
-            <a href="https://www.facebook.com/profile.php?id=100007554916573"><img src="assets/image/facebook.svg" alt="" width="15"></a><br>
-            <a href="https://www.instagram.com/yasith_c_bandara/?hl=en"><img src="assets/image/instagram.svg" alt="" width="15"></a><br>
+            <a href="https://www.facebook.com/profile.php?id=100007554916573"><img src="assets/image/facebook.svg"
+                                                                                   alt="" width="15"></a><br>
+            <a href="https://www.instagram.com/yasith_c_bandara/?hl=en"><img src="assets/image/instagram.svg" alt=""
+                                                                             width="15"></a><br>
             <a href="https://github.com/YasithCB"><img src="assets/image/git.png" alt="" width="18"></a><br>
             <a href="https://wa.link/10ocg4"><img src="assets/image/whatsapp.png" alt="" width="17"></a><br>
-            <a href="https://www.linkedin.com/in/yasith-c-bandara-22a415222/"><img src="assets/image/linked-in-alt.svg" alt="" width="15"></a><br>
-            <a href="https://stackoverflow.com/users/16251576/yasith"><img src="assets/image/stack-overflow.svg" alt="" width="15"></a><br>
+            <a href="https://www.linkedin.com/in/yasith-c-bandara-22a415222/"><img src="assets/image/linked-in-alt.svg"
+                                                                                   alt="" width="15"></a><br>
+            <a href="https://stackoverflow.com/users/16251576/yasith"><img src="assets/image/stack-overflow.svg" alt=""
+                                                                           width="15"></a><br>
         </nav>
     </section>
 
@@ -123,7 +143,7 @@
     <section id="sectionEdu">
         <h1 class="sectionTitle">Education</h1>
 
-        <section> <!--vmv-->
+        <section class="education_part"> <!--vmv-->
             <div><img src="assets/image/vmv.png" alt="vmv.png" width="67"></div>
             <section>
                 <h6>Primary Education</h6>
@@ -135,7 +155,7 @@
                 district. I faced to scolarship exam and i get 171 marks on 2011.</p>
         </section>
 
-        <section class="row_reversed_education"> <!--scc-->
+        <section class="row_reversed_education education_part"> <!--scc-->
             <div><img src="assets/image/scc.png" alt="scc.png" width="79"></div>
             <section>
                 <h6>Secondary Education</h6>
@@ -149,7 +169,7 @@
                 to AL exam on 2020 and finished my school journey.</p>
         </section>
 
-        <section> <!--nac-->
+        <section class="education_part"> <!--nac-->
             <div><img src="assets/image/nac.png" alt="nac.ong" width="80"></div>
             <section>
                 <h6>Additional Education</h6>
@@ -162,7 +182,7 @@
                 too.</p>
         </section>
 
-        <section class="row_reversed_education"> <!--Ijse-->
+        <section class="row_reversed_education education_part"> <!--Ijse-->
             <div><img src="assets/image/ijse.png" alt="ijse.png" width="91"></div>
             <section>
                 <h6>Higher Education</h6>
@@ -175,9 +195,22 @@
 
         <section id="certificates">
             <h1 class="sectionTitle" style="color: white">Certificates</h1>
-            <section id="certificate_container">
-
+            <section id="certificate_grid_container">
+                <div>
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div>
+                    <img src="assets/image/certificates/sololearn-html.jpg" alt="...">
+                </div>
+                <div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
             </section>
+            <div id="certificate_desc">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda corporis, deleniti eos
+                    exercitationem id laborum laudantium molestias nam officia optio quis quo rem repellat sapiente sit
+                    voluptate! Ea, vel.</p>
+            </div>
         </section>
 
     </section>
@@ -235,14 +268,17 @@
                     <h6>D24 Hostel</h6>
                     <p>
                         The D24 Hostel is a prominent hostel accommodation located in the Colombo area. Since its
-                        establishment, all management processes was done manually so far keeping records on physical files. This is a system for their student
+                        establishment, all management processes was done manually so far keeping records on physical
+                        files. This is a system for their student
                         registration and fee payment process.
                     </p>
                 </div>
             </div>
         </section>
 
-        <a href="pages/projects.html"><button type="button" id="btnMoreProjects" class="btn" name="moreProjects">More Projects</button></a>
+        <a href="pages/projects.html">
+            <button type="button" id="btnMoreProjects" class="btn" name="moreProjects">More Projects</button>
+        </a>
     </section>
 
     <!--assignments-->
@@ -256,7 +292,8 @@
         <h4 class="assignmentSubTitles">CSS Basics</h4>
         <section class="card-container">
             <div class="card">
-                <a href="assignments/CSS/basics/Case1/index.html" target="_blank"><img src="assets/image/css%20cases/basics/case1.jpg" class="card-img" alt="..."></a>
+                <a href="assignments/CSS/basics/Case1/index.html" target="_blank"><img
+                        src="assets/image/css%20cases/basics/case1.jpg" class="card-img" alt="..."></a>
                 <div>
                     <h6>Case 1</h6>
                     <p>
@@ -265,7 +302,8 @@
                 </div>
             </div>
             <div class="card">
-                <a href="assignments/CSS/basics/Case2/index.html" target="_blank"><img src="assets/image/css%20cases/basics/case2.jpg" class="card-img" alt="..."></a>
+                <a href="assignments/CSS/basics/Case2/index.html" target="_blank"><img
+                        src="assets/image/css%20cases/basics/case2.jpg" class="card-img" alt="..."></a>
                 <div>
                     <h6>Case 2</h6>
                     <p>
@@ -274,7 +312,8 @@
                 </div>
             </div>
             <div class="card">
-                <a href="assignments/CSS/basics/Case3/index.html" target="_blank"><img src="assets/image/css%20cases/basics/case3.jpg" class="card-img" alt="..."></a>
+                <a href="assignments/CSS/basics/Case3/index.html" target="_blank"><img
+                        src="assets/image/css%20cases/basics/case3.jpg" class="card-img" alt="..."></a>
                 <div>
                     <h6>Case 3</h6>
                     <p>
@@ -289,7 +328,8 @@
         <h4 class="assignmentSubTitles">CSS Animation and Transition</h4>
         <section class="card-container">
             <div class="card">
-                <a href="assignments/CSS/transitions/case1/index.html" target="_blank"><img src="assets/image/css%20cases/anim-and-trans/case1.jpg" class="card-img" alt="..."></a>
+                <a href="assignments/CSS/transitions/case1/index.html" target="_blank"><img
+                        src="assets/image/css%20cases/anim-and-trans/case1.jpg" class="card-img" alt="..."></a>
                 <div>
                     <h6>Case 1</h6>
                     <p>
@@ -299,7 +339,8 @@
                 </div>
             </div>
             <div class="card">
-                <a href="assignments/CSS/transitions/case2/index.html" target="_blank"><img src="assets/image/css%20cases/anim-and-trans/case2.jpg" class="card-img" alt="..."></a>
+                <a href="assignments/CSS/transitions/case2/index.html" target="_blank"><img
+                        src="assets/image/css%20cases/anim-and-trans/case2.jpg" class="card-img" alt="..."></a>
                 <div>
                     <h6>Case 2</h6>
                     <p>
@@ -309,7 +350,8 @@
                 </div>
             </div>
             <div class="card">
-                <a href="assignments/CSS/animation/case1/index.html" target="_blank"><img src="assets/image/css%20cases/anim-and-trans/case3.jpg" class="card-img" alt="..."></a>
+                <a href="assignments/CSS/animation/case1/index.html" target="_blank"><img
+                        src="assets/image/css%20cases/anim-and-trans/case3.jpg" class="card-img" alt="..."></a>
                 <div>
                     <h6>Case 3</h6>
                     <p>
@@ -323,7 +365,9 @@
 
         <!--CSS assignments end-->
 
-        <a href="pages/assignments.html" target="_blank"><button type="button" class="btn-view-all btn" name="moreProjects">View All Assignments</button></a>
+        <a href="pages/assignments.html" target="_blank">
+            <button type="button" class="btn-view-all btn" name="moreProjects">View All Assignments</button>
+        </a>
 
     </section>
 
