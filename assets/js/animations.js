@@ -61,3 +61,34 @@ $(window).on('load',function (){
 });
 /*loading screen*/
 
+
+/*certificate change*/
+{
+    let certificates = ["assets/image/certificates/sololearn-html.jpg","assets/image/certificates/uom-python.jpg"];
+    let selectedCertificateIndex = 0;
+
+    setCertificate();
+
+    $('#btn_next_on_certificate').click(function (){
+        selectedCertificateIndex++;
+        if (selectedCertificateIndex === certificates.length){
+            selectedCertificateIndex = 0;
+        }
+        setCertificate();
+    });
+    $('#btn_prev_on_certificate').click(function (){
+        selectedCertificateIndex--;
+        if (selectedCertificateIndex === -1){
+            selectedCertificateIndex = certificates.length-1;
+        }
+        setCertificate();
+    });
+
+    function setCertificate(){
+        console.log(certificates[selectedCertificateIndex]);
+        $('#certificate_image').attr('src',certificates[selectedCertificateIndex]);
+    }
+}
+/*certificate change*/
+
+
