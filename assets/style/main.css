@@ -1,20 +1,29 @@
 
+.test {
+    background: url("/assets/image/portfolioScreenshots/Screenshot 2022-09-22 142501.jpg")
+    repeat fixed 100%;
+}
+
 html {
     font-size: 5px;
 }
+
 main {
     width: 100%;
     height: 100%;
     padding-top: 10vh;
 }
+
 a {
     text-decoration: none;
 }
+
 body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
 }
+
 #main, #header, #footer {
     visibility: hidden;
 }
@@ -36,9 +45,11 @@ body {
     align-items: center;
     justify-content: center;
 }
-#loader> img {
+
+#loader > img {
     scale: 40%;
 }
+
 /*loader*/
 
 .btn {
@@ -57,6 +68,7 @@ body {
     transition-property: all;
     transition-duration: .2s;
 }
+
 .card-img:hover {
     scale: 120%;
     transition-property: all;
@@ -79,6 +91,7 @@ body {
     transition-property: all;
     transition-duration: .2s;
 }
+
 .card:hover {
     background-color: rgba(94, 94, 94, 0.16);
 
@@ -91,6 +104,7 @@ body {
     font-size: 3rem;
     padding-top: 4rem;
 }
+
 .card a {
     padding-top: 0.5rem;
     display: inline-block;
@@ -124,6 +138,7 @@ body {
     z-index: 1;
     cursor: pointer;
 }
+
 #call > i {
     position: relative;
     left: 4rem;
@@ -131,6 +146,7 @@ body {
     color: chartreuse;
     font-size: 2rem;
 }
+
 .water-drop-anim {
     width: 30rem;
     height: 30rem;
@@ -147,6 +163,7 @@ body {
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
 }
+
 .water-drop-anim2 {
     width: 30rem;
     height: 30rem;
@@ -163,6 +180,7 @@ body {
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
 }
+
 @keyframes circle_animate {
     0% {
         width: 10rem;
@@ -188,6 +206,7 @@ body {
     border-radius: 3rem;
     border: 0.35rem solid gray;
 }
+
 .btn-view-all:hover {
     background-color: #181818;
     color: white;
@@ -207,6 +226,7 @@ h1 {
     margin: 8.1rem;
     margin-left: 0;
 }
+
 h3 {
     text-align: center;
     color: #404040;
@@ -215,6 +235,7 @@ h3 {
     font-weight: 100;
     margin: 1.1rem 0 0 0;
 }
+
 h5 {
     text-align: center;
     color: #404040;
@@ -222,6 +243,7 @@ h5 {
     font-size: 3rem;
     letter-spacing: 2.5rem;
 }
+
 h6 {
     margin: 0;
     text-align: center;
@@ -230,9 +252,10 @@ h6 {
 }
 
 /*All sections in the main*/
-body> main> section {
+body > main > section {
     padding-top: 20rem;
 }
+
 #homeSection { /*home section doesn't need a top padding*/
     padding-top: 0;
 }
@@ -245,6 +268,7 @@ body> main> section {
     height: 10vh;
     width: 100%;
 }
+
 #my-logo {
     background: url("../image/my-logo.png");
     background-size: cover;
@@ -253,28 +277,31 @@ body> main> section {
     height: 14rem;
     padding-left: 2rem;
 }
+
 #mainNavbar {
     position: relative;
     left: 34rem;
     bottom: 5.5rem;
     display: inline-block;
 }
-#mainNavbar> ul {
+
+#mainNavbar > ul {
     list-style: none;
     padding-top: 1.2rem;
     margin: 0;
 }
-#mainNavbar> ul> a> li {
+
+#mainNavbar > ul > a > li {
     display: inline-block;
     padding-left: 3rem;
     font-size: 3rem;
     color: gray;
     cursor: pointer;
 }
-#mainNavbar> ul> a> li:hover {
+
+#mainNavbar > ul > a > li:hover {
     color: red;
 }
-
 
 
 /*home*/
@@ -283,8 +310,8 @@ body> main> section {
     width: 100%;
     height: 90vh;
     display: grid;
-    grid-template-rows: repeat(1,1fr);
-    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(10, 1fr);
 }
 
 #socialNav {
@@ -299,12 +326,19 @@ body> main> section {
 #socialNav img {
     padding-bottom: 1.45rem;
     cursor: pointer;
+    transition: all 250ms;
 }
+#socialNav img:hover{
+    scale: 150%;
+    transition: all 250ms;
+}
+
 #homeTextDiv {
     grid-column: 2/7;
     bottom: 8vh;
     position: absolute;
 }
+
 #homeMainImage {
     background: url("../image/my-portrait b&w.png");
     background-size: cover;
@@ -313,14 +347,16 @@ body> main> section {
     grid-column: 7/10;
 }
 
-#homeSection> div> h3 {
+#homeSection > div > h3 {
     text-align: left;
 }
-#homeSection> div> h5 {
+
+#homeSection > div > h5 {
     text-align: left;
     margin: 2.45rem 0;
 }
-#homeSection> div> h1 {
+
+#homeSection > div > h1 {
     padding-left: 0;
     margin: 0;
     color: black;
@@ -332,7 +368,8 @@ body> main> section {
 #aboutSection {
     height: 85vh;
 }
-#aboutSection> article {
+
+#aboutSection > article {
     position: absolute;
     left: 0;
     right: 0;
@@ -342,16 +379,18 @@ body> main> section {
     height: 60rem;
     padding-top: 10rem;
 }
-#aboutSection> article> p {
+
+#aboutSection > article > p {
     text-align: center;
 }
 
-#aboutSection> article> img {
+#aboutSection > article > img {
     position: absolute;
     left: 0;
     right: 0;
     margin: auto;
 }
+
 /*article--------------end*/
 
 /*about me-------------------------------------------------------------end*/
@@ -362,12 +401,14 @@ body> main> section {
     display: flex;
     padding: 4.45rem 4rem;
 }
-.education_part> div { /*common to all image containing divs*/
+
+.education_part > div { /*common to all image containing divs*/
     display: inline-block;
     position: relative;
     width: 24rem;
 }
-.education_part> div> img { /*common style to images (logos)*/
+
+.education_part > div > img { /*common style to images (logos)*/
     position: absolute;
     left: -12px;
     right: 0;
@@ -375,12 +416,14 @@ body> main> section {
     bottom: 0;
     margin: auto;
 }
-.education_part> section { /*common to all rectangle sections*/
+
+.education_part > section { /*common to all rectangle sections*/
     display: inline-block;
     position: relative;
     width: 23%;
 }
-.education_part> section> div { /*common to all div(rect)s next to the logo*/
+
+.education_part > section > div { /*common to all div(rect)s next to the logo*/
     position: relative;
     border: 0.2rem solid black;
     border-radius: 2.5rem;
@@ -389,40 +432,48 @@ body> main> section {
     margin: 0.8rem;
     box-shadow: rgba(0, 0, 0, 0.2) 0 3rem 10rem -2rem;
 }
-.education_part> section> div> p { /*common to all p inside divs*/
+
+.education_part > section > div > p { /*common to all p inside divs*/
     text-align: center;
     position: relative;
     top: 5.4rem;
     margin: 0;
 }
-.education_part> p { /*common to all each articles*/
+
+.education_part > p { /*common to all each articles*/
     position: relative;
     display: inline-block;
     text-align: left;
     width: 37%;
     padding: 2.9rem 3vw 0 3vw;
 }
-#certificates{
+
+#certificates {
     background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#certificates> h1 {
+
+#certificates > h1 {
     padding: 0;
     margin: 0.67em 0;
 }
-#certificate_grid_container{
+
+#certificate_grid_container {
     width: 100%;
+    padding-bottom: 8rem;
     display: grid;
     gap: 3rem;
     grid-template-columns: 1fr 8fr 1fr;
 }
+
 #certificate_grid_container img {
     display: block;
     width: 100%;
     max-width: 100%;
 }
+
 #certificate_grid_container i {
     color: white;
     font-size: 40px;
@@ -431,13 +482,9 @@ body> main> section {
     left: 34%;
     cursor: pointer;
 }
+
 #certificate_grid_container i:hover {
     color: #ff2f2f;
-}
-#certificate_desc p{
-    color: white;
-    padding: 5rem 36rem;
-    text-align: center;
 }
 
 
@@ -445,9 +492,11 @@ body> main> section {
 .row_reversed_education { /*common to all sections*/
     flex-direction: row-reverse;
 }
-.row_reversed_education> p {
+
+.row_reversed_education > p {
     text-align: right !important;
 }
+
 /*Education ------------------------------------------------------------------end*/
 
 /*Skill and tools ------------------------------------------------------------start*/
@@ -456,12 +505,14 @@ body> main> section {
     scale: 100%;
     transition: 0.2s all;
 }
+
 #sectionSkills img:hover {
     scale: 150%;
     cursor: pointer;
     transition: 0.3s all;
 }
-#sectionSkills> section {
+
+#sectionSkills > section {
     display: flex;
     width: 90vw;
     flex-flow: wrap;
@@ -476,17 +527,19 @@ body> main> section {
 
 /*projects ----------------------------------------------------------------start*/
 
-#sectionProjects> section { /*flex container*/
+#sectionProjects > section { /*flex container*/
     display: flex;
     padding-bottom: 30rem;
     flex-direction: row;
     justify-content: space-between;
 }
-#sectionProjects> section> section { /*flex items*/
+
+#sectionProjects > section > section { /*flex items*/
     margin-bottom: 14rem;
     position: relative;
 }
-#sectionProjects> section> section> div { /*all project images*/
+
+#sectionProjects > section > section > div { /*all project images*/
     width: 190rem;
     height: 128rem;
     border-radius: 3.5rem;
@@ -496,34 +549,36 @@ body> main> section {
     margin: auto;
     transition: all 0.2s;
 }
-#sectionProjects> section> section> div:hover + article { /*when hover all articles show*/
+
+#sectionProjects > section > section > div:hover + article { /*when hover all articles show*/
     opacity: 1;
 }
-#sectionProjects> section> section> div:hover { /*when hovering all divs*/
+
+#sectionProjects > section > section > div:hover { /*when hovering all divs*/
     cursor: pointer;
     filter: brightness(0.16);
     transition: all 0.2s;
 }
 
 /*project 1*/
-#sectionProjects> section> section:nth-child(1)> div {
+#sectionProjects > section > section:nth-child(1) > div {
     background: url("../image/projectsScreenshots/parking system project.png");
     background-size: cover;
 }
 
 /*project 2*/
-#sectionProjects> section> section:nth-child(2)> div {
+#sectionProjects > section > section:nth-child(2) > div {
     background: url("../image/projectsScreenshots/t4me project.png");
     background-size: cover;
 }
 
 /*project 3*/
-#sectionProjects> section> section:nth-child(3)> div {
+#sectionProjects > section > section:nth-child(3) > div {
     background: url("../image/projectsScreenshots/d24 project.png");
     background-size: cover;
 }
 
-#sectionProjects> section> section> article { /*all description articles*/
+#sectionProjects > section > section > article { /*all description articles*/
     padding-top: 3rem;
     padding-bottom: 3rem;
     text-align: center;
@@ -534,16 +589,19 @@ body> main> section {
     top: 41rem;
     opacity: 0;
 }
-#sectionProjects> section> section> article> p {
+
+#sectionProjects > section > section > article > p {
     font-size: 3rem;
 }
-#sectionProjects> section> section> article> h5 {
+
+#sectionProjects > section > section > article > h5 {
     color: white;
     font-size: 8rem;
     margin: 0 0 6rem 0;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1.2rem;
 }
+
 #btnMoreProjects {
     position: relative;
     display: block;
@@ -555,14 +613,16 @@ body> main> section {
     border-radius: 3rem;
     border: 0.35rem solid gray;
 }
+
 #btnMoreProjects:hover { /*when hovering btn*/
     background-color: #181818;
     color: white;
 }
+
 /*projects ----------------------------------------------------end*/
 
 /*Contact me --------------------------------------------------start*/
-#sectionContact> div {
+#sectionContact > div {
     background: url("../image/map.jpg");
     background-position: center;
     height: 40rem;
@@ -574,10 +634,11 @@ body> main> section {
     margin-bottom: 16rem;
     box-shadow: 1rem 1.5rem 2.5rem -0.5rem #80808099
 }
+
 /*Contact me --------------------------------------------------end*/
 
 /*footer --------------------------------------------------start*/
-#footer> div:first-child {
+#footer > div:first-child {
     position: absolute;
     z-index: 0;
     height: 77rem;
@@ -590,34 +651,42 @@ body> main> section {
     border-top-right-radius: 130rem;
     box-shadow: 0.8rem 0 19rem 1.5rem #808080bf;
 }
-#footer> section {
+
+#footer > section {
     position: relative;
     top: 14rem;
 }
-#footer> section> p {
+
+#footer > section > p {
     text-align: center;
     color: white;
     padding-top: 3.5rem;
 }
-#footer> nav {
+
+#footer > nav {
     position: relative;
     top: 18rem;
     padding-left: 45vw;
 }
-#footer> nav> img {
+
+#footer > nav > img {
     padding-right: 0.8rem;
 }
-#footer> div:last-child {
+
+#footer > div:last-child {
     background-color: black;
     height: 8rem;
     position: relative;
     bottom: -25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-#footer> div:last-child> p {
+
+#footer > div:last-child > p {
     color: white;
-    text-align: center;
     top: -3rem;
-    position: relative;
     font-size: 2rem;
 }
+
 /*footer --------------------------------------------------end*/
