@@ -91,6 +91,18 @@ $(window).on('load',function (){
 /*certificate change*/
 
 
-/*scroll test*/
+/*when scroll from home sec*/
+window.onscroll = function() {myFunction()};
 
-/*scroll test*/
+function myFunction() {
+    if (document.documentElement.scrollTop > 700) {
+        $('#homeTextDiv').css('display','none');
+        $('#socialNav').css('display','none');
+        $('#homeMainImage').css('opacity','20%');
+    } else {
+        $('#homeTextDiv').css('display','inline');
+        $('#socialNav').css('display','inline');
+        $('#homeMainImage').css('opacity','100%');
+    }
+}
+/*when scroll from home sec*/
