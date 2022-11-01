@@ -85,10 +85,12 @@ $(window).on('load',function (){
     });
 
     function setCertificate(){
-        console.log(certificates[selectedCertificateIndex]);
         $('#certificate_image').attr('src',certificates[selectedCertificateIndex]);
     }
 }
 /*certificate change*/
 
 
+/*scroll test*/
+
+/*scroll test*/

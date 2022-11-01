@@ -396,6 +396,21 @@
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="assets/js/animations.js"></script>
+<script>
+    window.onscroll = function() {myFunction()};
+
+    function myFunction() {
+        if (document.documentElement.scrollTop > 700) {
+            $('#homeTextDiv').css('display','none');
+            $('#socialNav').css('display','none');
+            $('#homeMainImage').css('opacity','20%');
+        } else {
+            $('#homeTextDiv').css('display','inline');
+            $('#socialNav').css('display','inline');
+            $('#homeMainImage').css('opacity','100%');
+        }
+    }
+</script>
 </body>
 
 </html>
