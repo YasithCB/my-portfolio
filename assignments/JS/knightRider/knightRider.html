@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 3 | knight Rider</title>
+
+  <style>
+    main>section{
+      width: 1000px;
+      height: 150px;
+      background-color: rgba(255,255,255,0.10);
+      box-shadow: 0px 5px 5px rgba(130,127,130,0.83);
+      position: absolute;
+      top:0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+
+    }
+
+    main>section>section{
+      border: 2px solid white;
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      gap: 10px;
+      width: 900px;
+      height: 100px;
+    }
+
+    main>div{
+      position: absolute;
+      top: 350px;
+      bottom: 0px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      display: flex;
+      width: 200px;
+      height: 75px;
+      gap: 30px;
+    }
+
+    main>div>button:nth-child(1){
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+      color: white;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    main>div>button:nth-child(2){
+      width: 100%;
+      height: 100%;
+      background-color: #9e0000;
+      color: white;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: bold;
+
+    }
+
+    main>section>section>div{
+      width: 100%;
+      height: 100%;
+
+    }
+  </style>
+
+</head>
+<body bgcolor="#f5f5f5">
+
+<main>
+  <section class="newmain">
+    <section id="sec01"></section>
+  </section>
+
+  <div>
+    <button type="button" id="start">Start</button>
+    <button type="button" id="end">End</button>
+  </div>
+</main>
+
+
+<script src="../SPA/POS/assets/js/jquery-3.6.1.min.js"></script>
+<script>
+
+  var kingtRider={
+    count:0,
+    tmArray:[],
+    leftArray:["white","white","white","white","white","white","#ffe3e3","#fab5b5","#ee9797","#f17272","#ef2d2d","#ff0000"],
+    rightArray:["white","white","white","white","white","white","#ff0000","#ef2d2d","#f17272","#ee9797","#fab5b5","#ffe3e3"],
+
+    animateLeft:function () {
+      var lastColor=this.tmArray.pop();
+      this.tmArray.unshift(lastColor);
+    },
+
+    animateRight:function () {
+      var firstColor=this.tmArray.shift();
+      this.tmArray.push(firstColor);
+    },
+
+    animate:function () {
+      this.count++
+      if (this.count<=this.leftArray.length){
+        this.tmArray=this.leftArray
+
+        this.animateLeft();
+      }else {
+        if (this.count>=(this.rightArray.length*2)){
+          this.count=0;
+        }
+        this.tmArray=this.rightArray;
+        this.animateRight();
+      }
+    }
+  }
+  makeDives();
+  function makeDives() {
+    $("#sec01").empty();
+
+    for (let i = 0; i <(kingtRider.tmArray.length)/2 ; i++) {
+      $("#sec01").append(`<div style="background-color: ${kingtRider.tmArray[i]}"></div>`)
+    }
+    kingtRider.animate();
+  }
+
+  var id=setInterval(makeDives,90);
+
+  $("#start").click(function () {
+    clearInterval(id);
+    id=setInterval(makeDives,90);
+  })
+
+  $("#end").click(function () {
+    clearInterval(id);
+  })
+
+</script>
+</body>
+</html>
