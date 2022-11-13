@@ -44,9 +44,41 @@
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script>
+  let studentsArray = [new Student('Kasun','red'),new Student('Amal','green'),new Student('Kamal','yellow')];
+  appendDiv();
 
+  function Student(name,color){
+    this.name=name;
+    this.color= color;
+  }
 
+  $('#addQue').click(function (){
+    let student = new Student($("#name").val(),$("#color").val());
+    studentsArray.unshift(student);
+    console.log(student)
+    appendDiv();
+  });
 
+  function appendDiv(){
+    $('#que').empty();
+    for (let st of studentsArray) {
+      let div = `<div style="background-color: ${st.color}"><h1>${st.name}</h1></div>`;
+      $('#que').append(div);
+    }
+  }
+
+  function changeOrder(){
+    /*let last = studentsArray[studentsArray.length-1];
+    for (let i = studentsArray.length-1; i > 0; i--) {
+      studentsArray[i]= studentsArray[i-1];
+    }
+    studentsArray[0] = last;*/
+    let last = studentsArray.pop();
+    studentsArray.unshift(last)
+    appendDiv();
+  }
+
+  setInterval(changeOrder,1000);
 </script>
 </body>
 </html>
