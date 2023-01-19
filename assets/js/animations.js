@@ -19,7 +19,6 @@ function mainTitleWritingAnimation(){
         char++;
         if (char === splitText.length) {
             complete();
-            return;
         }
     }
 
@@ -51,8 +50,9 @@ for (const title of sectionTitlesList) {
 
 /*loading screen*/
 $(window).on('load',function (){
-    $('#loader').css('transform','translateX(100vw)');
-    $('#loader').css('transition','all 1s');
+    let loader = $('#loader');
+    loader.css('transform','translateX(100vw)');
+    loader.css('transition','all 1s');
     $('#main,#footer,#header').css('visibility','visible');
 
     setTimeout(function (){
@@ -106,3 +106,8 @@ function myFunction() {
     }
 }
 /*when scroll from home sec*/
+
+
+/*home video play*/
+document.getElementsByClassName('home-bg-video').defaultPlaybackRate = 0.5;
+/*home video play*/
